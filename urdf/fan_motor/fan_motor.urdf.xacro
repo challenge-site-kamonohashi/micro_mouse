@@ -1,0 +1,47 @@
+<?xml version="1.0"?>
+<robot xmlns:xacro="http://ros.org/wiki/xacro">
+  <xacro:include filename="$(find micro_mouse)/urdf/include.xacro"/>
+  <xacro:include filename="$(find micro_mouse)/urdf/fan_motor/fan_motor.gazebo.xacro"/>
+  <xacro:include filename="$(find micro_mouse)/urdf/fan_motor/fan_motor.transmission.xacro"/>
+  
+  <xacro:macro name="fan_motor_v0" params="name parent *origin">
+  
+    <joint name="${name}_fixed" type="fixed">
+      <parent link="${parent}"/>
+      <child  link="${name}"/>
+      <insert_block name="origin"/>
+    </joint>
+    
+    <joint name="${name}_rotation_joint" type="continuous">
+      <parent link="${name}"/>
+      <child  link="${name}_rotation_link"/>
+      <origin xyz=" 0.000  0.000 -0.010" rpy=" 0.000  0.000  0.000"/>
+      <axis xyz="0 0 1"/>
+      
+    </joint>
+    
+    <xacro:define_model_cylinder
+        name="${name}_rotation_link"
+        mass  ="0.005"
+        radius="0.030"
+        length="0.005"
+        color_name="Grey">
+      <color rgba="0.5  0.5  0.5  1.0"/>
+      <origin xyz="0.0  0.0  0.0" rpy="0.0  0.0  0.0"/>
+      <mesh filename="package://micro_mouse/meshes/fan.dae"/>
+    </xacro:define_model_cylinder>
+    
+    <xacro:define_model_cylinder
+        name="${name}"
+        mass  ="0.015"
+        radius="0.005"
+        length="0.020"
+        color_name="Grey">
+      <color rgba="0.5  0.5  0.5  1.0"/>
+      <origin xyz="0.0  0.0  0.0" rpy="0.0  0.0  0.0"/>
+      <mesh filename="package://micro_mouse/meshes/fan_motor.dae"/>
+    </xacro:define_model_cylinder>
+    
+  </xacro:macro>
+  
+</robot>

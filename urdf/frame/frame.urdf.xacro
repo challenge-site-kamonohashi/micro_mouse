@@ -1,0 +1,28 @@
+<?xml version="1.0"?>
+<robot xmlns:xacro="http://ros.org/wiki/xacro">
+  <xacro:include filename="$(find micro_mouse)/urdf/include.xacro"/>
+  <xacro:include filename="$(find micro_mouse)/urdf/frame/frame.gazebo.xacro"/>
+  
+  
+  <xacro:macro name="frame_v0" params="name parent *joint_origin">
+	  
+    <joint name="${name}_joint" type="fixed">
+      <insert_block name="joint_origin"/>
+      <parent link="${parent}"/>
+      <child link="${name}"/>
+    </joint>
+
+    <xacro:define_model_box
+        name="${name}"
+        mass="0.020"
+        x="0.080"
+        y="0.070"
+        z="0.002"
+        color_name="blue">
+      <color rgba="0.8 0.8 0.8 1.0"/>
+      <origin xyz="0 0 0" rpy="0 0 0"/>
+      <mesh filename="package://micro_mouse/meshes/frame.stl"/>
+    </xacro:define_model_box>
+  </xacro:macro>
+  
+</robot>

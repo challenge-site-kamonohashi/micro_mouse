@@ -1,0 +1,28 @@
+<?xml version="1.0"?>
+<robot xmlns:xacro="http://ros.org/wiki/xacro">
+
+  <xacro:include filename="$(find micro_mouse)/urdf/include.xacro"/>
+  <xacro:include filename="$(find micro_mouse)/urdf/lrf/lrf.gazebo.xacro"/>
+
+  <xacro:macro name="lrf_v0" params="name parent *joint_origin">
+    <joint name="${name}_joint" type="fixed">
+      <insert_block name="joint_origin"/>
+      <parent link="${parent}"/>
+      <child link="${name}"/>
+    </joint>
+    
+    <xacro:define_model_box
+	      name="${name}"
+	      mass="0.005"
+	      x="0.010"
+	      y="0.010"
+	      z="0.050"
+	      color_name="orange">
+	    <color rgba="1.0 0.5 0 1.0"/>
+	    <origin xyz="0 0 0" rpy="0 0 0"/>
+	    <mesh filename="package://micro_mouse/meshes/light_sensor.dae"/>
+	  </xacro:define_model_box>
+	  
+  </xacro:macro>
+
+</robot>

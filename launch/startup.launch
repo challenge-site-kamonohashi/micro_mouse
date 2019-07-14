@@ -1,0 +1,17 @@
+<launch>
+
+  <!-- arguments -->
+  <arg name="model" default="$(find micro_mouse)/robots/hello_xacro.xacro"/>
+  <!-- prameters -->
+  <param name="robot_description" command="$(find xacro)/xacro.py '$(arg model)'"/>
+
+
+  <!-- nodes -->
+  <node name="joint_state_publisher" pkg="joint_state_publisher" type="joint_state_publisher" />
+  <node name="robot_state_publisher" pkg="robot_state_publisher" type="state_publisher" />
+
+  <node name="stage_mouse" pkg="stage_ros" type="stageros" args="$(find micro_mouse)/worlds/test_stage.world"/>
+  <node name="scan_to_light" pkg="micro_mouse" type="scan_to_light.py"/>
+  <node name="rviz" pkg="rviz" type="rviz" required="true" args="-d $(find micro_mouse)/config/micro_mouse.rviz"/>
+
+</launch>

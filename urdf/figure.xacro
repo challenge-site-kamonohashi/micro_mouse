@@ -1,0 +1,172 @@
+<?xml version="1.0"?>
+<robot xmlns:xacro="http://ros.org/wiki/xacro">
+  
+  <xacro:macro name="define_box" params="name mass x y z color_name *origin *color">
+  
+    <link name="${name}">
+      <!--visual detect area-->
+      <visual>
+        <geometry>
+          <box size = "${x} ${y} ${z}"/>
+        </geometry>
+        <insert_block name="origin"/>
+        <material name="${color_name}">
+          <insert_block name="color"/>
+        </material>
+      </visual>
+      <!--collision detect area-->
+      <collision>
+        <geometry>
+          <box size = "${x} ${y} ${z}"/>
+        </geometry>
+        <insert_block name="origin"/>
+      </collision>
+      <!--inertia matrix-->
+      <inertial>
+        <box_inertia mass="${mass}"  x="${x}" y="${y}" z="${z}"/>
+      </inertial>
+    </link>
+  </xacro:macro>
+  
+  
+  
+  <xacro:macro name="define_cylinder" params="name mass radius length color_name *origin *color">
+    <link name="${name}">
+      <!--visual detect area-->
+      <visual>
+        <geometry>
+          <cylinder radius="${radius}" length="${length}"/>
+        </geometry>
+        <insert_block name="origin"/>
+        <material name="${color_name}">
+	        <insert_block name="color"/>
+	      </material>
+      </visual>
+      
+      <!--collision detect area-->
+      <collision>
+        <geometry>
+          <cylinder radius="${radius}" length="${length}"/>
+        </geometry>
+        <insert_block name="origin"/>
+      </collision>
+      <!--inertia matrix-->
+      <inertial>
+        <cylinder_inertia mass="${mass}" radius="${radius}" length="${length}"/>
+      </inertial>
+    </link>
+  </xacro:macro>
+  
+  
+  
+  
+  <xacro:macro name="define_sphere" params="name mass radius color_name *origin *color">
+    <link name="${name}">
+      <!--visual detect area-->
+      <visual>
+        <geometry>
+          <sphere radius="${radius}"/>
+        </geometry>
+        <insert_block name="origin"/>
+        <material name="${color_name}">
+	        <insert_block name="color"/>
+	      </material>
+      </visual>
+      <!--collision detect area-->
+      <collision>
+        <geometry>
+          <sphere radius="${radius}"/>
+        </geometry>
+        <insert_block name="origin"/>
+      </collision>
+      <!--inertia matrix-->
+      <inertial>
+        <sphere_inertia mass="${mass}" radius="${radius}"/>
+      </inertial>
+    </link>
+  </xacro:macro>
+  
+  
+  <xacro:macro name="define_model_box" params="name mass x y z color_name *origin *color *model">
+  
+    <link name="${name}">
+      <!--visual detect area-->
+      <visual>
+        <geometry>
+          <insert_block name="model"/>
+        </geometry>
+        <insert_block name="origin"/>
+        <material name="${color_name}">
+	        <insert_block name="color"/>
+	      </material>
+      </visual>
+      <!--collision detect area-->
+      <collision>
+        <geometry>
+          <insert_block name="model"/>
+        </geometry>
+        <insert_block name="origin"/>
+      </collision>
+      <!--inertia matrix-->
+      <inertial>
+        <box_inertia mass="${mass}"  x="${x}" y="${y}" z="${z}"/>
+      </inertial>
+    </link>
+  </xacro:macro>
+  
+  <xacro:macro name="define_model_cylinder" params="name mass radius length color_name *origin *color *model">
+  
+    <link name="${name}">
+      <!--visual detect area-->
+      <visual>
+        <geometry>
+          <insert_block name="model"/>
+        </geometry>
+        <insert_block name="origin"/>
+        <material name="${color_name}">
+	        <insert_block name="color"/>
+	      </material>
+      </visual>
+      <!--collision detect area-->
+      <collision>
+        <geometry>
+          <insert_block name="model"/>
+        </geometry>
+        <insert_block name="origin"/>
+      </collision>
+      <!--inertia matrix-->
+      <inertial>
+        <cylinder_inertia mass="${mass}" radius="${radius}" length="${length}"/>
+      </inertial>
+    </link>
+  </xacro:macro>
+  
+  <xacro:macro name="define_model_sphere" params="name mass radius color_name *origin *color *model">
+  
+    <link name="${name}">
+      <!--visual detect area-->
+      <visual>
+        <geometry>
+          <insert_block name="model"/>
+        </geometry>
+        <insert_block name="origin"/>
+        <material name="${color_name}">
+	        <insert_block name="color"/>
+	      </material>
+      </visual>
+      <!--collision detect area-->
+      <collision>
+        <geometry>
+          <insert_block name="model"/>
+        </geometry>
+        <insert_block name="origin"/>
+      </collision>
+      <!--inertia matrix-->
+      <inertial>
+        <sphere_inertia mass="${mass}"  radius="${radius}"/>
+      </inertial>
+    </link>
+  </xacro:macro>
+  
+  
+</robot>

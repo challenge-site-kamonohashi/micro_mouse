@@ -1,0 +1,164 @@
+<?xml version="1.0"?>
+<robot xmlns:xacro="http://ros.org/wiki/xacro" name="micro_mouse">
+  <xacro:include filename="$(find micro_mouse)/urdf/shassie/shassie.urdf.xacro"/>
+  <xacro:include filename="$(find micro_mouse)/urdf/frame/frame.urdf.xacro"/>
+  <xacro:include filename="$(find micro_mouse)/urdf/wheel/wheel.urdf.xacro"/>
+  
+  <xacro:include filename="$(find micro_mouse)/urdf/lrf/lrf.urdf.xacro"/>
+  
+  <xacro:include filename="$(find micro_mouse)/urdf/motor/motor.urdf.xacro"/>
+  <xacro:include filename="$(find micro_mouse)/urdf/fan_motor/fan_motor.urdf.xacro"/>
+
+  
+  <!--  link decide aria-->
+  <link name="base_link"/>
+  
+  <xacro:shassie_v0 
+      name="shassie"
+      parent="base_link">
+    <origin xyz=" 0.000  0.000  0.000" rpy=" 0.000  0.000  0.000"/>
+  </xacro:shassie_v0>
+  
+  <xacro:frame_v0 
+      name="frame"
+      parent="shassie">
+    <origin xyz=" 0.000  0.000  0.000" rpy=" 0.000  0.000  0.000"/>
+  </xacro:frame_v0>
+
+
+  <xacro:wheel_v0 
+      name="left_wheel"
+      parent="left_motor_rotation_link">
+    <origin xyz=" 0.000  0.000  0.000" rpy=" 0.000  0.000  0.000"/>
+  </xacro:wheel_v0>
+  
+  <xacro:wheel_v0 
+      name="right_wheel"
+      parent="right_motor_rotation_link">
+    <origin xyz=" 0.000  0.000  0.000" rpy=" 0.000  0.000  0.000"/>
+  </xacro:wheel_v0>
+  
+  
+  <xacro:lrf_v0 name="lrf_L" parent="shassie">
+    <origin xyz=" 0.010  0.030  0.007" rpy="0 0 ${ M_PI/2}"/>
+  </xacro:lrf_v0>
+  
+  <xacro:lrf_v0 name="lrf_R" parent="shassie">
+    <origin xyz=" 0.010 -0.030  0.007" rpy="0 0 ${-M_PI/2}"/>
+  </xacro:lrf_v0>
+  
+  <xacro:lrf_v0 name="lrf_FL" parent="shassie">
+    <origin xyz=" 0.030  0.025  0.007" rpy="0 0 0"/>
+  </xacro:lrf_v0>
+  
+  <xacro:lrf_v0 name="lrf_FR" parent="shassie">
+    <origin xyz=" 0.030 -0.025  0.007" rpy="0 0 0"/>
+  </xacro:lrf_v0>
+  
+  <xacro:lrf_v0 name="lrf_DFL" parent="shassie">
+    <origin xyz=" 0.035  0.010  0.007" rpy="0 0 ${-M_PI/4}"/>
+  </xacro:lrf_v0>
+  
+  <xacro:lrf_v0 name="lrf_DFR" parent="shassie">
+    <origin xyz=" 0.035 -0.010  0.007" rpy="0 0 ${ M_PI/4}"/>
+  </xacro:lrf_v0>
+  
+
+  
+  <xacro:motor_v0 
+      name="left_motor" 
+      parent="shassie">
+    <origin xyz="-0.020 -0.025  0.0115" rpy=" 0.000  0.000 ${ M_PI/2}"/>
+    <axis xyz="1 0 0"/>
+  </xacro:motor_v0>
+  
+  <xacro:motor_v0 
+      name="right_motor" 
+      parent="shassie">
+    <origin xyz="-0.020  0.025  0.0115" rpy=" 0.000  0.000 ${-M_PI/2}"/>
+    <axis xyz="-1 0 0"/>
+  </xacro:motor_v0>
+  
+  <xacro:fan_motor_v0 
+      name="fan_motor" 
+      parent="shassie">
+    <origin xyz=" 0.005  0.000  0.015" rpy=" 0.000  0.000  0.000"/>
+  </xacro:fan_motor_v0>
+  
+<!--gazebo decide aria-->
+  <xacro:shassie_gazebo_v0 name="shassie"/>
+  <xacro:frame_gazebo_v0 name="frame"/>
+  
+  <xacro:wheel_gazebo_v0 name="left_wheel"/>
+  <xacro:wheel_gazebo_v0 name="right_wheel"/>
+  
+  
+  <xacro:lrf_gazebo_v0 
+      name="lrf_L"
+      min_rad  ="-0.001"
+      max_rad  =" 0.001"
+      min_range=" 0.010"
+      max_range=" 0.200"
+  />
+  
+  <xacro:lrf_gazebo_v0 
+      name="lrf_R"
+      min_rad  ="-0.001"
+      max_rad  =" 0.001"
+      min_range=" 0.010"
+      max_range=" 0.200"
+  />
+  
+  <xacro:lrf_gazebo_v0 
+      name="lrf_FL"
+      min_rad  ="-0.001"
+      max_rad  =" 0.001"
+      min_range=" 0.010"
+      max_range=" 0.200"
+  />
+  
+  <xacro:lrf_gazebo_v0 
+      name="lrf_FR"
+      min_rad  ="-0.001"
+      max_rad  =" 0.001"
+      min_range=" 0.010"
+      max_range=" 0.200"
+  />
+  
+  <xacro:lrf_gazebo_v0 
+      name="lrf_DFL"
+      min_rad  ="-0.001"
+      max_rad  =" 0.001"
+      min_range=" 0.010"
+      max_range=" 0.200"
+  />
+  
+  <xacro:lrf_gazebo_v0 
+      name="lrf_DFR"
+      min_rad  ="-0.001"
+      max_rad  =" 0.001"
+      min_range=" 0.010"
+      max_range=" 0.200"
+  />
+  
+
+  <xacro:motor_gazebo_v0 name="left_motor"/>
+  <xacro:motor_gazebo_v0 name="right_motor"/>
+  <xacro:fan_motor_gazebo_v0 name="fan_motor"/>
+  
+  
+<!--trans mission-->
+
+  <xacro:motor_trans_v0 name="left_motor"/>
+  <xacro:motor_trans_v0 name="right_motor"/>
+  <xacro:fan_motor_trans_v0 name="fan_motor"/>
+
+
+  <gazebo>
+    <plugin name="gazebo_ros_control" filename="libgazebo_ros_control.so">
+      <robotNamespace>micro_mouse</robotNamespace>
+      <robotSimType>gazebo_ros_control/DefaultRobotHWSim</robotSimType>
+    </plugin>
+  </gazebo>
+  
+</robot>

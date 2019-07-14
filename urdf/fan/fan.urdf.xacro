@@ -1,0 +1,28 @@
+<?xml version="1.0"?>
+<robot xmlns:xacro="http://ros.org/wiki/xacro">
+  <xacro:include filename="$(find micro_mouse)/urdf/include.xacro"/>
+  <xacro:include filename="$(find micro_mouse)/urdf/fan/fan.gazebo.xacro"/>
+  
+  
+  <xacro:macro name="fan_v0" params="name parent *joint_origin">
+	  
+    <joint name="${name}_joint" type="fixed">
+      <insert_block name="joint_origin"/>
+      <parent link="${parent}"/>
+      <child link="${name}"/>
+    </joint>
+    
+    
+    <xacro:define_model_cylinder
+        name="${name}"
+        mass  ="0.005"
+        radius="0.030"
+        length="0.005"
+        color_name="Grey">
+      <color rgba="0.5  0.5  0.5  1.0"/>
+      <origin xyz="0.0  0.0  0.0" rpy="0.0  0.0  0.0"/>
+      <mesh filename="package://micro_mouse/meshes/fan.dae"/>
+    </xacro:define_model_cylinder>
+  </xacro:macro>
+  
+</robot>

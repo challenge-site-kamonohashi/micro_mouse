@@ -1,0 +1,7 @@
+<?xml version="1.0"?>
+<robot xmlns:xacro="http://ros.org/wiki/xacro">
+  <property name="package_name" value="2"/>
+  <xacro:include filename="$(find micro_mouse)/urdf/common.xacro"/>
+  <xacro:include filename="$(find micro_mouse)/urdf/inertia.xacro"/>
+  <xacro:include filename="$(find micro_mouse)/urdf/figure.xacro"/>
+</robot>

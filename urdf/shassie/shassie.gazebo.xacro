@@ -1,0 +1,10 @@
+<?xml version="1.0"?>
+<robot xmlns:xacro="http://ros.org/wiki/xacro">  
+  <xacro:macro name="shassie_gazebo_v0" params="name">
+	  <gazebo reference="${name}">
+	    <selfCollide>true</selfCollide>
+      <mu1 value="0.1" />
+      <mu2 value="0.1" />
+    </gazebo>
+  </xacro:macro>
+</robot>

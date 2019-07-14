@@ -1,0 +1,27 @@
+必要パッケージ一覧
+ros-kinetic-turtlebot-msgs
+ros-kinetic-turtlebot-teleop
+
+
+workspace作成
+mkdir -p ~/mp_ws/src
+cd ~/mp_ws/src/
+catkin_init_workspace
+
+パッケージ作成(コピー)
+cd ~/mp_ws/src/
+cp -R  ~/Downloads/micro_mouse ~/mp_ws/src/
+
+makeする
+cd ~/mp_ws/
+catkin_make
+
+パッケージへの移動
+roscd micro_mouse
+
+
+シミュレータ起動
+roslaunch micro_mouse startup.launch
+
+動作テスト
+rosrun turtlebot_teleop turtlebot_teleop_key turtlebot_teleop/cmd_vel:=/cmd_vel

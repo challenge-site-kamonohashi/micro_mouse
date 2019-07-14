@@ -1,0 +1,38 @@
+<?xml version="1.0"?>
+<robot xmlns:xacro="http://ros.org/wiki/xacro">
+  <xacro:include filename="$(find micro_mouse)/urdf/include.xacro"/>
+  <xacro:include filename="$(find micro_mouse)/urdf/motor/motor.gazebo.xacro"/>
+  <xacro:include filename="$(find micro_mouse)/urdf/motor/motor.transmission.xacro"/>
+  
+  <xacro:macro name="motor_v0" params="name parent *origin *axis">
+  
+    <joint name="${name}_fixed" type="fixed">
+      <parent link="${parent}"/>
+      <child  link="${name}"/>
+      <insert_block name="origin"/>
+    </joint>
+    
+    <joint name="${name}_rotation_joint" type="continuous">
+      <parent link="${name}"/>
+      <child  link="${name}_rotation_link"/>
+      <origin xyz="-0.010  0.000  0.000" rpy=" 0.000  0.000  0.000"/>
+      <insert_block name="axis"/>
+    </joint>
+    
+    <link name="${name}_rotation_link"/>
+        
+    
+    <xacro:define_model_cylinder
+        name="${name}"
+        mass  ="0.050"
+        radius="0.022"
+        length="0.070"
+        color_name="Grey">
+      <color rgba="0.5  0.5  0.5  1.0"/>
+      <origin xyz="0.0  0.0  0.0" rpy="0.0  0.0  0.0"/>
+      <mesh filename="package://micro_mouse/meshes/motor.dae"/>
+    </xacro:define_model_cylinder>
+    
+  </xacro:macro>
+  
+</robot>

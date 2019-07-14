@@ -1,0 +1,21 @@
+<launch>
+
+  <node name="mouse1" pkg="micro_mouse" type="mouse.py">
+    <remap from="/cmd_vel" to="/robot_0/cmd_vel"/>
+    <remap from="/mouse/R" to="/robot_0/R"/>
+    <remap from="/mouse/FR" to="/robot_0/FR"/>
+    <remap from="/mouse/F" to="/robot_0/F"/>
+    <remap from="/mouse/FL" to="/robot_0/FL"/>
+    <remap from="/mouse/L" to="/robot_0/L"/>
+  </node>
+
+  <node name="mouse2" pkg="micro_mouse" type="mouse.py">
+    <remap from="/cmd_vel" to="/robot_1/cmd_vel"/>
+    <remap from="/mouse/R" to="/robot_1/R"/>
+    <remap from="/mouse/FR" to="/robot_1/FR"/>
+    <remap from="/mouse/F" to="/robot_1/F"/>
+    <remap from="/mouse/FL" to="/robot_1/FL"/>
+    <remap from="/mouse/L" to="/robot_1/L"/>
+  </node>
+
+</launch>
