@@ -201,7 +201,7 @@ Visualization Manager:
           Scale: 1
           Value: true
         Value: true
-      Enabled: true
+      Enabled: false
       Keep: 2000
       Name: Odometry
       Position Tolerance: 0.200000003
@@ -217,13 +217,301 @@ Visualization Manager:
         Value: Arrow
       Topic: /base_pose_ground_truth
       Unreliable: false
-      Value: true
+      Value: false
     - Class: rviz/MarkerArray
       Enabled: true
       Marker Topic: /wall_marker
       Name: MarkerArray
       Namespaces:
-        {}
+        wall_0: true
+        wall_1: true
+        wall_10: true
+        wall_100: true
+        wall_101: true
+        wall_102: true
+        wall_103: true
+        wall_104: true
+        wall_105: true
+        wall_106: true
+        wall_107: true
+        wall_108: true
+        wall_109: true
+        wall_11: true
+        wall_110: true
+        wall_111: true
+        wall_112: true
+        wall_113: true
+        wall_114: true
+        wall_115: true
+        wall_116: true
+        wall_117: true
+        wall_118: true
+        wall_119: true
+        wall_12: true
+        wall_120: true
+        wall_121: true
+        wall_122: true
+        wall_123: true
+        wall_124: true
+        wall_125: true
+        wall_126: true
+        wall_127: true
+        wall_128: true
+        wall_129: true
+        wall_13: true
+        wall_130: true
+        wall_131: true
+        wall_132: true
+        wall_133: true
+        wall_134: true
+        wall_135: true
+        wall_136: true
+        wall_137: true
+        wall_138: true
+        wall_139: true
+        wall_14: true
+        wall_140: true
+        wall_141: true
+        wall_142: true
+        wall_143: true
+        wall_144: true
+        wall_145: true
+        wall_146: true
+        wall_147: true
+        wall_148: true
+        wall_149: true
+        wall_15: true
+        wall_150: true
+        wall_151: true
+        wall_152: true
+        wall_153: true
+        wall_154: true
+        wall_155: true
+        wall_156: true
+        wall_157: true
+        wall_158: true
+        wall_159: true
+        wall_16: true
+        wall_160: true
+        wall_161: true
+        wall_162: true
+        wall_163: true
+        wall_164: true
+        wall_165: true
+        wall_166: true
+        wall_167: true
+        wall_168: true
+        wall_169: true
+        wall_17: true
+        wall_170: true
+        wall_171: true
+        wall_172: true
+        wall_173: true
+        wall_174: true
+        wall_175: true
+        wall_176: true
+        wall_177: true
+        wall_178: true
+        wall_179: true
+        wall_18: true
+        wall_180: true
+        wall_181: true
+        wall_182: true
+        wall_183: true
+        wall_184: true
+        wall_185: true
+        wall_186: true
+        wall_187: true
+        wall_188: true
+        wall_189: true
+        wall_19: true
+        wall_190: true
+        wall_191: true
+        wall_192: true
+        wall_193: true
+        wall_194: true
+        wall_195: true
+        wall_196: true
+        wall_197: true
+        wall_198: true
+        wall_199: true
+        wall_2: true
+        wall_20: true
+        wall_200: true
+        wall_201: true
+        wall_202: true
+        wall_203: true
+        wall_204: true
+        wall_205: true
+        wall_206: true
+        wall_207: true
+        wall_208: true
+        wall_209: true
+        wall_21: true
+        wall_210: true
+        wall_211: true
+        wall_212: true
+        wall_213: true
+        wall_214: true
+        wall_215: true
+        wall_216: true
+        wall_217: true
+        wall_218: true
+        wall_219: true
+        wall_22: true
+        wall_220: true
+        wall_221: true
+        wall_222: true
+        wall_223: true
+        wall_224: true
+        wall_225: true
+        wall_226: true
+        wall_227: true
+        wall_228: true
+        wall_229: true
+        wall_23: true
+        wall_230: true
+        wall_231: true
+        wall_232: true
+        wall_233: true
+        wall_234: true
+        wall_235: true
+        wall_236: true
+        wall_237: true
+        wall_238: true
+        wall_239: true
+        wall_24: true
+        wall_240: true
+        wall_241: true
+        wall_242: true
+        wall_243: true
+        wall_244: true
+        wall_245: true
+        wall_246: true
+        wall_247: true
+        wall_248: true
+        wall_249: true
+        wall_25: true
+        wall_250: true
+        wall_251: true
+        wall_252: true
+        wall_253: true
+        wall_254: true
+        wall_255: true
+        wall_256: true
+        wall_257: true
+        wall_258: true
+        wall_259: true
+        wall_26: true
+        wall_260: true
+        wall_261: true
+        wall_262: true
+        wall_263: true
+        wall_264: true
+        wall_265: true
+        wall_266: true
+        wall_267: true
+        wall_268: true
+        wall_269: true
+        wall_27: true
+        wall_270: true
+        wall_271: true
+        wall_272: true
+        wall_273: true
+        wall_274: true
+        wall_275: true
+        wall_276: true
+        wall_277: true
+        wall_278: true
+        wall_279: true
+        wall_28: true
+        wall_280: true
+        wall_281: true
+        wall_282: true
+        wall_283: true
+        wall_284: true
+        wall_285: true
+        wall_286: true
+        wall_287: true
+        wall_288: true
+        wall_29: true
+        wall_3: true
+        wall_30: true
+        wall_31: true
+        wall_32: true
+        wall_33: true
+        wall_34: true
+        wall_35: true
+        wall_36: true
+        wall_37: true
+        wall_38: true
+        wall_39: true
+        wall_4: true
+        wall_40: true
+        wall_41: true
+        wall_42: true
+        wall_43: true
+        wall_44: true
+        wall_45: true
+        wall_46: true
+        wall_47: true
+        wall_48: true
+        wall_49: true
+        wall_5: true
+        wall_50: true
+        wall_51: true
+        wall_52: true
+        wall_53: true
+        wall_54: true
+        wall_55: true
+        wall_56: true
+        wall_57: true
+        wall_58: true
+        wall_59: true
+        wall_6: true
+        wall_60: true
+        wall_61: true
+        wall_62: true
+        wall_63: true
+        wall_64: true
+        wall_65: true
+        wall_66: true
+        wall_67: true
+        wall_68: true
+        wall_69: true
+        wall_7: true
+        wall_70: true
+        wall_71: true
+        wall_72: true
+        wall_73: true
+        wall_74: true
+        wall_75: true
+        wall_76: true
+        wall_77: true
+        wall_78: true
+        wall_79: true
+        wall_8: true
+        wall_80: true
+        wall_81: true
+        wall_82: true
+        wall_83: true
+        wall_84: true
+        wall_85: true
+        wall_86: true
+        wall_87: true
+        wall_88: true
+        wall_89: true
+        wall_9: true
+        wall_90: true
+        wall_91: true
+        wall_92: true
+        wall_93: true
+        wall_94: true
+        wall_95: true
+        wall_96: true
+        wall_97: true
+        wall_98: true
+        wall_99: true
       Queue Size: 100
       Value: true
     - Class: rviz/Axes
@@ -365,19 +653,19 @@ Visualization Manager:
       Invert Z Axis: false
       Name: Current View
       Near Clip Distance: 0.00999999978
-      Scale: 100
+      Scale: 117.975723
       Target Frame: <Fixed Frame>
       Value: TopDownOrtho (rviz)
-      X: 3.5
-      Y: 3.5
+      X: 1.61824906
+      Y: 3.55967093
     Saved: ~
 Window Geometry:
   Displays:
     collapsed: false
   Height: 1056
   Hide Left Dock: false
-  Hide Right Dock: false
-  QMainWindow State: 000000ff00000000fd000000040000000000000174000003dafc020000000dfb000000100044006900730070006c006100790073000000002800000139000000d700fffffffb0000001200530065006c0065006300740069006f006e00000001e10000009b0000006100fffffffb0000001e0054006f006f006c002000500072006f007000650072007400690065007302000001ed000001df00000185000000a3fb000000120056006900650077007300200054006f006f02000001df000002110000018500000122fb000000200054006f006f006c002000500072006f0070006500720074006900650073003203000002880000011d000002210000017afb000000100044006900730070006c00610079007300000001100000010b000000d700fffffffb0000002000730065006c0065006300740069006f006e00200062007500660066006500720200000138000000aa0000023a00000294fb00000014005700690064006500530074006500720065006f02000000e6000000d2000003ee0000030bfb0000000c004b0069006e0065006300740200000186000001060000030c00000261fb0000000a0049006d0061006700650000000028000001160000000000000000fb0000000c00430061006d00650072006101000003ec000000160000000000000000fb0000000a0049006d0061006700650000000028000000160000000000000000fb000000100044006900730070006c0061007900730100000028000003da000000d700ffffff000000010000010f000003dafc0200000003fb0000001e0054006f006f006c002000500072006f00700065007200740069006500730100000041000000780000000000000000fb0000000a005600690065007700730100000028000003da000000ad00fffffffb0000001200530065006c0065006300740069006f006e010000025a000000b200000000000000000000000200000780000000d7fc0100000002fb0000000a0049006d0061006700650300000123000000b500000549000003d6fb0000000a00560069006500770073030000004e00000080000002e100000197000000030000073f000001a5fc0100000004fb0000000a0049006d00610067006501000000000000039e0000000000000000fb0000000a0049006d00610067006501000000000000073f0000000000000000fb0000000800540069006d006500000000000000074f0000030000fffffffb0000000800540069006d00650100000000000004500000000000000000000004f1000003da00000004000000040000000800000008fc0000000100000002000000010000000a0054006f006f006c00730100000000ffffffff0000000000000000
+  Hide Right Dock: true
+  QMainWindow State: 000000ff00000000fd000000040000000000000174000003dafc020000000dfb000000100044006900730070006c006100790073000000002800000139000000d700fffffffb0000001200530065006c0065006300740069006f006e00000001e10000009b0000006100fffffffb0000001e0054006f006f006c002000500072006f007000650072007400690065007302000001ed000001df00000185000000a3fb000000120056006900650077007300200054006f006f02000001df000002110000018500000122fb000000200054006f006f006c002000500072006f0070006500720074006900650073003203000002880000011d000002210000017afb000000100044006900730070006c00610079007300000001100000010b000000d700fffffffb0000002000730065006c0065006300740069006f006e00200062007500660066006500720200000138000000aa0000023a00000294fb00000014005700690064006500530074006500720065006f02000000e6000000d2000003ee0000030bfb0000000c004b0069006e0065006300740200000186000001060000030c00000261fb0000000a0049006d0061006700650000000028000001160000000000000000fb0000000c00430061006d00650072006101000003ec000000160000000000000000fb0000000a0049006d0061006700650000000028000000160000000000000000fb000000100044006900730070006c0061007900730100000028000003da000000d700ffffff000000010000010f000003dafc0200000003fb0000001e0054006f006f006c002000500072006f00700065007200740069006500730100000041000000780000000000000000fb0000000a005600690065007700730000000028000003da000000ad00fffffffb0000001200530065006c0065006300740069006f006e010000025a000000b200000000000000000000000200000780000000d7fc0100000002fb0000000a0049006d0061006700650300000123000000b500000549000003d6fb0000000a00560069006500770073030000004e00000080000002e100000197000000030000073f000001a5fc0100000004fb0000000a0049006d00610067006501000000000000039e0000000000000000fb0000000a0049006d00610067006501000000000000073f0000000000000000fb0000000800540069006d006500000000000000074f0000030000fffffffb0000000800540069006d00650100000000000004500000000000000000000005c5000003da00000004000000040000000800000008fc0000000100000002000000010000000a0054006f006f006c00730100000000ffffffff0000000000000000
   Selection:
     collapsed: false
   Time:
@@ -385,7 +673,7 @@ Window Geometry:
   Tool Properties:
     collapsed: false
   Views:
-    collapsed: false
-  Width: 1920
-  X: 0
+    collapsed: true
+  Width: 1855
+  X: 1985
   Y: 1104

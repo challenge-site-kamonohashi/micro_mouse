@@ -58,29 +58,27 @@
 メカニックカモノハシ用のworkspaceを新たに作りましょう。
 
 \begin{lstlisting}[frame=single, caption=workspaceの作成, label=create_workspace]
-mkdir -p ~/mp_ws/src
-cd ~/mp_ws/src/
-catkin_init_workspace
-echo "source ~/mp_ws/devel/setup.bash" >> ~/.bashrc
+$ mkdir -p ~/mp_ws/src
+$ cd ~/mp_ws/src/
+$ catkin_init_workspace
+$ echo "source ~/mp_ws/devel/setup.bash" >> ~/.bashrc
 \end{lstlisting}
 
 
 \subsection{マイクロマウスパッケージの導入}
 githubから、パッケージをcloneしてcatkin\_makeします。
 \begin{lstlisting}[frame=single, caption=catkin\_make, label=catkin_make]
-cd ~/mp_ws/src
-git clone 
-cd ~/mp_ws
-catkin_ws
-source ~/.bashrc
+$ cd ~/mp_ws/src
+$ git clone https://github.com/platypus5384/micro_mouse.git
+$ cd ~/mp_ws
+$ catkin_ws
+$ source ~/.bashrc
 \end{lstlisting}
 
 以下のコマンドを入力し、ディレクトリを移動できれば成功です。
 \begin{lstlisting}[frame=single, caption=roscd, label=roscd]
-roscd micro_mouse
+$ roscd micro_mouse
 \end{lstlisting}
-
-
 
 
 \newpage
@@ -92,9 +90,37 @@ roscd micro_mouse
 sudo apt install ros-kinetic-turtlebot ros-kinetic-turtlebot-msgs ros-kinetic-turtlebot-teleop 
 \end{lstlisting}
 
-\section{Exercise}
-\subsection{Pythonをマスターしよう}
+\section{micro\_mouse動作テスト}
+付いていると思いますが、一応、ファイルに権限を付けます。以下を実行してください。
+\begin{lstlisting}[frame=single, caption=roscd, label=roscd]
+$ roscd micro_mouse/script
+$ sudo chmod -R a+x *
+\end{lstlisting}
 
+シミュレータを起動します。以下のコマンドをそれぞれ別端末で実行してください。
+\begin{lstlisting}[frame=single, caption=roscd, label=roscd]
+$ roslaunch micro_mouse startup.launch
+別の端末を開き、
+$ rosrun micro_mouse left_hund_ex.py
+\end{lstlisting}
+
+
+マウスが動き出し、マッピングが始まれば成功です。
+しばらく待つと、以下のようになります。
+\begin{figure}[h]
+  \begin{center}
+    \includegraphics[width=128mm]{./mms_test.png}
+  \end{center}
+  \caption{}
+  \label{graph3}
+\end{figure}
+
+
+
+
+\section{Exercise}
+\subsection{Python簡易入門}
+簡易的にPython入門しよう。
 
 \newpage
 \subsection{マウスを動かそう}
@@ -103,11 +129,11 @@ sudo apt install ros-kinetic-turtlebot ros-kinetic-turtlebot-msgs ros-kinetic-tu
 
 
 \newpage
-\lstinputlisting[caption=micro\_mouse/script/chapter/1/going\_mouse.py,label=going_mouse,numbers=left]{./../../script/chapters/1/moving_mouse.py}
+\lstinputlisting[caption=micro\_mouse/script/chapter/1/going\_mouse.py,label=going_mouse,numbers=left]{./../../script/chapters/1/going_mouse.py}
 
 
 \newpage
-\lstinputlisting[caption=micro\_mouse/script/chapter/1/sensing\_mouse.py,label=sensing_mouse,numbers=left]{./../../script/chapters/1/moving_mouse.py}
+\lstinputlisting[caption=micro\_mouse/script/chapter/1/sensing\_mouse.py,label=sensing_mouse,numbers=left]{./../../script/chapters/1/sensing_mouse.py}
 
 
 
@@ -126,12 +152,17 @@ sudo apt install ros-kinetic-turtlebot ros-kinetic-turtlebot-msgs ros-kinetic-tu
 
 \newpage
 \subsection{左手法・拡張左手法・足立法を理解しよう}
-
+\subsubsection{左手法}
 \lstinputlisting[caption=micro\_mouse/script/chapter/3/left\_hund.py,label=left_hund,numbers=left]{./../../script/chapters/3/left_hund.py}
 
 
 \newpage
+\subsubsection{拡張左手法}
 \lstinputlisting[caption=micro\_mouse/script/chapter/3/left\_hund\_ex.py,label=left_hund_ex,numbers=left]{./../../script/chapters/3/left_hund_ex.py}
+
+
+\subsubsection{足立法}
+
 
 
 

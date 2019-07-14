@@ -1,8 +1,10 @@
 #!/usr/bin/env python
 #coding: utf-8         # 日本語を使えるようにする
 
-import sys,os
-sys.path.append(os.path.dirname(os.path.abspath(__file__)) + '/lib')
+import roslib.packages
+pk_path = roslib.packages.get_pkg_dir('micro_mouse')
+import sys
+sys.path.append(pk_path + '/script/lib')
 
 import math
 import numpy as np
@@ -19,7 +21,7 @@ if __name__ == '__main__': # int main()みたいな
 
   use_sensor_num = [ 4, 2, 0]
   sensor = [ 0 for i in range( 4)]
-  sensor_dire = [ 1, 0,-1, -2] # Left, Forward, Right, Back
+  sensor_dire = [ 1, 0,-1,-2] # Left, Forward, Right, Back
 
   cell_matrix = [ 17, 17]
   cell_size = [ 0.500, 0.500]
@@ -29,7 +31,7 @@ if __name__ == '__main__': # int main()みたいな
                                     "scan/F",
                                     "scan/FL",
                                     "scan/L"])
-  map_data = np.zeros( cell_matrix)
+  map_data = np.zeros( cell_matrix, dtype=int)
   map_data_colored = np.zeros( cell_matrix, dtype=int)
 
   vl = vr = 0
@@ -38,13 +40,14 @@ if __name__ == '__main__': # int main()みたいな
     loop = rospy.Rate(10) # 10[loop/s]の設定をする。
     while not rospy.is_shutdown():
 #-----ここにプログラムを書く-----
-      tx = mx*2 + 1
-      ty = my*2 + 1
   #-----センサー読み込み-----
       for (i, num) in enumerate(use_sensor_num):
         sensor[ i] = mouse.sensor[ num].data < 1.0
+      sensor[ 3] = False
   #-----地図情報を更新する-----
     #-----壁更新-----
+      tx = mx*2 + 1
+      ty = my*2 + 1
       for (i,s_dire) in enumerate(sensor_dire):
         wx = int( round( tx +  math.cos( (dire + s_dire) * math.pi/2)))
         wy = int( round( ty +  math.sin( (dire + s_dire) * math.pi/2)))
@@ -57,7 +60,7 @@ if __name__ == '__main__': # int main()みたいな
             if map_data[ ry, rx] != 0:
               map_data[ wy, wx] = 2 # 仮想的な壁
         sensor[i] = (map_data[ wy, wx] != 0)
-        print i, map_data[ wy, wx]
+      print sensor
       print mx, my, dire
       print "----------------"
     #-----道更新-----
@@ -69,7 +72,6 @@ if __name__ == '__main__': # int main()みたいな
       else:
         color = 5 # 行き止まりでも交差点でもない場所
       map_data[ ty, tx] = color
-      
   #-----マップ色変え＆マップ送信-----
       map_data_colored[ map_data == 0] = walls.WALL_INVISIBLE  # 何もない
       map_data_colored[ map_data == 1] = walls.WALL_WHITE      # 壁
@@ -90,14 +92,13 @@ if __name__ == '__main__': # int main()みたいな
       walls.publish()
   #-----ロボットを動かす-----
       if vr != 0:
-        mouse.move(0.0, vr * math.pi/2, 10)
+        mouse.move( 0.0, vr * math.pi/2)
       if vl != 0:
         mouse.move( vl, 0.0, 10)
   #-----ロボットの自己位置を更新する-----
       dire += vr; dire %= 4
       mx = int( round( mx + vl * math.cos( dire * math.pi/2)))
       my = int( round( my + vl * math.sin( dire * math.pi/2)))
-
 #-----ここまで-----
       loop.sleep() # 10[loop/s]になるよう調整する。
   except KeyboardInterrupt: # try:中にCTRL-Cが押されればココを実行する。
