@@ -42,8 +42,8 @@
 \newcommand{\rot}{\mathrm{rot}\,}  %ローテーション
 %
 \title{チャレンジサイト・メカニックカモノハシ2019\\マイクロマウスシミュレータExercise}
-\author{ER17045 立道壱太郎}
-\date{\today}
+%\author{ER17045 立道壱太郎}
+%\date{\today}
 \begin{document}
 \maketitle
 %
@@ -105,14 +105,14 @@ $ rosrun micro_mouse left_hund_ex.py
 \end{lstlisting}
 
 
-マウスが動き出し、マッピングが始まれば成功です。
+ロボットが動き出し、マッピングが始まれば成功です。
 しばらく待つと、以下のようになります。
 \begin{figure}[h]
   \begin{center}
     \includegraphics[width=128mm]{./mms_test.png}
   \end{center}
   \caption{}
-  \label{graph3}
+  \label{test}
 \end{figure}
 
 
@@ -121,6 +121,68 @@ $ rosrun micro_mouse left_hund_ex.py
 \section{Exercise}
 \subsection{Python簡易入門}
 簡易的にPython入門しよう。
+使用するソースコード等は、\verb|micro_mouse/script/chapter/0|にあります。
+
+\subsection{プログラミング言語の３大要素}
+プログラミング言語の３大要素は「順次」、「選択」、「繰り返し」です。
+これはどの言語でも共通で、これさえ覚えれば、（労力はかかるが）なんでもできます。\\
+
+
+３大要素について解説します。
+
+まず、「順次」とは、上から下に順番に実行していくことです。それだけです。\\
+
+
+次に、「選択」とは「もしAならばBする」という処理です。
+例えば、「もし、ジュースが100円以下ならば、１本買う」、「もし、授業日ならば、学校に行く」と言った感じです。\\
+
+
+最後に、「繰り返し」とは、その名の通り繰り返しを行います。
+例えば、私達は「もし、日曜ならば、学校は休み」という選択を毎日やっていますが、
+これをプログラムで書く場合は「在学中なら、次の文を繰り返す」「もし、授業日ならば、学校に行く」というように書きます。
+\begin{figure}[htbp]
+ \begin{minipage}{0.3\hsize}
+  \begin{center}
+   \includegraphics[width=20mm]{./sequential.png}
+  \end{center}
+  \caption{順次}
+ \end{minipage}
+ \begin{minipage}{0.3\hsize}
+ \begin{center}
+  \includegraphics[width=40mm]{./choose.png}
+ \end{center}
+  \caption{選択}
+ \end{minipage}
+ \begin{minipage}{0.3\hsize}
+ \begin{center}
+  \includegraphics[width=40mm]{./repetition.png}
+ \end{center}
+  \caption{繰り返し}
+ \end{minipage}
+\end{figure}
+
+
+\subsection{Pythonの基礎要素}
+Pythonでプログラミングする際の基礎要素を解説します。Python2.7で実行するのを前提にしますが、Python3系で実行しても問題はないでしょう。
+また、構文など多少の差異はありますが、C言語やJava、その他言語でも同じような感じです。
+
+\subsubsection{変数}
+変数とは数字や文字（内部的には数字）を管理する箱のような物です。
+
+\subsubsection{print文}
+\subsubsection{if文}
+\subsubsection{リスト(配列変数)}
+\subsubsection{for文}
+\subsubsection{演習}
+
+
+
+
+\subsubsection{順次}
+順次とは上から下に処理をしていくという事でした。
+次のスクリプトを実行してください。
+\lstinputlisting[caption=micro\_mouse/script/chapter/0/sequential.py,label=sequential,numbers=left]{./../../script/chapters/0/sequential.py}
+
 
 \newpage
 \subsection{マウスを動かそう}
