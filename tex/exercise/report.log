@@ -1,4 +1,8 @@
+<<<<<<< HEAD
 This is e-pTeX, Version 3.14159265-p3.6-141210-2.6 (utf8.euc) (TeX Live 2015/Debian) (preloaded format=platex 2019.4.20)  7 AUG 2019 10:14
+=======
+This is e-pTeX, Version 3.14159265-p3.6-141210-2.6 (utf8.euc) (TeX Live 2015/Debian) (preloaded format=platex 2019.7.19)  19 JUL 2019 16:29
+>>>>>>> origin/master
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -196,8 +200,6 @@ File: lstmisc.sty 2015/06/04 1.6 (Carsten Heinz)
 \c@lstnumber=\count109
 \lst@skipnumbers=\count110
 \lst@framebox=\box52
-) (/usr/share/texlive/texmf-dist/tex/latex/listings/listings.cfg
-File: listings.cfg 2015/06/04 1.6 listings configuration
 ))
 Package: listings 2015/06/04 1.6 (Carsten Heinz)
  (./jlisting.sty
@@ -256,6 +258,10 @@ LaTeX Font Info:    Font shape `JY1/gt/m/n' will be
 (Font)              scaled to size 7.68799pt on input line 48.
 LaTeX Font Info:    Font shape `JY1/gt/m/n' will be
 (Font)              scaled to size 5.76599pt on input line 48.
+
+
+LaTeX Warning: No \author given.
+
 LaTeX Font Info:    Font shape `JT1/mc/m/n' will be
 (Font)              scaled to size 13.83836pt on input line 51.
 LaTeX Font Info:    Font shape `JY1/mc/m/n' will be
@@ -293,6 +299,7 @@ File: ./mms_test_pause.png Graphic file (type bmp)
 LaTeX Font Info:    Font shape `JT1/gt/m/n' will be
 (Font)              scaled to size 9.60999pt on input line 177.
 LaTeX Font Info:    Font shape `JY1/gt/m/n' will be
+<<<<<<< HEAD
 (Font)              scaled to size 9.60999pt on input line 177.
 Missing character: There is no ^^ef in font cmr10!
 Missing character: There is no ^^bd in font cmr10!
@@ -304,6 +311,10 @@ LaTeX Font Info:    Font shape `JY1/mc/m/n' will be
 LaTeX Font Info:    Try loading font information for OML+cmr on input line 193.
 
 
+=======
+(Font)              scaled to size 4.805pt on input line 61.
+LaTeX Font Info:    Try loading font information for OML+cmr on input line 64.
+>>>>>>> origin/master
 (/usr/share/texlive/texmf-dist/tex/latex/base/omlcmr.fd
 File: omlcmr.fd 2014/09/29 v2.5h Standard LaTeX font definitions
 )
@@ -316,6 +327,7 @@ LaTeX Font Info:    Try loading font information for OMS+cmr on input line 193.
 File: omscmr.fd 2014/09/29 v2.5h Standard LaTeX font definitions
 )
 LaTeX Font Info:    Font shape `OMS/cmr/m/n' in size <9> not available
+<<<<<<< HEAD
 (Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 193.
  [6]
 File: ./moving_mouse_result.png Graphic file (type bmp)
@@ -329,17 +341,54 @@ File: ./sensing_mouse_result.png Graphic file (type bmp)
 File: ./left_sensing_mouse_result.png Graphic file (type bmp)
  <./left_sensing_mouse_result.png>
 [13] [14] [15] [16] [17] [18] [19] [20] (./report.aux)
+=======
+(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 97.
+File: ./mms_test.png Graphic file (type bmp)
+ <./mms_test.png>
+LaTeX Font Info:    Font shape `JT1/gt/m/n' will be
+(Font)              scaled to size 9.60999pt on input line 124.
+LaTeX Font Info:    Font shape `JY1/gt/m/n' will be
+(Font)              scaled to size 9.60999pt on input line 124.
+
+[2]
+File: ./sequential.png Graphic file (type bmp)
+ <./sequential.png>
+LaTeX Font Info:    Font shape `JY1/mc/m/n' will be
+(Font)              scaled to size 6.72699pt on input line 149.
+LaTeX Font Info:    Font shape `JY1/gt/m/n' will be
+(Font)              scaled to size 6.72699pt on input line 149.
+File: ./choose.png Graphic file (type bmp)
+ <./choose.png>
+File: ./repetition.png Graphic file (type bmp)
+ <./repetition.png> [3]
+LaTeX Font Info:    Font shape `JT1/mc/m/n' will be
+(Font)              scaled to size 6.72699pt on input line 181.
+ [4] [5] [6]
+[7] [8] [9] [10] [11] [12] [13] [14] (./report.aux)
+>>>>>>> origin/master
 
 LaTeX Warning: There were multiply-defined labels.
 
  ) 
 Here is how much of TeX's memory you used:
+<<<<<<< HEAD
  3480 strings out of 494865
  45627 string characters out of 6179769
  296644 words of memory out of 5000000
  6831 multiletter control sequences out of 15000+600000
  24094 words of font info for 106 fonts, out of 8000000 for 9000
+=======
+ 3457 strings out of 494865
+ 44905 string characters out of 6179769
+ 296372 words of memory out of 5000000
+ 6812 multiletter control sequences out of 15000+600000
+ 27081 words of font info for 118 fonts, out of 8000000 for 9000
+>>>>>>> origin/master
  269 hyphenation exceptions out of 8191
- 30i,6n,32p,269b,1600s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 30i,6n,32p,269b,1598s stack positions out of 5000i,500n,10000p,200000b,80000s
 
+<<<<<<< HEAD
 Output written on report.dvi (20 pages, 75796 bytes).
+=======
+Output written on report.dvi (14 pages, 55880 bytes).
+>>>>>>> origin/master
