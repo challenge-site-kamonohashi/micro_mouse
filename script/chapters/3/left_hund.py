@@ -31,7 +31,7 @@ if __name__ == '__main__': # int main()みたいな
                                     "scan/F",
                                     "scan/FL",
                                     "scan/L"])
-  map_data = np.zeros( cell_matrix)
+  map_data = np.zeros( cell_matrix, dtype="int")
 
   vl = vr = 0
   mx = my = theta = 0

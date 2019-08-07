@@ -1,4 +1,4 @@
-This is e-pTeX, Version 3.14159265-p3.6-141210-2.6 (utf8.euc) (TeX Live 2015/Debian) (preloaded format=platex 2019.4.20)  7 AUG 2019 10:14
+This is e-pTeX, Version 3.14159265-p3.6-141210-2.6 (utf8.euc) (TeX Live 2015/Debian) (preloaded format=platex 2019.4.20)  7 AUG 2019 03:50
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -206,10 +206,10 @@ Package: jlisting 2006/02/20 0.2 (Thor)
 \lst@inputfile=\read1
 ) (./report.aux
 
-LaTeX Warning: Label `mms_simulator' multiply defined.
+LaTeX Warning: Label `roscd' multiply defined.
 
 
-LaTeX Warning: Label `mms_simulator' multiply defined.
+LaTeX Warning: Label `roscd' multiply defined.
 
 )
 \openout1 = `report.aux'.
@@ -272,74 +272,54 @@ LaTeX Font Info:    Font shape `JY1/mc/m/n' will be
 
 ]
 LaTeX Font Info:    Font shape `JT1/gt/m/n' will be
-(Font)              scaled to size 11.53198pt on input line 79.
-LaTeX Font Info:    Font shape `JY1/mc/m/n' will be
-(Font)              scaled to size 4.805pt on input line 82.
-LaTeX Font Info:    Font shape `JY1/gt/m/n' will be
-(Font)              scaled to size 8.64899pt on input line 82.
-LaTeX Font Info:    Font shape `JY1/gt/m/n' will be
-(Font)              scaled to size 4.805pt on input line 82.
- [2]
-File: ./mms_startup.png Graphic file (type bmp)
-
-<./mms_startup.png>
-File: ./mms_simulator.png Graphic file (type bmp)
- <./mms_simulator.png>
-File: ./mms_rviz.png Graphic file (type bmp)
- <./mms_rviz.png> [3]
-File: ./mms_test_pause.png Graphic file (type bmp)
-
-<./mms_test_pause.png> [4] [5]
+(Font)              scaled to size 11.53198pt on input line 82.
 LaTeX Font Info:    Font shape `JT1/gt/m/n' will be
-(Font)              scaled to size 9.60999pt on input line 177.
+(Font)              scaled to size 9.60999pt on input line 85.
 LaTeX Font Info:    Font shape `JY1/gt/m/n' will be
-(Font)              scaled to size 9.60999pt on input line 177.
-Missing character: There is no ^^ef in font cmr10!
-Missing character: There is no ^^bd in font cmr10!
-Missing character: There is no ^^a5 in font cmr10!
-LaTeX Font Info:    Font shape `JT1/mc/m/n' will be
-(Font)              scaled to size 6.72699pt on input line 193.
+(Font)              scaled to size 9.60999pt on input line 85.
 LaTeX Font Info:    Font shape `JY1/mc/m/n' will be
-(Font)              scaled to size 6.72699pt on input line 193.
-LaTeX Font Info:    Try loading font information for OML+cmr on input line 193.
+(Font)              scaled to size 4.805pt on input line 104.
+LaTeX Font Info:    Font shape `JY1/gt/m/n' will be
+(Font)              scaled to size 8.64899pt on input line 104.
+LaTeX Font Info:    Font shape `JY1/gt/m/n' will be
+(Font)              scaled to size 4.805pt on input line 104.
+ [2] [3]
+LaTeX Font Info:    Try loading font information for OML+cmr on input line 202.
 
 
 (/usr/share/texlive/texmf-dist/tex/latex/base/omlcmr.fd
 File: omlcmr.fd 2014/09/29 v2.5h Standard LaTeX font definitions
 )
 LaTeX Font Info:    Font shape `OML/cmr/m/n' in size <9> not available
-(Font)              Font shape `OML/cmm/m/it' tried instead on input line 193.
-LaTeX Font Info:    Try loading font information for OMS+cmr on input line 193.
+(Font)              Font shape `OML/cmm/m/it' tried instead on input line 202.
+ [4]
+LaTeX Font Info:    Try loading font information for OMS+cmr on input line 235.
 
 
 (/usr/share/texlive/texmf-dist/tex/latex/base/omscmr.fd
 File: omscmr.fd 2014/09/29 v2.5h Standard LaTeX font definitions
 )
 LaTeX Font Info:    Font shape `OMS/cmr/m/n' in size <9> not available
-(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 193.
- [6]
-File: ./moving_mouse_result.png Graphic file (type bmp)
-
-<./moving_mouse_result.png> [7] [8]
-File: ./going_mouse_result.png Graphic file (type bmp)
- <./going_mouse_result.png> [9] [10]
-File: ./sensing_mouse_result.png Graphic file (type bmp)
-
-<./sensing_mouse_result.png> [11] [12]
-File: ./left_sensing_mouse_result.png Graphic file (type bmp)
- <./left_sensing_mouse_result.png>
-[13] [14] [15] [16] [17] [18] [19] [20] (./report.aux)
+(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 235.
+File: ./mms_test.png Graphic file (type bmp)
+ <./mms_test.png>
+[5] [6]
+LaTeX Font Info:    Font shape `JT1/mc/m/n' will be
+(Font)              scaled to size 6.72699pt on input line 266.
+LaTeX Font Info:    Font shape `JY1/mc/m/n' will be
+(Font)              scaled to size 6.72699pt on input line 266.
+ [7] [8] [9] [10] [11] [12] [13] [14] [15] [16] (./report.aux)
 
 LaTeX Warning: There were multiply-defined labels.
 
  ) 
 Here is how much of TeX's memory you used:
- 3480 strings out of 494865
- 45627 string characters out of 6179769
- 296644 words of memory out of 5000000
- 6831 multiletter control sequences out of 15000+600000
- 24094 words of font info for 106 fonts, out of 8000000 for 9000
+ 3452 strings out of 494865
+ 44885 string characters out of 6179769
+ 296590 words of memory out of 5000000
+ 6812 multiletter control sequences out of 15000+600000
+ 23926 words of font info for 105 fonts, out of 8000000 for 9000
  269 hyphenation exceptions out of 8191
- 30i,6n,32p,269b,1600s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 30i,6n,32p,269b,1607s stack positions out of 5000i,500n,10000p,200000b,80000s
 
-Output written on report.dvi (20 pages, 75796 bytes).
+Output written on report.dvi (16 pages, 65744 bytes).

@@ -50,92 +50,287 @@
 %
 \section{この資料について}
 メカニックカモノハシではマイクロマウス大会に参加することでメンバーの技術向上を図ります。
+資料等はgithubに公開しているので、適時ダウンロードしてください。
 
-
-\section{マイクロマウスパッケージの導入}
-
-\subsection{workspaceの作成}
-メカニックカモノハシ用のworkspaceを新たに作りましょう。
-
-\begin{lstlisting}[frame=single, caption=workspaceの作成, label=create_workspace]
-$ mkdir -p ~/mp_ws/src
-$ cd ~/mp_ws/src/
-$ catkin_init_workspace
-$ echo "source ~/mp_ws/devel/setup.bash" >> ~/.bashrc
-\end{lstlisting}
-
-
-\subsection{マイクロマウスパッケージの導入}
-githubから、パッケージをcloneしてcatkin\_makeします。
-\begin{lstlisting}[frame=single, caption=catkin\_make, label=catkin_make]
-$ cd ~/mp_ws/src
+\begin{lstlisting}[frame=single]
 $ git clone https://github.com/platypus5384/micro_mouse.git
-$ cd ~/mp_ws
-$ catkin_ws
-$ source ~/.bashrc
 \end{lstlisting}
 
-以下のコマンドを入力し、ディレクトリを移動できれば成功です。
-\begin{lstlisting}[frame=single, caption=roscd, label=roscd]
-$ roscd micro_mouse
-\end{lstlisting}
+また、PC・Ubuntuの基本操作、vimの基本操作、プログラミング言語の基礎知識（if文・for文・配列等）が
+多少(講義を受けた、１周間くらい使ったことがある程度)を想定しています。
+最初は復習から始めますが、日常生活でも練習しておいてください。
+
+
+\section{動作環境について}
+Ubuntu16.04LTS
+
+ROS Kinetic
+
+での動作を前提としています。
+Ubuntu18.04LTS等でも問題ないと思いますが、ros関連のパッケージ名が違ってくるので注意（kineticをmelodic等に変えるだけなので簡単）
 
 
 \newpage
-
-\section{関連パッケージの導入}
-マイクロマウスパッケージの動作に必要な関連パッケージを導入します。
-以下のコマンドを実行してください。(全部で一行)
-\begin{lstlisting}[frame=single, caption=roscd, label=roscd]
-sudo apt install ros-kinetic-turtlebot ros-kinetic-turtlebot-msgs ros-kinetic-turtlebot-teleop 
-\end{lstlisting}
-
-\section{micro\_mouse動作テスト}
-付いていると思いますが、一応、ファイルに権限を付けます。以下を実行してください。
-\begin{lstlisting}[frame=single, caption=roscd, label=roscd]
-$ roscd micro_mouse/script
-$ sudo chmod -R a+x *
-\end{lstlisting}
-
-シミュレータを起動します。以下のコマンドをそれぞれ別端末で実行してください。
-\begin{lstlisting}[frame=single, caption=roscd, label=roscd]
-$ roslaunch micro_mouse startup.launch
-別の端末を開き、
-$ rosrun micro_mouse left_hund_ex.py
-\end{lstlisting}
-
-
-マウスが動き出し、マッピングが始まれば成功です。
-しばらく待つと、以下のようになります。
-\begin{figure}[h]
-  \begin{center}
-    \includegraphics[width=128mm]{./mms_test.png}
-  \end{center}
-  \caption{}
-  \label{graph3}
-\end{figure}
 
 
 
 
 \section{Exercise}
 \subsection{Python簡易入門}
-簡易的にPython入門しよう。
+Python2.7での動作を想定しています。以下を実行して、2.7.xxxのような出力になれば問題ないです。
+\begin{lstlisting}[frame=single]
+$ python -V
+2.7.12
+\end{lstlisting}
+
+Pythonを学ぶに至っては「Python 入門」等と調べると、
+丁寧でわかりやすいサイトが、たくさん多く出てくるので、
+このPDFではマイクロマウスシミュレータを触りながらPythonを学ぶ事にします。
+
+以下のサイトを見る事を想定して資料を作っています。
+（以降、このサイトを参考サイトと呼びます。ちなみにこのサイトは別に親切な訳では無いです。）
+\begin{lstlisting}[frame=single]
+http://tohoho-web.com/python/index.html
+\end{lstlisting}
 
 \newpage
-\subsection{マウスを動かそう}
+\subsection{マウスシミュレータを起動しよう}
+マウスシミュレータを起動・試運転させましょう。
+それぞれ別のタブで実行してください。
+\begin{lstlisting}[frame=single]
+$ roslaunch micro_mouse start_up.launch
+\end{lstlisting}
+
+実行すると、2つのウィンドウが開き、以下の図\ref{mms_startup}のような画面になります。
+\begin{figure}[h]
+  \begin{center}
+    \includegraphics[width=128mm]{./mms_startup.png}
+  \end{center}
+  \label{mms_startup}
+  \caption{マイクロマウスシミュレータを実行した時の様子}
+\end{figure}
+
+以下の写真のようなウィンドウはマイクロマウスのシミュレータです。
+実際のステージと思って貰って大丈夫です。
+\begin{figure}[h]
+  \begin{center}
+    \includegraphics[width=64mm]{./mms_simulator.png}
+  \end{center}
+  \label{mms_simulator}
+  \caption{マイクロマウスシミュレータ}
+\end{figure}
+
+以下の写真のようなウィンドウはRvizと呼ばれる、情報を可視化するツールです。ROS標準の物です。
+上記のシミュレータに直接書き込むことは出来ないので、こちらに壁や地図等を表示させます。
+実際のロボット開発でも使われており、メカニックカモノハシでも多用します。非常に便利なものなので慣れましょう。
+\begin{figure}[h]
+  \begin{center}
+    \includegraphics[width=100mm]{./mms_rviz.png}
+  \end{center}
+  \label{mms_simulator}
+  \caption{Rviz}
+\end{figure}
+
+
+
+\subsection{マウスシミュレータでマウスを動かそう}
+
+試運転に以下を実行してみましょう。拡張左手法のプログラムです。
+\begin{lstlisting}[frame=single]
+$ rosrun micro_mouse left_hund_ex.py
+\end{lstlisting}
+
+実行するとマウスが動き出し、Rvizに壁やタイルが描画されていきます。
+\begin{figure}[h]
+  \begin{center}
+    \includegraphics[width=128mm]{./mms_test_pause.png}
+  \end{center}
+  \label{mms_simulator}
+  \caption{left\_hund\_ex.pyを実行した直後}
+\end{figure}
+
+せっかくなので、シミュレータの時間停止、加速、減速などを試しましょう。
+以下を試してみてください。（シミュレータのツールバーに載っています）
+\begin{lstlisting}[frame=single]
+p 時間停止・開始
+[ 減速
+] 加速(２倍速以上?にすると脱線します)
+\end{lstlisting}
+
+
+\subsection{マウスシミュレータをリセットしよう}
+まずは、プログラム(rosrun)を中断してください。
+中断したら、以下を実行してください。
+\begin{lstlisting}[frame=single]
+rosservice call /reset_positions
+\end{lstlisting}
+実行するとマウスが初期位置に戻ります。(Rvizは初期化されませんが問題ありません）
+
+
+\newpage
+\subsection{マウスを動かそう１}
+このセクションでは、以下の知識を前提とします（参考サイト参照）。
+\begin{lstlisting}[frame=single]
+[構文]Hello world!(print文)
+\end{lstlisting}
+
+\subsubsection{サンプルプログラムの解説}
+1〜25行目、46〜最終行は、設定のようなものなので無視してください。
+
+
+print("<書きたい文字列>")と書くとTerminal上に表示されます。
+プログラムのどこが実行されているかを知りたい時に使うと良いでしょう。
+
+マウスを移動・回転させる時には、\verb|mouse.move()|を使います。構文は以下の通りです。
+
+また、速度･回転速度制限があり、直進速度は 1[m/s] 、回転速度は π /2 [rad/s] が限界です。
+ROSは右手系なので、正で半時計回りに回転します。
+
+\begin{lstlisting}[frame=single]
+mouse.move( 直進速度 [m/s], 回転速度 [rad/s])
+\end{lstlisting}
 
 \lstinputlisting[caption=micro\_mouse/script/chapter/1/moving\_mouse.py,label=moveing_mouse,numbers=left]{./../../script/chapters/1/moving_mouse.py}
 
+\subsubsection{サンプルプログラムの実行結果}
+実行結果は図\ref{moving_mouse_result}のようになります。
+\begin{figure}[h]
+  \begin{center}
+    \includegraphics[width=128mm]{./moving_mouse_result.png}
+  \end{center}
+  \label{moving_mouse_result}
+  \caption{moving\_mouse\_resultの実行結果}
+\end{figure}
+
+\subsubsection{課題}
+マウスをゴール（右上）まで進ませよう。
+
 
 \newpage
+\subsection{マウスを動かそう2}
+このセクションでは、以下の知識を前提とします（参考サイト参照）。
+\begin{lstlisting}[frame=single]
+[構文]Hello world! <print文>
+[リスト・タプル・辞書]リスト(list)
+[制御構文]もし～ならば(if, else, elsif)
+[制御構文]～のあいだ(for, in)
+[制御構文]ループを抜ける(break)
+\end{lstlisting}
+
+\subsubsection{サンプルプログラムの解説}
+24〜26行目に注目してください。ここでは変数を宣言、代入しています。
+pythonは変数宣言が必要ありませんが、このPDFでは一応明示的に宣言していきます。
+24行目ではリスト(配列変数)を初期化しています。
+25,26行目は使う変数を初期化しています。
+
+35〜45行目に注目してください。
+ここではマウスのプログラムを書いています。
+
+35行目に注目してください。
+for文でaction\_listの各要素をactionに代入しながら、
+36〜44行目を繰り返しています。
+
+36〜43行目に注目してください。
+if文でactionの数に応じて、vlとvrの値を変えています。
+
+44行目に注目してください。
+\verb|mouse.move(vl, vr)|と書く事により、vl,vrによる制御を行っています。
+
+つまり、for文でaction\_listから要素を１つ読み込み、それに応じて動作を行うという事を繰り返しています。
+
+マウスを動かそう１では、
+マウスを指定の位置に移動させる場合、かなりの行数を書かなければなりませんでした。
+これだと比較的短いコード量・労力で済みんじゃないでしょうか。
+また、センサの値によって、vl,vrを変えるようなプログラムを作れば自動化も出来そうです。
+
 \lstinputlisting[caption=micro\_mouse/script/chapter/1/going\_mouse.py,label=going_mouse,numbers=left]{./../../script/chapters/1/going_mouse.py}
 
+\subsubsection{サンプルプログラムの実行結果}
+実行結果は図\ref{going_mouse_result}のようになります。
+\begin{figure}[h]
+  \begin{center}
+    \includegraphics[width=64mm]{./going_mouse_result.png}
+  \end{center}
+  \label{going_mouse_result}
+  \caption{going\_mouse\_resultの実行結果}
+\end{figure}
+
+\subsubsection{課題}
+マウスをゴール（右上）まで進ませよう。
+１つ前のセクションよりも、ずっと楽なはずです。
+
 
 \newpage
+\subsection{マウスのセンサを扱おう}
+このセクションでは、以下の知識を前提とします（参考サイト参照）。
+\begin{lstlisting}[frame=single]
+[構文]Hello world! <print文>
+[リスト・タプル・辞書]リスト(list)
+[制御構文]もし～ならば(if, else, elsif)
+[制御構文]～のあいだ(for, in)
+\end{lstlisting}
+
+\subsubsection{サンプルプログラムの解説}
+26行目に注目してください。センサのための変数を定義しています。\\
+このように書くと、[0, 0, 0, 0, 0]というような変数を確保できます。
+37行目に注目してください。mouse.sensorという配列変数にそれぞれの距離センサ値[m]が格納されています。
+右辺式では、センサ値が1.0[m]以下かを判定しています
+1.0[m]未満ならTrue( 1)、1.0[m]以上ならFalse( 0)が帰ってくるので、
+以降、壁があるなら1、無いなら0、と簡単に考えることが出来ます。
+
+42行目と45に注目してください。sensor[2]==0 (壁がない)時と、else(壁がある無い、ではない時)で処理を書いています。
+
+
+\begin{lstlisting}[frame=single]
+mouse.sensor[ <管理番号> ]
+管理番号は18〜22行目を参考にしてください。
+L:左、R:右、F:前、FL:左前, FR:右前　です
+\end{lstlisting}
+
+
 \lstinputlisting[caption=micro\_mouse/script/chapter/1/sensing\_mouse.py,label=sensing_mouse,numbers=left]{./../../script/chapters/1/sensing_mouse.py}
 
+\subsubsection{サンプルプログラムの実行結果}
+実行結果は図\ref{sensing_mouse_result}のようになります。
+\begin{figure}[h]
+  \begin{center}
+    \includegraphics[width=128mm]{./sensing_mouse_result.png}
+  \end{center}
+  \label{sensing_mouse_result}
+  \caption{sensing\_mouse\_resultの実行結果}
+\end{figure}
 
+\subsubsection{課題}
+左に壁がない時、右に壁がない時を検知しよう(print等で)
+
+
+
+\newpage
+\subsection{左手法で探索しよう}
+このセクションでは、以下の知識を前提とします（参考サイト参照）。
+\begin{lstlisting}[frame=single]
+[リスト・タプル・辞書]リスト(list)
+[制御構文]もし～ならば(if, else, elsif)
+[制御構文]～のあいだ(for, in)
+\end{lstlisting}
+
+\subsubsection{サンプルプログラムの解説}
+特にありません。今までのセクションを参考にしてください。
+\lstinputlisting[caption=micro\_mouse/script/chapter/1/left\_sensing\_mouse.py,label=left_sensing_mouse,numbers=left]{./../../script/chapters/1/left_sensing_mouse.py}
+
+\subsubsection{サンプルプログラムの実行結果}
+実行結果は図\ref{left_sensing_mouse_result}のようになります。
+\begin{figure}[h]
+  \begin{center}
+    \includegraphics[width=64mm]{./left_sensing_mouse_result.png}
+  \end{center}
+  \label{left_sensing_mouse_result}
+  \caption{left\_sensing\_mouse\_resultの実行結果}
+\end{figure}
+
+\subsubsection{課題}
+右手法も作ってみよう。
+また、左・右手法には欠陥があります(ある壁配置だとで全探索が出来ない)。考えよう
 
 
 \newpage

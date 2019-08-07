@@ -27,11 +27,19 @@ if __name__ == '__main__': # int main()みたいな
   #-----ロボットを動かす-----
       # mouse.move( 直進速度[ m/s], 回転速度[ rad/s])
       # 直進速度は 1[m/s]、回転速度は π /2 [ rad/s]が限界です。
+      print("-------------------")
+      print("マウス動きます。")
+      print("マウス１マス前進します。")
       mouse.move(  1, 0.0)
-      mouse.move(0.0,  2 * math.pi/2)
+      print("マウス９０度回転します。")
+      mouse.move(0.0,  1 * math.pi/2)
+      print("マウス１マス前進します。")
       mouse.move(  1, 0.0)
+      print("マウス１マス後退します。")
       mouse.move( -1, 0.0)
+      print("マウス-９０度回転します。")
       mouse.move(0.0, -1 * math.pi/2)
+      print("マウス１マス後退します。")
       mouse.move( -1, 0.0)
 
 #-----ここまで-----
