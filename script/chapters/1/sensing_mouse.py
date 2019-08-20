@@ -11,7 +11,6 @@ import rospy  # include<ros/ros.h>のようなもの
 
 import mouse
 
-
 if __name__ == '__main__': # int main()みたいな
   rospy.init_node("node_name") # ノード設定
 
@@ -38,14 +37,12 @@ if __name__ == '__main__': # int main()みたいな
   #-----ロボットを動かす-----
       # mouse.move( 直進速度[ m/s], 回転速度[ rad/s])
       # 直進速度は 1[m/s]、回転速度は π /2 [ rad/s]が限界です。
-
       if sensor[ 2] == 0:
         print("壁がない、前に進もう")
         mouse.move(  1,  0.0)
       else:
         print("壁がある、左回転しよう")
         mouse.move(  0,  math.pi/2)
-
 #-----ここまで-----
       loop.sleep() # 10[loop/s]になるよう調整する。
   except KeyboardInterrupt: # 実行中(try:中)にCTRL-Cが押されればプログラムが終了する

@@ -1,4 +1,4 @@
-This is e-pTeX, Version 3.14159265-p3.6-141210-2.6 (utf8.euc) (TeX Live 2015/Debian) (preloaded format=platex 2019.4.20)  19 AUG 2019 20:38
+This is e-pTeX, Version 3.14159265-p3.6-141210-2.6 (utf8.euc) (TeX Live 2015/Debian) (preloaded format=platex 2019.4.20)  21 AUG 2019 00:15
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -206,10 +206,10 @@ Package: jlisting 2006/02/20 0.2 (Thor)
 \lst@inputfile=\read1
 ) (./report.aux
 
-LaTeX Warning: Label `roscd' multiply defined.
+LaTeX Warning: Label `wall' multiply defined.
 
 
-LaTeX Warning: Label `roscd' multiply defined.
+LaTeX Warning: Label `path' multiply defined.
 
 )
 \openout1 = `report.aux'.
@@ -264,60 +264,78 @@ LaTeX Font Info:    Font shape `JT1/gt/m/n' will be
 (Font)              scaled to size 13.83836pt on input line 51.
 LaTeX Font Info:    Font shape `JY1/gt/m/n' will be
 (Font)              scaled to size 13.83836pt on input line 51.
+LaTeX Font Info:    Font shape `JT1/gt/m/n' will be
+(Font)              scaled to size 11.53198pt on input line 52.
+LaTeX Font Info:    Try loading font information for OMS+cmr on input line 56.
+
+(/usr/share/texlive/texmf-dist/tex/latex/base/omscmr.fd
+File: omscmr.fd 2014/09/29 v2.5h Standard LaTeX font definitions
+)
+LaTeX Font Info:    Font shape `OMS/cmr/m/n' in size <10> not available
+(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 56.
+LaTeX Font Info:    Font shape `JT1/gt/m/n' will be
+(Font)              scaled to size 9.60999pt on input line 59.
+LaTeX Font Info:    Font shape `JY1/gt/m/n' will be
+(Font)              scaled to size 9.60999pt on input line 59.
 LaTeX Font Info:    Font shape `JT1/mc/m/n' will be
-(Font)              scaled to size 8.64899pt on input line 55.
+(Font)              scaled to size 8.64899pt on input line 86.
 LaTeX Font Info:    Font shape `JY1/mc/m/n' will be
-(Font)              scaled to size 8.64899pt on input line 55.
+(Font)              scaled to size 8.64899pt on input line 86.
+LaTeX Font Info:    Font shape `JT1/mc/m/n' will be
+(Font)              scaled to size 6.72699pt on input line 86.
+LaTeX Font Info:    Font shape `JY1/mc/m/n' will be
+(Font)              scaled to size 6.72699pt on input line 86.
+LaTeX Font Info:    Font shape `JY1/mc/m/n' will be
+(Font)              scaled to size 4.805pt on input line 86.
+LaTeX Font Info:    Font shape `JY1/gt/m/n' will be
+(Font)              scaled to size 8.64899pt on input line 86.
+LaTeX Font Info:    Font shape `JY1/gt/m/n' will be
+(Font)              scaled to size 4.805pt on input line 86.
  [1
 
 ]
-LaTeX Font Info:    Font shape `JT1/gt/m/n' will be
-(Font)              scaled to size 11.53198pt on input line 82.
-LaTeX Font Info:    Font shape `JT1/gt/m/n' will be
-(Font)              scaled to size 9.60999pt on input line 85.
-LaTeX Font Info:    Font shape `JY1/gt/m/n' will be
-(Font)              scaled to size 9.60999pt on input line 85.
-LaTeX Font Info:    Font shape `JY1/mc/m/n' will be
-(Font)              scaled to size 4.805pt on input line 104.
-LaTeX Font Info:    Font shape `JY1/gt/m/n' will be
-(Font)              scaled to size 8.64899pt on input line 104.
-LaTeX Font Info:    Font shape `JY1/gt/m/n' will be
-(Font)              scaled to size 4.805pt on input line 104.
- [2] [3]
-LaTeX Font Info:    Try loading font information for OML+cmr on input line 202.
-
+LaTeX Font Info:    Try loading font information for OML+cmr on input line 86.
 
 (/usr/share/texlive/texmf-dist/tex/latex/base/omlcmr.fd
 File: omlcmr.fd 2014/09/29 v2.5h Standard LaTeX font definitions
 )
 LaTeX Font Info:    Font shape `OML/cmr/m/n' in size <9> not available
-(Font)              Font shape `OML/cmm/m/it' tried instead on input line 202.
- [4]
-LaTeX Font Info:    Try loading font information for OMS+cmr on input line 235.
-
-
-(/usr/share/texlive/texmf-dist/tex/latex/base/omscmr.fd
-File: omscmr.fd 2014/09/29 v2.5h Standard LaTeX font definitions
-)
+(Font)              Font shape `OML/cmm/m/it' tried instead on input line 86.
 LaTeX Font Info:    Font shape `OMS/cmr/m/n' in size <9> not available
-(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 235.
-File: ./mms_test.png Graphic file (type bmp)
- <./mms_test.png>
+(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 86.
+ [2]
+LaTeX Font Info:    Font shape `JY1/gt/m/n' will be
+(Font)              scaled to size 6.72699pt on input line 104.
+ [3]
+File: ./wall_publisher.png Graphic file (type bmp)
 
-LaTeX Warning: Empty `thebibliography' environment on input line 257.
+<./wall_publisher.png>
+Overfull \hbox (19.92897pt too wide) in paragraph at lines 125--127
+[][]
+ []
 
-[5] (./report.aux)
+[4]
+File: ./path_publisher.png Graphic file (type bmp)
+ <./path_publisher.png>
+Overfull \hbox (19.92897pt too wide) in paragraph at lines 156--158
+[][]
+ []
+
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+[5] [6] (./report.aux)
 
 LaTeX Warning: There were multiply-defined labels.
 
  ) 
 Here is how much of TeX's memory you used:
- 3436 strings out of 494865
- 44679 string characters out of 6179769
- 183540 words of memory out of 5000000
- 6804 multiletter control sequences out of 15000+600000
- 23645 words of font info for 103 fonts, out of 8000000 for 9000
+ 3458 strings out of 494865
+ 44995 string characters out of 6179769
+ 217543 words of memory out of 5000000
+ 6817 multiletter control sequences out of 15000+600000
+ 26776 words of font info for 117 fonts, out of 8000000 for 9000
  269 hyphenation exceptions out of 8191
- 27i,6n,32p,228b,1607s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 32i,9n,32p,228b,1602s stack positions out of 5000i,500n,10000p,200000b,80000s
 
-Output written on report.dvi (5 pages, 20784 bytes).
+Output written on report.dvi (6 pages, 23080 bytes).

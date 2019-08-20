@@ -1,8 +1,4 @@
-<<<<<<< HEAD
-This is e-pTeX, Version 3.14159265-p3.6-141210-2.6 (utf8.euc) (TeX Live 2015/Debian) (preloaded format=platex 2019.4.20)  7 AUG 2019 10:14
-=======
-This is e-pTeX, Version 3.14159265-p3.6-141210-2.6 (utf8.euc) (TeX Live 2015/Debian) (preloaded format=platex 2019.7.19)  19 JUL 2019 16:29
->>>>>>> origin/master
+This is e-pTeX, Version 3.14159265-p3.6-141210-2.6 (utf8.euc) (TeX Live 2015/Debian) (preloaded format=platex 2019.4.20)  20 AUG 2019 20:50
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -200,6 +196,8 @@ File: lstmisc.sty 2015/06/04 1.6 (Carsten Heinz)
 \c@lstnumber=\count109
 \lst@skipnumbers=\count110
 \lst@framebox=\box52
+) (/usr/share/texlive/texmf-dist/tex/latex/listings/listings.cfg
+File: listings.cfg 2015/06/04 1.6 listings configuration
 ))
 Package: listings 2015/06/04 1.6 (Carsten Heinz)
  (./jlisting.sty
@@ -216,120 +214,125 @@ LaTeX Warning: Label `mms_simulator' multiply defined.
 )
 \openout1 = `report.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 47.
-LaTeX Font Info:    ... okay on input line 47.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 47.
-LaTeX Font Info:    ... okay on input line 47.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 47.
-LaTeX Font Info:    ... okay on input line 47.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 47.
-LaTeX Font Info:    ... okay on input line 47.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 47.
-LaTeX Font Info:    ... okay on input line 47.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 47.
-LaTeX Font Info:    ... okay on input line 47.
-LaTeX Font Info:    Checking defaults for JY1/mc/m/n on input line 47.
-LaTeX Font Info:    ... okay on input line 47.
-LaTeX Font Info:    Checking defaults for JT1/mc/m/n on input line 47.
-LaTeX Font Info:    ... okay on input line 47.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 46.
+LaTeX Font Info:    ... okay on input line 46.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 46.
+LaTeX Font Info:    ... okay on input line 46.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 46.
+LaTeX Font Info:    ... okay on input line 46.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 46.
+LaTeX Font Info:    ... okay on input line 46.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 46.
+LaTeX Font Info:    ... okay on input line 46.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 46.
+LaTeX Font Info:    ... okay on input line 46.
+LaTeX Font Info:    Checking defaults for JY1/mc/m/n on input line 46.
+LaTeX Font Info:    ... okay on input line 46.
+LaTeX Font Info:    Checking defaults for JT1/mc/m/n on input line 46.
+LaTeX Font Info:    ... okay on input line 46.
 \c@lstlisting=\count112
 LaTeX Font Info:    Font shape `JT1/mc/m/n' will be
-(Font)              scaled to size 16.60605pt on input line 48.
+(Font)              scaled to size 16.60605pt on input line 47.
 LaTeX Font Info:    Font shape `JY1/mc/m/n' will be
-(Font)              scaled to size 16.60605pt on input line 48.
+(Font)              scaled to size 16.60605pt on input line 47.
 LaTeX Font Info:    Font shape `JT1/mc/m/n' will be
-(Font)              scaled to size 11.53198pt on input line 48.
+(Font)              scaled to size 11.53198pt on input line 47.
 LaTeX Font Info:    Font shape `JY1/mc/m/n' will be
-(Font)              scaled to size 11.53198pt on input line 48.
+(Font)              scaled to size 11.53198pt on input line 47.
 LaTeX Font Info:    Font shape `JY1/mc/m/n' will be
-(Font)              scaled to size 5.76599pt on input line 48.
-LaTeX Font Info:    Try loading font information for U+msa on input line 48.
+(Font)              scaled to size 5.76599pt on input line 47.
+LaTeX Font Info:    Try loading font information for U+msa on input line 47.
  (/usr/share/texlive/texmf-dist/tex/latex/amsfonts/umsa.fd
 File: umsa.fd 2013/01/14 v3.01 AMS symbols A
 )
-LaTeX Font Info:    Try loading font information for U+msb on input line 48.
+LaTeX Font Info:    Try loading font information for U+msb on input line 47.
 
 (/usr/share/texlive/texmf-dist/tex/latex/amsfonts/umsb.fd
 File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 )
 LaTeX Font Info:    Font shape `JY1/gt/m/n' will be
-(Font)              scaled to size 11.53198pt on input line 48.
+(Font)              scaled to size 11.53198pt on input line 47.
 LaTeX Font Info:    Font shape `JY1/gt/m/n' will be
-(Font)              scaled to size 7.68799pt on input line 48.
+(Font)              scaled to size 7.68799pt on input line 47.
 LaTeX Font Info:    Font shape `JY1/gt/m/n' will be
-(Font)              scaled to size 5.76599pt on input line 48.
+(Font)              scaled to size 5.76599pt on input line 47.
 
 
 LaTeX Warning: No \author given.
 
 LaTeX Font Info:    Font shape `JT1/mc/m/n' will be
-(Font)              scaled to size 13.83836pt on input line 51.
+(Font)              scaled to size 13.83836pt on input line 50.
 LaTeX Font Info:    Font shape `JY1/mc/m/n' will be
-(Font)              scaled to size 13.83836pt on input line 51.
+(Font)              scaled to size 13.83836pt on input line 50.
 LaTeX Font Info:    Font shape `JT1/gt/m/n' will be
-(Font)              scaled to size 13.83836pt on input line 51.
+(Font)              scaled to size 13.83836pt on input line 50.
 LaTeX Font Info:    Font shape `JY1/gt/m/n' will be
-(Font)              scaled to size 13.83836pt on input line 51.
+(Font)              scaled to size 13.83836pt on input line 50.
 LaTeX Font Info:    Font shape `JT1/mc/m/n' will be
-(Font)              scaled to size 8.64899pt on input line 55.
+(Font)              scaled to size 8.64899pt on input line 54.
 LaTeX Font Info:    Font shape `JY1/mc/m/n' will be
-(Font)              scaled to size 8.64899pt on input line 55.
+(Font)              scaled to size 8.64899pt on input line 54.
+LaTeX Font Info:    Try loading font information for OMS+cmr on input line 65.
+(/usr/share/texlive/texmf-dist/tex/latex/base/omscmr.fd
+File: omscmr.fd 2014/09/29 v2.5h Standard LaTeX font definitions
+)
+LaTeX Font Info:    Font shape `OMS/cmr/m/n' in size <10> not available
+(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 65.
+LaTeX Font Info:    Font shape `JT1/gt/m/n' will be
+(Font)              scaled to size 11.53198pt on input line 74.
+LaTeX Font Info:    Font shape `JY1/mc/m/n' will be
+(Font)              scaled to size 4.805pt on input line 77.
+LaTeX Font Info:    Font shape `JY1/gt/m/n' will be
+(Font)              scaled to size 8.64899pt on input line 77.
+LaTeX Font Info:    Font shape `JY1/gt/m/n' will be
+(Font)              scaled to size 4.805pt on input line 77.
  [1
 
 ]
-LaTeX Font Info:    Font shape `JT1/gt/m/n' will be
-(Font)              scaled to size 11.53198pt on input line 79.
-LaTeX Font Info:    Font shape `JY1/mc/m/n' will be
-(Font)              scaled to size 4.805pt on input line 82.
-LaTeX Font Info:    Font shape `JY1/gt/m/n' will be
-(Font)              scaled to size 8.64899pt on input line 82.
-LaTeX Font Info:    Font shape `JY1/gt/m/n' will be
-(Font)              scaled to size 4.805pt on input line 82.
- [2]
 File: ./mms_startup.png Graphic file (type bmp)
 
 <./mms_startup.png>
 File: ./mms_simulator.png Graphic file (type bmp)
  <./mms_simulator.png>
 File: ./mms_rviz.png Graphic file (type bmp)
- <./mms_rviz.png> [3]
+ <./mms_rviz.png> [2]
 File: ./mms_test_pause.png Graphic file (type bmp)
 
-<./mms_test_pause.png> [4] [5]
+<./mms_test_pause.png>
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
 LaTeX Font Info:    Font shape `JT1/gt/m/n' will be
-(Font)              scaled to size 9.60999pt on input line 177.
+(Font)              scaled to size 9.60999pt on input line 171.
 LaTeX Font Info:    Font shape `JY1/gt/m/n' will be
-<<<<<<< HEAD
-(Font)              scaled to size 9.60999pt on input line 177.
+(Font)              scaled to size 9.60999pt on input line 171.
+[3]
+File: ./sequential.png Graphic file (type bmp)
+ <./sequential.png>
+LaTeX Font Info:    Font shape `JY1/mc/m/n' will be
+(Font)              scaled to size 6.72699pt on input line 196.
+LaTeX Font Info:    Font shape `JY1/gt/m/n' will be
+(Font)              scaled to size 6.72699pt on input line 196.
+File: ./choose.png Graphic file (type bmp)
+ <./choose.png>
+File: ./repetition.png Graphic file (type bmp)
+ <./repetition.png> [4] [5]
 Missing character: There is no ^^ef in font cmr10!
 Missing character: There is no ^^bd in font cmr10!
 Missing character: There is no ^^a5 in font cmr10!
 LaTeX Font Info:    Font shape `JT1/mc/m/n' will be
-(Font)              scaled to size 6.72699pt on input line 193.
-LaTeX Font Info:    Font shape `JY1/mc/m/n' will be
-(Font)              scaled to size 6.72699pt on input line 193.
-LaTeX Font Info:    Try loading font information for OML+cmr on input line 193.
+(Font)              scaled to size 6.72699pt on input line 241.
+LaTeX Font Info:    Try loading font information for OML+cmr on input line 241.
 
 
-=======
-(Font)              scaled to size 4.805pt on input line 61.
-LaTeX Font Info:    Try loading font information for OML+cmr on input line 64.
->>>>>>> origin/master
 (/usr/share/texlive/texmf-dist/tex/latex/base/omlcmr.fd
 File: omlcmr.fd 2014/09/29 v2.5h Standard LaTeX font definitions
 )
 LaTeX Font Info:    Font shape `OML/cmr/m/n' in size <9> not available
-(Font)              Font shape `OML/cmm/m/it' tried instead on input line 193.
-LaTeX Font Info:    Try loading font information for OMS+cmr on input line 193.
-
-
-(/usr/share/texlive/texmf-dist/tex/latex/base/omscmr.fd
-File: omscmr.fd 2014/09/29 v2.5h Standard LaTeX font definitions
-)
-LaTeX Font Info:    Font shape `OMS/cmr/m/n' in size <9> not available
-<<<<<<< HEAD
-(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 193.
+(Font)              Font shape `OML/cmm/m/it' tried instead on input line 241.
  [6]
+LaTeX Font Info:    Font shape `OMS/cmr/m/n' in size <9> not available
+(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 241.
 File: ./moving_mouse_result.png Graphic file (type bmp)
 
 <./moving_mouse_result.png> [7] [8]
@@ -340,55 +343,22 @@ File: ./sensing_mouse_result.png Graphic file (type bmp)
 <./sensing_mouse_result.png> [11] [12]
 File: ./left_sensing_mouse_result.png Graphic file (type bmp)
  <./left_sensing_mouse_result.png>
-[13] [14] [15] [16] [17] [18] [19] [20] (./report.aux)
-=======
-(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 97.
-File: ./mms_test.png Graphic file (type bmp)
- <./mms_test.png>
-LaTeX Font Info:    Font shape `JT1/gt/m/n' will be
-(Font)              scaled to size 9.60999pt on input line 124.
-LaTeX Font Info:    Font shape `JY1/gt/m/n' will be
-(Font)              scaled to size 9.60999pt on input line 124.
+[13] [14] [15] [16] [17] [18] [19] [20]
 
-[2]
-File: ./sequential.png Graphic file (type bmp)
- <./sequential.png>
-LaTeX Font Info:    Font shape `JY1/mc/m/n' will be
-(Font)              scaled to size 6.72699pt on input line 149.
-LaTeX Font Info:    Font shape `JY1/gt/m/n' will be
-(Font)              scaled to size 6.72699pt on input line 149.
-File: ./choose.png Graphic file (type bmp)
- <./choose.png>
-File: ./repetition.png Graphic file (type bmp)
- <./repetition.png> [3]
-LaTeX Font Info:    Font shape `JT1/mc/m/n' will be
-(Font)              scaled to size 6.72699pt on input line 181.
- [4] [5] [6]
-[7] [8] [9] [10] [11] [12] [13] [14] (./report.aux)
->>>>>>> origin/master
+LaTeX Warning: Empty `thebibliography' environment on input line 429.
+
+[21] (./report.aux)
 
 LaTeX Warning: There were multiply-defined labels.
 
  ) 
 Here is how much of TeX's memory you used:
-<<<<<<< HEAD
- 3480 strings out of 494865
- 45627 string characters out of 6179769
- 296644 words of memory out of 5000000
- 6831 multiletter control sequences out of 15000+600000
- 24094 words of font info for 106 fonts, out of 8000000 for 9000
-=======
- 3457 strings out of 494865
- 44905 string characters out of 6179769
- 296372 words of memory out of 5000000
- 6812 multiletter control sequences out of 15000+600000
+ 3509 strings out of 494865
+ 46061 string characters out of 6179769
+ 321657 words of memory out of 5000000
+ 6852 multiletter control sequences out of 15000+600000
  27081 words of font info for 118 fonts, out of 8000000 for 9000
->>>>>>> origin/master
  269 hyphenation exceptions out of 8191
- 30i,6n,32p,269b,1598s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 30i,6n,32p,269b,1588s stack positions out of 5000i,500n,10000p,200000b,80000s
 
-<<<<<<< HEAD
-Output written on report.dvi (20 pages, 75796 bytes).
-=======
-Output written on report.dvi (14 pages, 55880 bytes).
->>>>>>> origin/master
+Output written on report.dvi (21 pages, 85136 bytes).

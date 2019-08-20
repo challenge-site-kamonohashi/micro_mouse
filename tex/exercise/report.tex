@@ -14,7 +14,6 @@
   keywordstyle={\small\bfseries},%
   ndkeywordstyle={\small},%
   stringstyle={\small\ttfamily},
-  frame={tb},
   breaklines=true,
   columns=[l]{fullflexible},%
   numbers=none,%
@@ -62,22 +61,18 @@ $ git clone https://github.com/platypus5384/micro_mouse.git
 
 
 \section{動作環境について}
-Ubuntu16.04LTS
-
-ROS Kinetic
+\begin{itemize}
+\item{} Ubuntu16.04LTS
+\item{} ROS Kinetic
+\end{itemize}
 
 での動作を前提としています。
 Ubuntu18.04LTS等でも問題ないと思いますが、ros関連のパッケージ名が違ってくるので注意（kineticをmelodic等に変えるだけなので簡単）
 
 
-\newpage
-
-
-
-
 \section{Exercise}
 \subsection{Python簡易入門}
-Python2.7での動作を想定しています。以下を実行して、2.7.xxxのような出力になれば問題ないです。
+Python2.7での動作を想定しています。以下を実行し、2.7.xxxのような出力になれば問題ありません。
 \begin{lstlisting}[frame=single]
 $ python -V
 2.7.12
@@ -86,7 +81,6 @@ $ python -V
 Pythonを学ぶに至っては「Python 入門」等と調べると、
 丁寧でわかりやすいサイトが、たくさん多く出てくるので、
 このPDFではマイクロマウスシミュレータを触りながらPythonを学ぶ事にします。
-
 以下のサイトを見る事を想定して資料を作っています。
 （以降、このサイトを参考サイトと呼びます。ちなみにこのサイトは別に親切な訳では無いです。）
 \begin{lstlisting}[frame=single]
@@ -140,33 +134,27 @@ $ roslaunch micro_mouse start_up.launch
 $ rosrun micro_mouse left_hund_ex.py
 \end{lstlisting}
 
-<<<<<<< HEAD
 実行するとマウスが動き出し、Rvizに壁やタイルが描画されていきます。
-=======
 
 ロボットが動き出し、マッピングが始まれば成功です。
 しばらく待つと、以下のようになります。
->>>>>>> origin/master
 \begin{figure}[h]
   \begin{center}
     \includegraphics[width=128mm]{./mms_test_pause.png}
   \end{center}
-<<<<<<< HEAD
   \label{mms_simulator}
   \caption{left\_hund\_ex.pyを実行した直後}
-=======
   \caption{}
   \label{test}
->>>>>>> origin/master
 \end{figure}
 
 せっかくなので、シミュレータの時間停止、加速、減速などを試しましょう。
 以下を試してみてください。（シミュレータのツールバーに載っています）
-\begin{lstlisting}[frame=single]
-p 時間停止・開始
-[ 減速
-] 加速(２倍速以上?にすると脱線します)
-\end{lstlisting}
+\begin{itemize}
+\item{ p} 時間停止・開始
+\item{ [} 減速
+\item{ ]}加速(２倍速以上?にすると脱線します)
+\end{itemize}
 
 
 \subsection{マウスシミュレータをリセットしよう}
@@ -177,8 +165,6 @@ rosservice call /reset_positions
 \end{lstlisting}
 実行するとマウスが初期位置に戻ります。(Rvizは初期化されませんが問題ありません）
 
-<<<<<<< HEAD
-=======
 \section{Exercise}
 \subsection{Python簡易入門}
 簡易的にPython入門しよう。
@@ -227,24 +213,6 @@ rosservice call /reset_positions
 Pythonでプログラミングする際の基礎要素を解説します。Python2.7で実行するのを前提にしますが、Python3系で実行しても問題はないでしょう。
 また、構文など多少の差異はありますが、C言語やJava、その他言語でも同じような感じです。
 
-\subsubsection{変数}
-変数とは数字や文字（内部的には数字）を管理する箱のような物です。
-
-\subsubsection{print文}
-\subsubsection{if文}
-\subsubsection{リスト(配列変数)}
-\subsubsection{for文}
-\subsubsection{演習}
-
-
-
-
-\subsubsection{順次}
-順次とは上から下に処理をしていくという事でした。
-次のスクリプトを実行してください。
-\lstinputlisting[caption=micro\_mouse/script/chapter/0/sequential.py,label=sequential,numbers=left]{./../../script/chapters/0/sequential.py}
-
->>>>>>> origin/master
 
 \newpage
 \subsection{マウスを動かそう１}
@@ -254,16 +222,17 @@ Pythonでプログラミングする際の基礎要素を解説します。Pytho
 \end{lstlisting}
 
 \subsubsection{サンプルプログラムの解説}
+\begin{itemize}
+\item{}
 1〜25行目、46〜最終行は、設定のようなものなので無視してください。
-
-
-print("<書きたい文字列>")と書くとTerminal上に表示されます。
+\item{}
+print("書きたい文字列")と書くとTerminal上に表示されます。
 プログラムのどこが実行されているかを知りたい時に使うと良いでしょう。
-
+\item{}
 マウスを移動・回転させる時には、\verb|mouse.move()|を使います。構文は以下の通りです。
-
 また、速度･回転速度制限があり、直進速度は 1[m/s] 、回転速度は π /2 [rad/s] が限界です。
 ROSは右手系なので、正で半時計回りに回転します。
+\end{itemize}
 
 \begin{lstlisting}[frame=single]
 mouse.move( 直進速度 [m/s], 回転速度 [rad/s])
@@ -297,30 +266,34 @@ mouse.move( 直進速度 [m/s], 回転速度 [rad/s])
 \end{lstlisting}
 
 \subsubsection{サンプルプログラムの解説}
-24〜26行目に注目してください。ここでは変数を宣言、代入しています。
+\begin{itemize}
+\item{}
+22〜24行目に注目してください。ここでは変数を宣言、代入しています。
 pythonは変数宣言が必要ありませんが、このPDFでは一応明示的に宣言していきます。
-24行目ではリスト(配列変数)を初期化しています。
-25,26行目は使う変数を初期化しています。
-
-35〜45行目に注目してください。
+\item{}
+22行目ではリスト(配列変数)を初期化しています。
+\item{}
+23,24行目は使う変数を初期化しています。
+\item{}
+33〜43行目に注目してください。
 ここではマウスのプログラムを書いています。
-
-35行目に注目してください。
+\item{}
+33行目に注目してください。
 for文でaction\_listの各要素をactionに代入しながら、
-36〜44行目を繰り返しています。
-
-36〜43行目に注目してください。
+34〜42行目を繰り返しています。
+\item{}
+34〜41行目に注目してください。
 if文でactionの数に応じて、vlとvrの値を変えています。
-
-44行目に注目してください。
+\item{}
+42行目に注目してください。
 \verb|mouse.move(vl, vr)|と書く事により、vl,vrによる制御を行っています。
-
 つまり、for文でaction\_listから要素を１つ読み込み、それに応じて動作を行うという事を繰り返しています。
-
+\item{}
 マウスを動かそう１では、
 マウスを指定の位置に移動させる場合、かなりの行数を書かなければなりませんでした。
 これだと比較的短いコード量・労力で済みんじゃないでしょうか。
-また、センサの値によって、vl,vrを変えるようなプログラムを作れば自動化も出来そうです。
+また、センサ値によってvl,vrを変えるようなプログラムを作れば自動化も出来そうです。
+\end{itemize}
 
 \lstinputlisting[caption=micro\_mouse/script/chapter/1/going\_mouse.py,label=going_mouse,numbers=left]{./../../script/chapters/1/going_mouse.py}
 
@@ -328,7 +301,7 @@ if文でactionの数に応じて、vlとvrの値を変えています。
 実行結果は図\ref{going_mouse_result}のようになります。
 \begin{figure}[h]
   \begin{center}
-    \includegraphics[width=64mm]{./going_mouse_result.png}
+    \includegraphics[width=50mm]{./going_mouse_result.png}
   \end{center}
   \label{going_mouse_result}
   \caption{going\_mouse\_resultの実行結果}
@@ -350,15 +323,18 @@ if文でactionの数に応じて、vlとvrの値を変えています。
 \end{lstlisting}
 
 \subsubsection{サンプルプログラムの解説}
-26行目に注目してください。センサのための変数を定義しています。\\
+\begin{itemize}
+\item{}
+25行目に注目してください。センサのための変数を定義しています。\\
 このように書くと、[0, 0, 0, 0, 0]というような変数を確保できます。
-37行目に注目してください。mouse.sensorという配列変数にそれぞれの距離センサ値[m]が格納されています。
+\item{}
+36行目に注目してください。mouse.sensorという配列変数にそれぞれの距離センサ値[m]が格納されています。
 右辺式では、センサ値が1.0[m]以下かを判定しています
 1.0[m]未満ならTrue( 1)、1.0[m]以上ならFalse( 0)が帰ってくるので、
 以降、壁があるなら1、無いなら0、と簡単に考えることが出来ます。
-
-42行目と45に注目してください。sensor[2]==0 (壁がない)時と、else(壁がある無い、ではない時)で処理を書いています。
-
+\item{}
+40,43行目に注目してください。sensor[2]==0 (壁がない)時と、else(壁がある無い、ではない時)で処理を書いています。
+\end{itemize}
 
 \begin{lstlisting}[frame=single]
 mouse.sensor[ <管理番号> ]
@@ -366,14 +342,13 @@ mouse.sensor[ <管理番号> ]
 L:左、R:右、F:前、FL:左前, FR:右前　です
 \end{lstlisting}
 
-
 \lstinputlisting[caption=micro\_mouse/script/chapter/1/sensing\_mouse.py,label=sensing_mouse,numbers=left]{./../../script/chapters/1/sensing_mouse.py}
 
 \subsubsection{サンプルプログラムの実行結果}
 実行結果は図\ref{sensing_mouse_result}のようになります。
 \begin{figure}[h]
   \begin{center}
-    \includegraphics[width=128mm]{./sensing_mouse_result.png}
+    \includegraphics[width=100mm]{./sensing_mouse_result.png}
   \end{center}
   \label{sensing_mouse_result}
   \caption{sensing\_mouse\_resultの実行結果}
@@ -414,6 +389,7 @@ L:左、R:右、F:前、FL:左前, FR:右前　です
 
 \newpage
 \subsection{wallPublisherを使いこなそう}
+\lstinputlisting[caption=micro\_mouse/script/chapter/2/wall\_publisher.py,label=wall_publisher,numbers=left]{./../../script/chapters/2/wall_publisher.py}
 
 
 
@@ -450,8 +426,6 @@ L:左、R:右、F:前、FL:左前, FR:右前　です
 
 
 \begin{thebibliography}{99}
-\bibitem{install_ubuntu16} Windows10とUbuntu16.04のデュアルブート環境構築\\https://qiita.com/medalotte/items/4bb5cfa709e93d044f1c
-\bibitem{install_ubuntu18} Windows10とUbuntu18.04をデュアルブートする.\\https://qiita.com/yo\_kanyukari/items/2a944a300db22482c696
 \end{thebibliography}%
 %
 \end{document}

@@ -8,9 +8,7 @@ sys.path.append(pk_path + '/script/lib')
 
 import math
 import rospy  # include<ros/ros.h>のようなもの
-
 import mouse
-
 
 if __name__ == '__main__': # int main()みたいな
   rospy.init_node("node_name") # ノード設定
