@@ -3,15 +3,15 @@ include "turtlebot.inc"
 
 
 # time to pause (in GUI mode) or quit (in headless mode (-g)) the simulation
-quit_time 3600 # 1 hour of simulated time
+quit_time 36000 # 10 hour of simulated time
 paused 1
-resolution 0.0500
+resolution 0.005
 
 
 window
 (
   size [ 600.000 600.000 ] # in pixels
-  scale 70.000   # pixels per meter
+  scale 300.000   # pixels per meter
   center [ 0  0 ]
   rotate [ 0  0 ]
 
@@ -22,9 +22,10 @@ window
 floorplan
 (
   name "test_stage"
-  size [8.000 8.000 0.200]
+  size [1.600 1.600 0.200]
   pose [0 0 0 0]
-  bitmap "bitmaps/stranger.png"
+  bitmap "bitmaps/left_hand.png"
+  obstacle_return 1
 )
 
-turtlebot( pose [ -3.5 -3.5 0.0 0.0 ] name "mouse")
+turtlebot( pose [ -0.7 -0.7 0.0 0.0 ] name "mouse")

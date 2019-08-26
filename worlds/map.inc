@@ -32,6 +32,6 @@ define zone model
   gui_outline 0
 
   # insensible to collision and range sensors
-  obstacle_return 0
+  obstacle_return 1
   ranger_return -1  # transparent to range sensors
 )

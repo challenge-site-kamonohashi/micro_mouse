@@ -24,7 +24,7 @@ if __name__ == '__main__': # int main()みたいな
   sensor_dire = [ 1, 0,-1]
 
   cell_matrix = [ 17, 17]
-  cell_size = [ 0.500, 0.500]
+  cell_size = [ 0.200, 0.200]
   walls = wall.wallPublisher("wall_marker", cell_matrix, cell_size)
   mouse = mouse.Mouse( "cmd_vel",  ["scan/R",
                                     "scan/FR",
@@ -42,7 +42,7 @@ if __name__ == '__main__': # int main()みたいな
 
   #-----センサー読み込み-----
       for (i, num) in enumerate(use_sensor_num):
-        sensor[ i] = mouse.sensor[ num].data < 1.0
+        sensor[ i] = mouse.sensor[ num].data < 0.2
   #-----検知した壁を地図に反映させる
       for (i,dire) in enumerate(sensor_dire):
         if sensor[i] == True:
@@ -65,7 +65,7 @@ if __name__ == '__main__': # int main()みたいな
       if vr != 0:
         mouse.move(0.0, vr * math.pi/2, 10)
       if vl != 0:
-        mouse.move( vl, 0.0, 10)
+        mouse.move( vl*0.2, 0.0, 10)
   #-----ロボットの自己位置を更新する-----
       theta += vr; theta %= 4
       mx = int( round( mx + vl * math.cos( theta * math.pi/2)))
