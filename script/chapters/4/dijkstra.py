@@ -40,21 +40,27 @@ cost_map[0,0] = 0
 #directions = np.array([ [ 0,-1], [-1, 0]])
 directions = np.array([[ 0, 1], [ 1,0], [ 0,-1], [-1, 0]])
 
-for y in range(array_size[0]):
-  for x in range(1,array_size[1]):
-    costs = []
-    for d in directions:
-      search_y = y + d[0]
-      search_x = x + d[1]
-      if (0 <= search_x and search_x < array_size[1]) and \
-         (0 <= search_y and search_y < array_size[0]):
-        if ( INF <= calc_cost(y, x)):
-          cost = INF
-        else:
-          cost = ( calc_cost(search_y, search_x) + cost_map[ y, x])
-      costs.append( cost)
-    print(costs)
-    cost_map[y, x] += min(costs)
+x = 1
+y = 1
+goal_x = map_size[1] - 1
+goal_y = map_size[0] - 1
+while not (x==goal_x and y==goal_y):
+  costs = []
+  for d in directions:
+    search_y = y + d[0]
+    search_x = x + d[1]
+    if (0 <= search_x and search_x < array_size[1]) and (0 <= search_y and search_y < array_size[0]):
+      if ( INF <= calc_cost(y, x)):
+        cost = INF
+      else:
+        cost = ( calc_cost(search_y, search_x) + cost_map[ y, x])
+    costs.append( cost)
+  costs = np.array(costs)
+  index = np.argmin(costs)
+  cost_map[y, x] += min(costs)
+  x += directions[ index][1]
+  y += directions[ index][0]
+  print(cost_map)
       
 
 
