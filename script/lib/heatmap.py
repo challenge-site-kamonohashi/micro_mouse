@@ -2,6 +2,7 @@
 #coding: utf-8         # 日本語を使えるようにする
 
 import math
+import numpy as np
 import rospy  # include<ros/ros.h>
 from std_msgs.msg import ColorRGBA
 from std_msgs.msg import UInt8MultiArray
@@ -9,27 +10,28 @@ from geometry_msgs.msg import Vector3
 from visualization_msgs.msg import Marker
 from visualization_msgs.msg import MarkerArray
 
-class wallPublisher:
+class heatmapPublisher:
   def __init__( self, topic, matrix, size):
-    self.colors = [ ColorRGBA( 0.0, 0.0, 0.0, 0.0),  # 0 Invisible
-                    ColorRGBA( 1.0, 1.0, 1.0, 1.0),  # 1 White
-                    ColorRGBA( 1.0, 0.0, 0.0, 1.0),  # 2 Red
-                    ColorRGBA( 1.0, 0.5, 0.0, 1.0),  # 3 Orange
-                    ColorRGBA( 1.0, 1.0, 0.0, 1.0),  # 4 Yellow
-                    ColorRGBA( 0.0, 1.0, 0.0, 1.0),  # 5 Green
-                    ColorRGBA( 0.0, 0.0, 1.0, 1.0),  # 6 Blue
-                    ColorRGBA( 1.0, 0.0, 1.0, 1.0),  # 7 Purple
-                    ColorRGBA( 0.5, 0.5, 0.5, 1.0)]  # 8 grey
+    self.colors = [ [ 0.0, 0.0, 0.0, 0.0],  # 0 Invisible
+                    [ 1.0, 1.0, 1.0, 1.0],  # 1 White
+                    [ 1.0, 0.0, 0.0, 1.0],  # 2 Red
+                    [ 1.0, 0.5, 0.0, 1.0],  # 3 Orange
+                    [ 1.0, 1.0, 0.0, 1.0],  # 4 Yellow
+                    [ 0.0, 1.0, 0.0, 1.0],  # 5 Green
+                    [ 0.0, 0.0, 1.0, 1.0],  # 6 Blue
+                    [ 1.0, 0.0, 1.0, 1.0],  # 7 Purple
+                    [ 0.5, 0.5, 0.5, 1.0]]  # 8 grey
+    self.colors = np.array( self.colors)
 
-    self.WALL_INVISIBLE = 0
-    self.WALL_WHITE     = 1
-    self.WALL_RED       = 2
-    self.WALL_ORANGE    = 3
-    self.WALL_YELLOW    = 4
-    self.WALL_GREEN     = 5
-    self.WALL_BLUE      = 6
-    self.WALL_PURPLE    = 7
-    self.WALL_GREY      = 8
+    self.INVISIBLE = 0
+    self.WHITE     = 1
+    self.RED       = 2
+    self.ORANGE    = 3
+    self.YELLOW    = 4
+    self.GREEN     = 5
+    self.BLUE      = 6
+    self.PURPLE    = 7
+    self.GREY      = 8
 
     self.generate( matrix, size)
     self.pub_wall = rospy.Publisher( topic, MarkerArray, queue_size=10)
@@ -37,8 +39,8 @@ class wallPublisher:
   def generate( self, matrix, size):
     (self.mx, self.my) = matrix
     (sx, sy) = size
-    self.pole_sx = sx*0.1; self.wallx_sx = sx*0.99; self.wally_sx = sx*0.10; self.cell_sx = sx*0.99
-    self.pole_sy = sy*0.1; self.wallx_sy = sy*0.10; self.wally_sy = sy*0.99; self.cell_sy = sy*0.99
+    self.pole_sx = sx*0.1; self.wallx_sx = sx*0.85; self.wally_sx = sx*0.10; self.cell_sx = sx*0.85
+    self.pole_sy = sy*0.1; self.wallx_sy = sy*0.10; self.wally_sy = sy*0.85; self.cell_sy = sy*0.85
     self.pole_sz =  0.200; self.wallx_sz =   0.200; self.wally_sz =   0.200; self.cell_sz =  0.050
     self.offset_x =-sx/2; self.offset_y =-sy/2; self.offset_z = -0.100;
     self.sx = sx
@@ -80,11 +82,13 @@ class wallPublisher:
         self.walls.markers[ -1].color = ColorRGBA( 1.0, 1.0, 1.0, 1.0)
         wall_ct += 1
 
-  def setData( self, data):
+  def setData( self, data, heatmap_color, resolution):
+    resolution = 1.0 / resolution
     wall_ct = 0
     for iy in range( self.my):
       for ix in range( self.mx):
-        color = self.colors[ data[ iy, ix]]
+        color = self.colors[ heatmap_color] * data[iy][ix] * resolution
+        color = ColorRGBA(color[0],color[1],color[2],self.colors[heatmap_color,3])
         self.walls.markers[ wall_ct].color = color
         wall_ct += 1
 

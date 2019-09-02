@@ -3,6 +3,7 @@
 
 import math
 import rospy
+import numpy as np
 from std_msgs.msg import ColorRGBA
 from geometry_msgs.msg import Vector3
 from geometry_msgs.msg import Pose
@@ -11,18 +12,21 @@ from nav_msgs.msg import Path
 
 class pathPublisher:
   def __init__( self, topic, cell_size):
-    self.cell_size = cell_size
+    self.cell_size = np.array(cell_size) / 2.0
     self.topic = topic
     self.pub_path = rospy.Publisher( topic, Path, queue_size=10)
     self.path = Path()
     self.path.header.frame_id = "odom"
 
+    self.offset_x = cell_size[0] / -2.0
+    self.offset_y = cell_size[1] / -2.0
+
   def setData( self, path_data):
     poses = [PoseStamped() for i in range(len(path_data))]
     for (i,point) in enumerate(path_data):
       poses[i].header.frame_id = "odom"
-      poses[i].pose.position.x = self.cell_size[0] * point[0]
-      poses[i].pose.position.y = self.cell_size[1] * point[1]
+      poses[i].pose.position.x = self.cell_size[0] * point[0] + self.offset_x
+      poses[i].pose.position.y = self.cell_size[1] * point[1] + self.offset_y
       poses[i].pose.position.z = 0.0
       poses[i].pose.orientation.x = 0.0
       poses[i].pose.orientation.y = 0.0
