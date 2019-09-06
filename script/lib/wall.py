@@ -2,6 +2,7 @@
 #coding: utf-8         # 日本語を使えるようにする
 
 import math
+import numpy as np
 import rospy  # include<ros/ros.h>
 from std_msgs.msg import ColorRGBA
 from std_msgs.msg import UInt8MultiArray
@@ -31,12 +32,12 @@ class wallPublisher:
     self.WALL_PURPLE    = 7
     self.WALL_GREY      = 8
 
-    self.generate( matrix, size)
+    empty_maze_map = self.generate( matrix, size)
     self.pub_wall = rospy.Publisher( topic, MarkerArray, queue_size=10)
 
-  def generate( self, matrix, size):
-    (self.mx, self.my) = matrix
-    (sx, sy) = size
+  def generate( self, cell_matrix, cell_size):
+    (self.mx, self.my) = cell_matrix
+    (sx, sy) = cell_size
     self.pole_sx = sx*0.1; self.wallx_sx = sx*0.99; self.wally_sx = sx*0.10; self.cell_sx = sx*0.99
     self.pole_sy = sy*0.1; self.wallx_sy = sy*0.10; self.wally_sy = sy*0.99; self.cell_sy = sy*0.99
     self.pole_sz =  0.200; self.wallx_sz =   0.200; self.wally_sz =   0.200; self.cell_sz =  0.050
@@ -79,6 +80,19 @@ class wallPublisher:
         self.walls.markers[ -1].scale = Vector3( sx, sy, sz)
         self.walls.markers[ -1].color = ColorRGBA( 1.0, 1.0, 1.0, 1.0)
         wall_ct += 1
+
+  def getEmptyMazeMap( self, cell_matrix):
+    empty_maze_map = np.zeros( cell_matrix, dtype=int)
+    for i in range( cell_matrix[1]):
+      empty_maze_map[ 0, i] = 1
+      empty_maze_map[-1, i] = 1
+    for i in range( cell_matrix[0]):
+      empty_maze_map[i, 0] = 1
+      empty_maze_map[i,-1] = 1
+    for i in range( 2, cell_matrix[1]-2, 2):
+      for ii in range( 2, cell_matrix[0]-2, 2):
+        empty_maze_map[i, ii] = 1
+    return empty_maze_map
 
   def setData( self, data):
     wall_ct = 0

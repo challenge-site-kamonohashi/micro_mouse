@@ -20,11 +20,14 @@ class LightSensor:
     
 
 class Mouse:
-  def __init__( self, topic_drive, topics_sensor):
+  def __init__( self, control_topic="cmd_vel", sensors_topic=["scan/R","scan/FR","scan/F","scan/FL","scan/L"], sensor_directions=[-math.pi/2, math.pi/4,0, math.pi/4, math.pi/2]):
+    self.control_topic = control_topic
+    self.sensors_topic = sensors_topic
+    self.sensor_directions = sensor_directions
     print("hello_mouse!")
-    self.pub_twist = rospy.Publisher( topic_drive, Twist, queue_size=10)
-    self.sensor = [ None for i in range(len(topics_sensor))]
-    for (i,topic) in enumerate(topics_sensor):
+    self.pub_twist = rospy.Publisher( control_topic, Twist, queue_size=10)
+    self.sensor = [ None for i in range(len(sensors_topic))]
+    for (i,topic) in enumerate(sensors_topic):
       self.sensor[ i] = LightSensor( topic)
 
     self.move(0.0, 0.0, 5)
@@ -38,3 +41,9 @@ class Mouse:
     for i in range(cnt):
       self.pub_twist.publish( msg)
       loop.sleep()
+
+  def getSensor( self):
+    return [ sensor.data for sensor in self.senser]
+
+
+

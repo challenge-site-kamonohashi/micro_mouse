@@ -150,7 +150,6 @@ try:
 #------generate cost map-----
     while not (len(nodes)==0 or (ny==GOAL_Y and nx==GOAL_X)):
       print("--------------------------------------------")
-      print(min( [node.cost for node in nodes]))
       node = nodes[ np.argmin(np.array( [node.cost for node in nodes]))]
       for dire in DIRECTIONS:
         (ny, nx) = node.pos

@@ -20,8 +20,10 @@ import numpy as np
 INF = 999
 
 class Node:
-  def __init__( self, pos):
+  def __init__( self, pos, cost=0):
     self.pos = np.array(pos)
+    self.cost = cost
+
 
 def calc_cost( maze, y1, x1, y2, x2):
   result = 1
@@ -35,13 +37,23 @@ def calc_cost( maze, y1, x1, y2, x2):
     result *= 1.4 # math.sqrt(2) = 1.41....
   return result
 
-def costmapByDijkstra( maze, start, DIRECTIONS=[[ 0, 1], [ 1, 1], [ 1,0], [ 1,-1], [ 0,-1], [-1,-1], [-1, 0], [-1, 1]]):
+
+def huristic(y1, x1, y2, x2):
+  vx = x2 - x1
+  vy = y2 - y1
+  result = math.sqrt( vx**2 + vy**2)
+  return result
+
+
+def costmapByDijkstra( maze, start, goal, DIRECTIONS=[[ 0, 1], [ 1, 1], [ 1,0], [ 1,-1], [ 0,-1], [-1,-1], [-1, 0], [-1, 1]]):
+  START_X, START_Y = start
+  GOAL_X, GOAL_Y = goal
   DIRECTIONS = np.array(DIRECTIONS)
   ARRAY_SIZE = np.array( [len(maze), len(maze[0])])
   cost_map   = np.ones((ARRAY_SIZE), dtype=float) * INF
-  cost_map[ start[1], start[0]] = 0
-  nodes = [Node( [start[1], start[0]])]
-  while not (len(nodes)==0):
+  cost_map[ START_Y, START_X] = 0
+  nodes = [Node( [START_Y, START_X])]
+  while not (len(nodes)==0 or (GOAL_X==nx and GOAL_Y==ny)):
     for node in nodes:
       for dire in DIRECTIONS:
         (ny, nx) = node.pos
@@ -53,6 +65,36 @@ def costmapByDijkstra( maze, start, DIRECTIONS=[[ 0, 1], [ 1, 1], [ 1,0], [ 1,-1
           nodes.append( Node( [search_y, search_x]))
       nodes.remove(node)
   return cost_map
+
+def costmapByAstar( maze, start, goal, DIRECTIONS=[[ 0, 1], [ 1, 1], [ 1,0], [ 1,-1], [ 0,-1], [-1,-1], [-1, 0], [-1, 1]]):
+  START_X, START_Y = start
+  GOAL_X, GOAL_Y = goal
+  DIRECTIONS = np.array(DIRECTIONS)
+  ARRAY_SIZE = np.array( [len(maze), len(maze[0])])
+  cost_map   = np.ones((ARRAY_SIZE), dtype=float) * INF
+  cost_map[ START_Y, START_X] = 0
+  nodes = [Node( [START_Y, START_X], 0)]
+  ny, nx = (-1, -1)
+  while not (len(nodes)==0 or (GOAL_X==nx and GOAL_Y==ny)):
+    node = nodes[ np.argmin(np.array( [node.cost for node in nodes]))]
+    for dire in DIRECTIONS:
+      (ny, nx) = node.pos
+      (search_y, search_x) = node.pos + dire
+      cost_c = INF
+      cost_h = INF
+      if (0 <= search_x and search_x < ARRAY_SIZE[1]) and (0 <= search_y and search_y < ARRAY_SIZE[0]):
+        cost_c  = calc_cost( maze, ny, nx, search_y, search_x) + cost_map[ ny, nx]
+        cost_h = huristic(ny, nx, GOAL_Y, GOAL_X)
+      cost_total = cost_c + cost_h*3
+      if cost_c < cost_map[search_y, search_x]:
+        cost_map[ search_y, search_x] = cost_c
+        nodes.append( Node( [search_y, search_x], cost_total))
+    nodes.remove(node)
+  return cost_map
+
+    
+
+
  
 def pathByCostmap( cost_map, start, goal, DIRECTIONS=[[ 0, 1], [ 1, 1], [ 1,0], [ 1,-1], [ 0,-1], [-1,-1], [-1, 0], [-1, 1]]):
   px, py = goal
