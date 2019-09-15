@@ -1,0 +1,227 @@
+EESchema Schematic File Version 2
+LIBS:power
+LIBS:device
+LIBS:transistors
+LIBS:conn
+LIBS:linear
+LIBS:regul
+LIBS:74xx
+LIBS:cmos4000
+LIBS:adc-dac
+LIBS:memory
+LIBS:xilinx
+LIBS:microcontrollers
+LIBS:dsp
+LIBS:microchip
+LIBS:analog_switches
+LIBS:motorola
+LIBS:texas
+LIBS:intel
+LIBS:audio
+LIBS:interface
+LIBS:digital-audio
+LIBS:philips
+LIBS:display
+LIBS:cypress
+LIBS:siliconi
+LIBS:opto
+LIBS:atmel
+LIBS:contrib
+LIBS:valves
+LIBS:ADA3708
+LIBS:A4988
+LIBS:L7805
+LIBS:LBR-127HLD
+LIBS:BSS138
+LIBS:MCU-MCP3008-I_P_DIP16-7.62MM_
+LIBS:OSX10201-GYR1
+LIBS:pololu_a4988
+LIBS:A4988-cache
+LIBS:mouse-cache
+EELAYER 25 0
+EELAYER END
+$Descr A4 11693 8268
+encoding utf-8
+Sheet 4 4
+Title ""
+Date ""
+Rev ""
+Comp ""
+Comment1 ""
+Comment2 ""
+Comment3 ""
+Comment4 ""
+$EndDescr
+$Comp
+L POLOLU_A4988 U6
+U 1 1 5D7D26BE
+P 5800 2350
+F 0 "U6" H 5800 2800 60  0000 C CNN
+F 1 "POLOLU_A4988" V 5800 2350 50  0000 C CNN
+F 2 "Displays_7-Segment:DA04" H 5800 2350 60  0001 C CNN
+F 3 "" H 5800 2350 60  0000 C CNN
+	1    5800 2350
+	1    0    0    -1  
+$EndComp
+$Comp
+L CONN_01X04 P22
+U 1 1 5D7D27E7
+P 4800 2350
+F 0 "P22" H 4800 2600 50  0000 C CNN
+F 1 "MOTOR_L" V 4900 2350 50  0000 C CNN
+F 2 "Socket_Strips:Socket_Strip_Straight_1x04" H 4800 2350 50  0001 C CNN
+F 3 "" H 4800 2350 50  0000 C CNN
+	1    4800 2350
+	-1   0    0    1   
+$EndComp
+$Comp
+L CONN_01X02 P19
+U 1 1 5D7D2A66
+P 3700 1000
+F 0 "P19" H 3700 1150 50  0000 C CNN
+F 1 "MOTOR_SOURCE" V 3800 1000 50  0000 C CNN
+F 2 "Socket_Strips:Socket_Strip_Straight_1x02" H 3700 1000 50  0001 C CNN
+F 3 "" H 3700 1000 50  0000 C CNN
+	1    3700 1000
+	0    -1   -1   0   
+$EndComp
+$Comp
+L CONN_01X02 P20
+U 1 1 5D7D2AE2
+P 4400 1000
+F 0 "P20" H 4400 1150 50  0000 C CNN
+F 1 "CHIP_SOURCE" V 4500 1000 50  0000 C CNN
+F 2 "Socket_Strips:Socket_Strip_Straight_1x02" H 4400 1000 50  0001 C CNN
+F 3 "" H 4400 1000 50  0000 C CNN
+	1    4400 1000
+	0    -1   -1   0   
+$EndComp
+$Comp
+L POLOLU_A4988 U7
+U 1 1 5D7D2D98
+P 5800 3500
+F 0 "U7" H 5800 3950 60  0000 C CNN
+F 1 "POLOLU_A4988" V 5800 3500 50  0000 C CNN
+F 2 "Displays_7-Segment:DA04" H 5800 3500 60  0001 C CNN
+F 3 "" H 5800 3500 60  0000 C CNN
+	1    5800 3500
+	1    0    0    -1  
+$EndComp
+$Comp
+L CONN_01X04 P23
+U 1 1 5D7D2D9F
+P 4800 3500
+F 0 "P23" H 4800 3750 50  0000 C CNN
+F 1 "MOTOR_R" V 4900 3500 50  0000 C CNN
+F 2 "Socket_Strips:Socket_Strip_Straight_1x04" H 4800 3500 50  0001 C CNN
+F 3 "" H 4800 3500 50  0000 C CNN
+	1    4800 3500
+	-1   0    0    1   
+$EndComp
+Wire Wire Line
+	5000 2200 5200 2200
+Wire Wire Line
+	5200 2300 5000 2300
+Wire Wire Line
+	5000 2400 5200 2400
+Wire Wire Line
+	5200 2500 5000 2500
+Wire Wire Line
+	5200 2600 4950 2600
+Wire Wire Line
+	4950 2600 4950 2700
+Wire Wire Line
+	4950 2700 3650 2700
+Wire Wire Line
+	3650 1200 3650 3850
+Wire Wire Line
+	4350 1200 4350 3150
+Wire Wire Line
+	4350 2000 5200 2000
+Wire Wire Line
+	4450 1200 4450 3250
+Wire Wire Line
+	4450 2100 5200 2100
+Connection ~ 4350 2700
+Connection ~ 4350 2000
+Wire Wire Line
+	3750 1200 3750 4000
+Wire Wire Line
+	3750 2850 5050 2850
+Wire Wire Line
+	5050 2850 5050 2700
+Wire Wire Line
+	5050 2700 5200 2700
+Wire Wire Line
+	6400 2300 6550 2300
+Wire Wire Line
+	6550 2300 6550 2200
+Wire Wire Line
+	6550 2200 6400 2200
+Wire Wire Line
+	5000 3350 5200 3350
+Wire Wire Line
+	5200 3450 5000 3450
+Wire Wire Line
+	5000 3550 5200 3550
+Wire Wire Line
+	5200 3650 5000 3650
+Wire Wire Line
+	5200 3750 4950 3750
+Wire Wire Line
+	4950 3750 4950 3850
+Wire Wire Line
+	4950 3850 3650 3850
+Wire Wire Line
+	4350 3150 5200 3150
+Wire Wire Line
+	4450 3250 5200 3250
+Wire Wire Line
+	3750 4000 5050 4000
+Wire Wire Line
+	5050 4000 5050 3850
+Wire Wire Line
+	5050 3850 5200 3850
+Wire Wire Line
+	6400 3450 6550 3450
+Wire Wire Line
+	6550 3450 6550 3350
+Wire Wire Line
+	6550 3350 6400 3350
+Connection ~ 3650 2700
+Connection ~ 3750 2850
+Connection ~ 4450 2100
+$Comp
+L CONN_01X04 P21
+U 1 1 5D7D35F7
+P 7050 2150
+F 0 "P21" H 7050 2400 50  0000 C CNN
+F 1 "MOTOR_CONTROL" V 7150 2150 50  0000 C CNN
+F 2 "Socket_Strips:Socket_Strip_Straight_1x04" H 7050 2150 50  0001 C CNN
+F 3 "" H 7050 2150 50  0000 C CNN
+	1    7050 2150
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	6400 2000 6850 2000
+Wire Wire Line
+	6850 2100 6400 2100
+Wire Wire Line
+	6400 3150 6700 3150
+Wire Wire Line
+	6700 3150 6700 2200
+Wire Wire Line
+	6700 2200 6850 2200
+Wire Wire Line
+	6850 2300 6850 3250
+Wire Wire Line
+	6850 3250 6400 3250
+NoConn ~ 6400 2400
+NoConn ~ 6400 2500
+NoConn ~ 6400 2600
+NoConn ~ 6400 2700
+NoConn ~ 6400 3550
+NoConn ~ 6400 3650
+NoConn ~ 6400 3750
+NoConn ~ 6400 3850
+$EndSCHEMATC

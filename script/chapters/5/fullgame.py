@@ -12,11 +12,8 @@ import wall
 import mouse
 import heatmap
 import pathplanning
-
 #-----include std libraries-----
 import math
-import time
-
 #-----include extends libraries
 import numpy as np
 

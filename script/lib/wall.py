@@ -38,8 +38,8 @@ class wallPublisher:
   def generate( self, cell_matrix, cell_size):
     (self.mx, self.my) = cell_matrix
     (sx, sy) = cell_size
-    self.pole_sx = sx*0.1; self.wallx_sx = sx*0.99; self.wally_sx = sx*0.10; self.cell_sx = sx*0.99
-    self.pole_sy = sy*0.1; self.wallx_sy = sy*0.10; self.wally_sy = sy*0.99; self.cell_sy = sy*0.99
+    self.pole_sx = sx*0.1; self.wallx_sx = sx*0.90; self.wally_sx = sx*0.10; self.cell_sx = sx*0.99
+    self.pole_sy = sy*0.1; self.wallx_sy = sy*0.10; self.wally_sy = sy*0.90; self.cell_sy = sy*0.99
     self.pole_sz =  0.200; self.wallx_sz =   0.200; self.wally_sz =   0.200; self.cell_sz =  0.050
     self.offset_x =-sx/2; self.offset_y =-sy/2; self.offset_z = -0.100;
     self.sx = sx
