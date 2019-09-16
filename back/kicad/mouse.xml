@@ -1,0 +1,1618 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<export version="D">
+  <design>
+    <source>/home/platypus/mp_ws/src/micro_mouse/kicad/mouse.sch</source>
+    <date>2019年09月16日 18時05分02秒</date>
+    <tool>Eeschema 4.0.2+dfsg1-stable</tool>
+    <sheet number="1" name="/" tstamps="/">
+      <title_block>
+        <title/>
+        <company/>
+        <rev/>
+        <date/>
+        <source>mouse.sch</source>
+        <comment number="1" value=""/>
+        <comment number="2" value=""/>
+        <comment number="3" value=""/>
+        <comment number="4" value=""/>
+      </title_block>
+    </sheet>
+    <sheet number="2" name="/ir_sensor/" tstamps="/5D7C5FAF/">
+      <title_block>
+        <title/>
+        <company/>
+        <rev/>
+        <date/>
+        <source>ir_sensor.sch</source>
+        <comment number="1" value=""/>
+        <comment number="2" value=""/>
+        <comment number="3" value=""/>
+        <comment number="4" value=""/>
+      </title_block>
+    </sheet>
+    <sheet number="3" name="/mouse_ui/" tstamps="/5D7CBC6D/">
+      <title_block>
+        <title/>
+        <company/>
+        <rev/>
+        <date/>
+        <source>mouse_ui.sch</source>
+        <comment number="1" value=""/>
+        <comment number="2" value=""/>
+        <comment number="3" value=""/>
+        <comment number="4" value=""/>
+      </title_block>
+    </sheet>
+    <sheet number="4" name="/motor_controller/" tstamps="/5D7D2443/">
+      <title_block>
+        <title/>
+        <company/>
+        <rev/>
+        <date/>
+        <source>motor_controller.sch</source>
+        <comment number="1" value=""/>
+        <comment number="2" value=""/>
+        <comment number="3" value=""/>
+        <comment number="4" value=""/>
+      </title_block>
+    </sheet>
+  </design>
+  <components>
+    <comp ref="IC1">
+      <value>L7805</value>
+      <footprint>L7805:78XXS</footprint>
+      <datasheet>Unavailable</datasheet>
+      <fields>
+        <field name="Field4">STMicroelectronics</field>
+        <field name="Field5">None</field>
+        <field name="Field6">IC Regulator 7805T/L7805 INCHANGE SEMICONDUCTORS TO220</field>
+        <field name="Field7">TO-263-3 Inchange Semiconductor</field>
+        <field name="Field8">L7805</field>
+      </fields>
+      <libsource lib="L7805" part="L7805"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>5D7BB7F5</tstamp>
+    </comp>
+    <comp ref="C1">
+      <value>0.33uF</value>
+      <footprint>Capacitors_ThroughHole:C_Disc_D3_P2.5</footprint>
+      <libsource lib="device" part="C"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>5D7BB8AB</tstamp>
+    </comp>
+    <comp ref="C2">
+      <value>0.1uF</value>
+      <footprint>Capacitors_ThroughHole:C_Disc_D3_P2.5</footprint>
+      <libsource lib="device" part="C"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>5D7BB97A</tstamp>
+    </comp>
+    <comp ref="P3">
+      <value>battery 12v</value>
+      <footprint>Socket_Strips:Socket_Strip_Straight_1x02</footprint>
+      <libsource lib="conn" part="CONN_01X02"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>5D7BBC6E</tstamp>
+    </comp>
+    <comp ref="A1">
+      <value>ADA3708</value>
+      <footprint>ADA3708:ADA3708_RPI-ZERO</footprint>
+      <datasheet>Raspberry Pi Zero WH _Zero W with Headers_</datasheet>
+      <fields>
+        <field name="Field4">Unavailable</field>
+        <field name="Field5">None</field>
+        <field name="Field6">Raspberry Pi</field>
+        <field name="Field7">None</field>
+        <field name="Field8">ADA3708</field>
+      </fields>
+      <libsource lib="ADA3708" part="ADA3708"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>5D7C8F11</tstamp>
+    </comp>
+    <comp ref="U1">
+      <value>MCP3008</value>
+      <footprint>Housings_DIP:DIP-16_W7.62mm_LongPads</footprint>
+      <libsource lib="adc-dac" part="MCP3008"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>5D7C9C58</tstamp>
+    </comp>
+    <comp ref="P8">
+      <value>IR_CONN</value>
+      <footprint>Socket_Strips:Socket_Strip_Straight_1x04</footprint>
+      <libsource lib="conn" part="CONN_01X04"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>5D7C9EB4</tstamp>
+    </comp>
+    <comp ref="R1">
+      <value>4.7k</value>
+      <footprint>Resistors_ThroughHole:Resistor_Horizontal_RM7mm</footprint>
+      <libsource lib="device" part="R"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>5D7CAEB4</tstamp>
+    </comp>
+    <comp ref="R2">
+      <value>8.2k</value>
+      <footprint>Resistors_ThroughHole:Resistor_Horizontal_RM7mm</footprint>
+      <libsource lib="device" part="R"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>5D7CAF15</tstamp>
+    </comp>
+    <comp ref="P9">
+      <value>MOTOR_CONTROL</value>
+      <footprint>Socket_Strips:Socket_Strip_Straight_1x06</footprint>
+      <libsource lib="conn" part="CONN_01X06"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>5D7D457A</tstamp>
+    </comp>
+    <comp ref="P11">
+      <value>SW_CONN</value>
+      <footprint>Socket_Strips:Socket_Strip_Straight_1x04</footprint>
+      <libsource lib="conn" part="CONN_01X04"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>5D7D6AA9</tstamp>
+    </comp>
+    <comp ref="P12">
+      <value>LED_K_CONN</value>
+      <footprint>Socket_Strips:Socket_Strip_Straight_1x03</footprint>
+      <libsource lib="conn" part="CONN_01X03"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>5D7D6E46</tstamp>
+    </comp>
+    <comp ref="P10">
+      <value>LED_CONN</value>
+      <footprint>Socket_Strips:Socket_Strip_Straight_1x08</footprint>
+      <libsource lib="conn" part="CONN_01X08"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>5D7D7414</tstamp>
+    </comp>
+    <comp ref="P4">
+      <value>SOURCE_5v</value>
+      <footprint>Socket_Strips:Socket_Strip_Straight_1x02</footprint>
+      <libsource lib="conn" part="CONN_01X02"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>5D7DB08F</tstamp>
+    </comp>
+    <comp ref="P5">
+      <value>SOURCE_5v</value>
+      <footprint>Socket_Strips:Socket_Strip_Straight_1x02</footprint>
+      <libsource lib="conn" part="CONN_01X02"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>5D7DB4B8</tstamp>
+    </comp>
+    <comp ref="P6">
+      <value>SOURCE_5v</value>
+      <footprint>Socket_Strips:Socket_Strip_Straight_1x02</footprint>
+      <libsource lib="conn" part="CONN_01X02"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>5D7DB517</tstamp>
+    </comp>
+    <comp ref="P7">
+      <value>SOURCE_5v</value>
+      <footprint>Socket_Strips:Socket_Strip_Straight_1x02</footprint>
+      <libsource lib="conn" part="CONN_01X02"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>5D7DB579</tstamp>
+    </comp>
+    <comp ref="P2">
+      <value>SOURCE_12v</value>
+      <footprint>Socket_Strips:Socket_Strip_Straight_1x02</footprint>
+      <libsource lib="conn" part="CONN_01X02"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>5D7DBD82</tstamp>
+    </comp>
+    <comp ref="P1">
+      <value>SOURCE_12v</value>
+      <footprint>Socket_Strips:Socket_Strip_Straight_1x02</footprint>
+      <libsource lib="conn" part="CONN_01X02"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>5D7DBE9A</tstamp>
+    </comp>
+    <comp ref="SW5">
+      <value>SPST</value>
+      <libsource lib="device" part="SPST"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>5D7F5504</tstamp>
+    </comp>
+    <comp ref="U2">
+      <value>LBR-127HLD</value>
+      <footprint>LBR-127HLD:A5131A</footprint>
+      <datasheet>http://akizukidenshi.com/download/lbr127hld.pdf</datasheet>
+      <fields>
+        <field name="Description">Reflective Object Sensor</field>
+        <field name="Manufacturer_Name">Letex Technology</field>
+        <field name="Manufacturer_Part_Number">LBR-127HLD</field>
+      </fields>
+      <libsource lib="LBR-127HLD" part="LBR-127HLD"/>
+      <sheetpath names="/ir_sensor/" tstamps="/5D7C5FAF/"/>
+      <tstamp>5D7C65A9</tstamp>
+    </comp>
+    <comp ref="Q1">
+      <value>BSS138</value>
+      <footprint>TO_SOT_Packages_SMD:SOT-23</footprint>
+      <libsource lib="transistors" part="BSS138"/>
+      <sheetpath names="/ir_sensor/" tstamps="/5D7C5FAF/"/>
+      <tstamp>5D7C65B6</tstamp>
+    </comp>
+    <comp ref="R5">
+      <value>10k</value>
+      <footprint>Resistors_ThroughHole:Resistor_Horizontal_RM7mm</footprint>
+      <libsource lib="device" part="R"/>
+      <sheetpath names="/ir_sensor/" tstamps="/5D7C5FAF/"/>
+      <tstamp>5D7C65C3</tstamp>
+    </comp>
+    <comp ref="R7">
+      <value>1k</value>
+      <footprint>Resistors_ThroughHole:Resistor_Horizontal_RM7mm</footprint>
+      <libsource lib="device" part="R"/>
+      <sheetpath names="/ir_sensor/" tstamps="/5D7C5FAF/"/>
+      <tstamp>5D7C65D4</tstamp>
+    </comp>
+    <comp ref="R3">
+      <value>10</value>
+      <footprint>Resistors_ThroughHole:Resistor_Horizontal_RM7mm</footprint>
+      <libsource lib="device" part="R"/>
+      <sheetpath names="/ir_sensor/" tstamps="/5D7C5FAF/"/>
+      <tstamp>5D7C65E7</tstamp>
+    </comp>
+    <comp ref="U4">
+      <value>LBR-127HLD</value>
+      <footprint>LBR-127HLD:A5131A</footprint>
+      <datasheet>http://akizukidenshi.com/download/lbr127hld.pdf</datasheet>
+      <fields>
+        <field name="Description">Reflective Object Sensor</field>
+        <field name="Manufacturer_Name">Letex Technology</field>
+        <field name="Manufacturer_Part_Number">LBR-127HLD</field>
+      </fields>
+      <libsource lib="LBR-127HLD" part="LBR-127HLD"/>
+      <sheetpath names="/ir_sensor/" tstamps="/5D7C5FAF/"/>
+      <tstamp>5D7C67B8</tstamp>
+    </comp>
+    <comp ref="Q3">
+      <value>BSS138</value>
+      <footprint>TO_SOT_Packages_SMD:SOT-23</footprint>
+      <libsource lib="transistors" part="BSS138"/>
+      <sheetpath names="/ir_sensor/" tstamps="/5D7C5FAF/"/>
+      <tstamp>5D7C67C4</tstamp>
+    </comp>
+    <comp ref="R11">
+      <value>10k</value>
+      <footprint>Resistors_ThroughHole:Resistor_Horizontal_RM7mm</footprint>
+      <libsource lib="device" part="R"/>
+      <sheetpath names="/ir_sensor/" tstamps="/5D7C5FAF/"/>
+      <tstamp>5D7C67D0</tstamp>
+    </comp>
+    <comp ref="R13">
+      <value>1k</value>
+      <footprint>Resistors_ThroughHole:Resistor_Horizontal_RM7mm</footprint>
+      <libsource lib="device" part="R"/>
+      <sheetpath names="/ir_sensor/" tstamps="/5D7C5FAF/"/>
+      <tstamp>5D7C67E0</tstamp>
+    </comp>
+    <comp ref="R9">
+      <value>10</value>
+      <footprint>Resistors_ThroughHole:Resistor_Horizontal_RM7mm</footprint>
+      <libsource lib="device" part="R"/>
+      <sheetpath names="/ir_sensor/" tstamps="/5D7C5FAF/"/>
+      <tstamp>5D7C67F2</tstamp>
+    </comp>
+    <comp ref="U3">
+      <value>LBR-127HLD</value>
+      <footprint>LBR-127HLD:A5131A</footprint>
+      <datasheet>http://akizukidenshi.com/download/lbr127hld.pdf</datasheet>
+      <fields>
+        <field name="Description">Reflective Object Sensor</field>
+        <field name="Manufacturer_Name">Letex Technology</field>
+        <field name="Manufacturer_Part_Number">LBR-127HLD</field>
+      </fields>
+      <libsource lib="LBR-127HLD" part="LBR-127HLD"/>
+      <sheetpath names="/ir_sensor/" tstamps="/5D7C5FAF/"/>
+      <tstamp>5D7C6C06</tstamp>
+    </comp>
+    <comp ref="Q2">
+      <value>BSS138</value>
+      <footprint>TO_SOT_Packages_SMD:SOT-23</footprint>
+      <libsource lib="transistors" part="BSS138"/>
+      <sheetpath names="/ir_sensor/" tstamps="/5D7C5FAF/"/>
+      <tstamp>5D7C6C12</tstamp>
+    </comp>
+    <comp ref="R6">
+      <value>10k</value>
+      <footprint>Resistors_ThroughHole:Resistor_Horizontal_RM7mm</footprint>
+      <libsource lib="device" part="R"/>
+      <sheetpath names="/ir_sensor/" tstamps="/5D7C5FAF/"/>
+      <tstamp>5D7C6C1E</tstamp>
+    </comp>
+    <comp ref="R8">
+      <value>1k</value>
+      <footprint>Resistors_ThroughHole:Resistor_Horizontal_RM7mm</footprint>
+      <libsource lib="device" part="R"/>
+      <sheetpath names="/ir_sensor/" tstamps="/5D7C5FAF/"/>
+      <tstamp>5D7C6C2E</tstamp>
+    </comp>
+    <comp ref="R4">
+      <value>10</value>
+      <footprint>Resistors_ThroughHole:Resistor_Horizontal_RM7mm</footprint>
+      <libsource lib="device" part="R"/>
+      <sheetpath names="/ir_sensor/" tstamps="/5D7C5FAF/"/>
+      <tstamp>5D7C6C40</tstamp>
+    </comp>
+    <comp ref="U5">
+      <value>LBR-127HLD</value>
+      <footprint>LBR-127HLD:A5131A</footprint>
+      <datasheet>http://akizukidenshi.com/download/lbr127hld.pdf</datasheet>
+      <fields>
+        <field name="Description">Reflective Object Sensor</field>
+        <field name="Manufacturer_Name">Letex Technology</field>
+        <field name="Manufacturer_Part_Number">LBR-127HLD</field>
+      </fields>
+      <libsource lib="LBR-127HLD" part="LBR-127HLD"/>
+      <sheetpath names="/ir_sensor/" tstamps="/5D7C5FAF/"/>
+      <tstamp>5D7C6C58</tstamp>
+    </comp>
+    <comp ref="Q4">
+      <value>BSS138</value>
+      <footprint>TO_SOT_Packages_SMD:SOT-23</footprint>
+      <libsource lib="transistors" part="BSS138"/>
+      <sheetpath names="/ir_sensor/" tstamps="/5D7C5FAF/"/>
+      <tstamp>5D7C6C64</tstamp>
+    </comp>
+    <comp ref="R12">
+      <value>10k</value>
+      <footprint>Resistors_ThroughHole:Resistor_Horizontal_RM7mm</footprint>
+      <libsource lib="device" part="R"/>
+      <sheetpath names="/ir_sensor/" tstamps="/5D7C5FAF/"/>
+      <tstamp>5D7C6C70</tstamp>
+    </comp>
+    <comp ref="R14">
+      <value>1k</value>
+      <footprint>Resistors_ThroughHole:Resistor_Horizontal_RM7mm</footprint>
+      <libsource lib="device" part="R"/>
+      <sheetpath names="/ir_sensor/" tstamps="/5D7C5FAF/"/>
+      <tstamp>5D7C6C80</tstamp>
+    </comp>
+    <comp ref="R10">
+      <value>10</value>
+      <footprint>Resistors_ThroughHole:Resistor_Horizontal_RM7mm</footprint>
+      <libsource lib="device" part="R"/>
+      <sheetpath names="/ir_sensor/" tstamps="/5D7C5FAF/"/>
+      <tstamp>5D7C6C92</tstamp>
+    </comp>
+    <comp ref="P13">
+      <value>IR_SOURCE</value>
+      <footprint>Socket_Strips:Socket_Strip_Straight_1x06</footprint>
+      <libsource lib="conn" part="CONN_01X06"/>
+      <sheetpath names="/ir_sensor/" tstamps="/5D7C5FAF/"/>
+      <tstamp>5D7C728B</tstamp>
+    </comp>
+    <comp ref="P14">
+      <value>IR_CONN</value>
+      <footprint>Socket_Strips:Socket_Strip_Straight_1x04</footprint>
+      <libsource lib="conn" part="CONN_01X04"/>
+      <sheetpath names="/ir_sensor/" tstamps="/5D7C5FAF/"/>
+      <tstamp>5D7C814D</tstamp>
+    </comp>
+    <comp ref="DS1">
+      <value>OSX10201-GYR1</value>
+      <footprint>OSX10201-GYR1:DIPS760W45P254L2550H815Q20N</footprint>
+      <datasheet>http://www.optosupply.com/uppic/2016810490258.pdf</datasheet>
+      <fields>
+        <field name="Description">0.2 Inch Ten Digit Multi-color Display</field>
+        <field name="Height">8.15</field>
+        <field name="Manufacturer_Name">OptoSupply</field>
+        <field name="Manufacturer_Part_Number">OSX10201-GYR1</field>
+      </fields>
+      <libsource lib="OSX10201-GYR1" part="OSX10201-GYR1"/>
+      <sheetpath names="/mouse_ui/" tstamps="/5D7CBC6D/"/>
+      <tstamp>5D7CBDC3</tstamp>
+    </comp>
+    <comp ref="R15">
+      <value>10k</value>
+      <footprint>Resistors_ThroughHole:Resistor_Horizontal_RM7mm</footprint>
+      <libsource lib="device" part="R"/>
+      <sheetpath names="/mouse_ui/" tstamps="/5D7CBC6D/"/>
+      <tstamp>5D7CBFB9</tstamp>
+    </comp>
+    <comp ref="R16">
+      <value>10k</value>
+      <footprint>Resistors_ThroughHole:Resistor_Horizontal_RM7mm</footprint>
+      <libsource lib="device" part="R"/>
+      <sheetpath names="/mouse_ui/" tstamps="/5D7CBC6D/"/>
+      <tstamp>5D7CC071</tstamp>
+    </comp>
+    <comp ref="R17">
+      <value>10k</value>
+      <footprint>Resistors_ThroughHole:Resistor_Horizontal_RM7mm</footprint>
+      <libsource lib="device" part="R"/>
+      <sheetpath names="/mouse_ui/" tstamps="/5D7CBC6D/"/>
+      <tstamp>5D7CC0A9</tstamp>
+    </comp>
+    <comp ref="R18">
+      <value>10k</value>
+      <footprint>Resistors_ThroughHole:Resistor_Horizontal_RM7mm</footprint>
+      <libsource lib="device" part="R"/>
+      <sheetpath names="/mouse_ui/" tstamps="/5D7CBC6D/"/>
+      <tstamp>5D7CC0D9</tstamp>
+    </comp>
+    <comp ref="R19">
+      <value>10k</value>
+      <footprint>Resistors_ThroughHole:Resistor_Horizontal_RM7mm</footprint>
+      <libsource lib="device" part="R"/>
+      <sheetpath names="/mouse_ui/" tstamps="/5D7CBC6D/"/>
+      <tstamp>5D7CC1B7</tstamp>
+    </comp>
+    <comp ref="R21">
+      <value>10k</value>
+      <footprint>Resistors_ThroughHole:Resistor_Horizontal_RM7mm</footprint>
+      <libsource lib="device" part="R"/>
+      <sheetpath names="/mouse_ui/" tstamps="/5D7CBC6D/"/>
+      <tstamp>5D7CC23B</tstamp>
+    </comp>
+    <comp ref="R22">
+      <value>10k</value>
+      <footprint>Resistors_ThroughHole:Resistor_Horizontal_RM7mm</footprint>
+      <libsource lib="device" part="R"/>
+      <sheetpath names="/mouse_ui/" tstamps="/5D7CBC6D/"/>
+      <tstamp>5D7CC5EA</tstamp>
+    </comp>
+    <comp ref="S1">
+      <value>7SEGM</value>
+      <footprint>Displays_7-Segment:7SegmentLED_LTS6760_LTS6780</footprint>
+      <libsource lib="display" part="7SEGM"/>
+      <sheetpath names="/mouse_ui/" tstamps="/5D7CBC6D/"/>
+      <tstamp>5D7CC874</tstamp>
+    </comp>
+    <comp ref="R23">
+      <value>10k</value>
+      <footprint>Resistors_ThroughHole:Resistor_Horizontal_RM7mm</footprint>
+      <libsource lib="device" part="R"/>
+      <sheetpath names="/mouse_ui/" tstamps="/5D7CBC6D/"/>
+      <tstamp>5D7CC8FF</tstamp>
+    </comp>
+    <comp ref="S2">
+      <value>7SEGM</value>
+      <footprint>Displays_7-Segment:7SegmentLED_LTS6760_LTS6780</footprint>
+      <libsource lib="display" part="7SEGM"/>
+      <sheetpath names="/mouse_ui/" tstamps="/5D7CBC6D/"/>
+      <tstamp>5D7CCECF</tstamp>
+    </comp>
+    <comp ref="Q7">
+      <value>BSS138</value>
+      <footprint>TO_SOT_Packages_SMD:SOT-23</footprint>
+      <libsource lib="transistors" part="BSS138"/>
+      <sheetpath names="/mouse_ui/" tstamps="/5D7CBC6D/"/>
+      <tstamp>5D7CE50E</tstamp>
+    </comp>
+    <comp ref="R29">
+      <value>10k</value>
+      <footprint>Resistors_ThroughHole:Resistor_Horizontal_RM7mm</footprint>
+      <libsource lib="device" part="R"/>
+      <sheetpath names="/mouse_ui/" tstamps="/5D7CBC6D/"/>
+      <tstamp>5D7CE51B</tstamp>
+    </comp>
+    <comp ref="Q6">
+      <value>BSS138</value>
+      <footprint>TO_SOT_Packages_SMD:SOT-23</footprint>
+      <libsource lib="transistors" part="BSS138"/>
+      <sheetpath names="/mouse_ui/" tstamps="/5D7CBC6D/"/>
+      <tstamp>5D7CEE22</tstamp>
+    </comp>
+    <comp ref="R24">
+      <value>10k</value>
+      <footprint>Resistors_ThroughHole:Resistor_Horizontal_RM7mm</footprint>
+      <libsource lib="device" part="R"/>
+      <sheetpath names="/mouse_ui/" tstamps="/5D7CBC6D/"/>
+      <tstamp>5D7CEE2F</tstamp>
+    </comp>
+    <comp ref="Q5">
+      <value>BSS138</value>
+      <footprint>TO_SOT_Packages_SMD:SOT-23</footprint>
+      <libsource lib="transistors" part="BSS138"/>
+      <sheetpath names="/mouse_ui/" tstamps="/5D7CBC6D/"/>
+      <tstamp>5D7CF221</tstamp>
+    </comp>
+    <comp ref="R20">
+      <value>10k</value>
+      <footprint>Resistors_ThroughHole:Resistor_Horizontal_RM7mm</footprint>
+      <libsource lib="device" part="R"/>
+      <sheetpath names="/mouse_ui/" tstamps="/5D7CBC6D/"/>
+      <tstamp>5D7CF22E</tstamp>
+    </comp>
+    <comp ref="P17">
+      <value>LED_CONN</value>
+      <footprint>Socket_Strips:Socket_Strip_Straight_1x08</footprint>
+      <libsource lib="conn" part="CONN_01X08"/>
+      <sheetpath names="/mouse_ui/" tstamps="/5D7CBC6D/"/>
+      <tstamp>5D7CF99F</tstamp>
+    </comp>
+    <comp ref="P16">
+      <value>LED_K_CONN</value>
+      <footprint>Socket_Strips:Socket_Strip_Straight_1x03</footprint>
+      <libsource lib="conn" part="CONN_01X03"/>
+      <sheetpath names="/mouse_ui/" tstamps="/5D7CBC6D/"/>
+      <tstamp>5D7D0373</tstamp>
+    </comp>
+    <comp ref="SW4">
+      <value>SW_PUSH</value>
+      <footprint>Buttons_Switches_ThroughHole:SW_PUSH-12mm</footprint>
+      <libsource lib="device" part="SW_PUSH"/>
+      <sheetpath names="/mouse_ui/" tstamps="/5D7CBC6D/"/>
+      <tstamp>5D7C9274</tstamp>
+    </comp>
+    <comp ref="SW3">
+      <value>SW_PUSH</value>
+      <footprint>Buttons_Switches_ThroughHole:SW_PUSH-12mm</footprint>
+      <libsource lib="device" part="SW_PUSH"/>
+      <sheetpath names="/mouse_ui/" tstamps="/5D7CBC6D/"/>
+      <tstamp>5D7C93BD</tstamp>
+    </comp>
+    <comp ref="SW2">
+      <value>SW_PUSH</value>
+      <footprint>Buttons_Switches_ThroughHole:SW_PUSH-12mm</footprint>
+      <libsource lib="device" part="SW_PUSH"/>
+      <sheetpath names="/mouse_ui/" tstamps="/5D7CBC6D/"/>
+      <tstamp>5D7C9418</tstamp>
+    </comp>
+    <comp ref="SW1">
+      <value>SPST</value>
+      <footprint>Buttons_Switches_ThroughHole:SW_DIP_x1_Slide</footprint>
+      <libsource lib="device" part="SPST"/>
+      <sheetpath names="/mouse_ui/" tstamps="/5D7CBC6D/"/>
+      <tstamp>5D7C9516</tstamp>
+    </comp>
+    <comp ref="R25">
+      <value>10k</value>
+      <footprint>Resistors_ThroughHole:Resistor_Horizontal_RM7mm</footprint>
+      <libsource lib="device" part="R"/>
+      <sheetpath names="/mouse_ui/" tstamps="/5D7CBC6D/"/>
+      <tstamp>5D7C9C0D</tstamp>
+    </comp>
+    <comp ref="R26">
+      <value>10k</value>
+      <footprint>Resistors_ThroughHole:Resistor_Horizontal_RM7mm</footprint>
+      <libsource lib="device" part="R"/>
+      <sheetpath names="/mouse_ui/" tstamps="/5D7CBC6D/"/>
+      <tstamp>5D7C9D79</tstamp>
+    </comp>
+    <comp ref="R27">
+      <value>10k</value>
+      <footprint>Resistors_ThroughHole:Resistor_Horizontal_RM7mm</footprint>
+      <libsource lib="device" part="R"/>
+      <sheetpath names="/mouse_ui/" tstamps="/5D7CBC6D/"/>
+      <tstamp>5D7C9E01</tstamp>
+    </comp>
+    <comp ref="R28">
+      <value>10k</value>
+      <footprint>Resistors_ThroughHole:Resistor_Horizontal_RM7mm</footprint>
+      <libsource lib="device" part="R"/>
+      <sheetpath names="/mouse_ui/" tstamps="/5D7CBC6D/"/>
+      <tstamp>5D7C9E89</tstamp>
+    </comp>
+    <comp ref="P18">
+      <value>SW_CONN</value>
+      <footprint>Socket_Strips:Socket_Strip_Straight_1x04</footprint>
+      <libsource lib="conn" part="CONN_01X04"/>
+      <sheetpath names="/mouse_ui/" tstamps="/5D7CBC6D/"/>
+      <tstamp>5D7CB5B9</tstamp>
+    </comp>
+    <comp ref="P15">
+      <value>UI_SOURCE</value>
+      <footprint>Socket_Strips:Socket_Strip_Straight_1x02</footprint>
+      <libsource lib="conn" part="CONN_01X02"/>
+      <sheetpath names="/mouse_ui/" tstamps="/5D7CBC6D/"/>
+      <tstamp>5D7D128D</tstamp>
+    </comp>
+    <comp ref="U6">
+      <value>POLOLU_A4988</value>
+      <footprint>Displays_7-Segment:DA04</footprint>
+      <libsource lib="pololu_a4988" part="POLOLU_A4988"/>
+      <sheetpath names="/motor_controller/" tstamps="/5D7D2443/"/>
+      <tstamp>5D7D26BE</tstamp>
+    </comp>
+    <comp ref="P22">
+      <value>MOTOR_L</value>
+      <footprint>Socket_Strips:Socket_Strip_Straight_1x04</footprint>
+      <libsource lib="conn" part="CONN_01X04"/>
+      <sheetpath names="/motor_controller/" tstamps="/5D7D2443/"/>
+      <tstamp>5D7D27E7</tstamp>
+    </comp>
+    <comp ref="P19">
+      <value>MOTOR_SOURCE</value>
+      <footprint>Socket_Strips:Socket_Strip_Straight_1x02</footprint>
+      <libsource lib="conn" part="CONN_01X02"/>
+      <sheetpath names="/motor_controller/" tstamps="/5D7D2443/"/>
+      <tstamp>5D7D2A66</tstamp>
+    </comp>
+    <comp ref="P20">
+      <value>CHIP_SOURCE</value>
+      <footprint>Socket_Strips:Socket_Strip_Straight_1x02</footprint>
+      <libsource lib="conn" part="CONN_01X02"/>
+      <sheetpath names="/motor_controller/" tstamps="/5D7D2443/"/>
+      <tstamp>5D7D2AE2</tstamp>
+    </comp>
+    <comp ref="U7">
+      <value>POLOLU_A4988</value>
+      <footprint>Displays_7-Segment:DA04</footprint>
+      <libsource lib="pololu_a4988" part="POLOLU_A4988"/>
+      <sheetpath names="/motor_controller/" tstamps="/5D7D2443/"/>
+      <tstamp>5D7D2D98</tstamp>
+    </comp>
+    <comp ref="P23">
+      <value>MOTOR_R</value>
+      <footprint>Socket_Strips:Socket_Strip_Straight_1x04</footprint>
+      <libsource lib="conn" part="CONN_01X04"/>
+      <sheetpath names="/motor_controller/" tstamps="/5D7D2443/"/>
+      <tstamp>5D7D2D9F</tstamp>
+    </comp>
+    <comp ref="P21">
+      <value>MOTOR_CONTROL</value>
+      <footprint>Socket_Strips:Socket_Strip_Straight_1x04</footprint>
+      <libsource lib="conn" part="CONN_01X04"/>
+      <sheetpath names="/motor_controller/" tstamps="/5D7D2443/"/>
+      <tstamp>5D7D35F7</tstamp>
+    </comp>
+  </components>
+  <libparts>
+    <libpart lib="display" part="7SEGM">
+      <description>Afficheur Leds 7 segments</description>
+      <fields>
+        <field name="Reference">S</field>
+        <field name="Value">7SEGM</field>
+      </fields>
+      <pins>
+        <pin num="1" name="Segm_E" type="passive"/>
+        <pin num="2" name="Segm_D" type="passive"/>
+        <pin num="3" name="K" type="passive"/>
+        <pin num="4" name="Segm_C" type="passive"/>
+        <pin num="5" name="SegmDP" type="passive"/>
+        <pin num="6" name="Segm_B" type="passive"/>
+        <pin num="7" name="Segm_A" type="passive"/>
+        <pin num="8" name="K" type="input"/>
+        <pin num="9" name="Segm_F" type="passive"/>
+        <pin num="10" name="Segm_G" type="passive"/>
+      </pins>
+    </libpart>
+    <libpart lib="ADA3708" part="ADA3708">
+      <fields>
+        <field name="Reference">A</field>
+        <field name="Value">ADA3708</field>
+        <field name="Footprint">ADA3708_RPI-ZERO</field>
+        <field name="Datasheet">Raspberry Pi Zero WH _Zero W with Headers_</field>
+        <field name="Field4">Unavailable</field>
+        <field name="Field5">None</field>
+        <field name="Field6">Raspberry Pi</field>
+        <field name="Field7">None</field>
+        <field name="Field8">ADA3708</field>
+      </fields>
+      <pins>
+        <pin num="1" name="3V3[1]" type="power_in"/>
+        <pin num="2" name="5V[1]" type="power_in"/>
+        <pin num="3" name="GPIO2/SDA" type="BiDi"/>
+        <pin num="4" name="5V[2]" type="power_in"/>
+        <pin num="5" name="GPIO3/SCL" type="BiDi"/>
+        <pin num="6" name="GND[8]" type="power_in"/>
+        <pin num="7" name="GPIO4/GPCKL0" type="BiDi"/>
+        <pin num="8" name="TXD0/GPIO14" type="BiDi"/>
+        <pin num="9" name="GND[1]" type="power_in"/>
+        <pin num="10" name="RXD0/GPIO15" type="BiDi"/>
+        <pin num="11" name="GPIO17/GEN0" type="BiDi"/>
+        <pin num="12" name="GPIO18" type="BiDi"/>
+        <pin num="13" name="GPIO27/GEN2" type="BiDi"/>
+        <pin num="14" name="GND[4]" type="power_in"/>
+        <pin num="15" name="GPIO22/GEN3" type="BiDi"/>
+        <pin num="16" name="GEN4/GPIO23" type="BiDi"/>
+        <pin num="17" name="3V3[2]" type="power_in"/>
+        <pin num="18" name="GEN5/GPIO24" type="BiDi"/>
+        <pin num="19" name="GPIO10/MOSI" type="BiDi"/>
+        <pin num="20" name="GND[5]" type="power_in"/>
+        <pin num="21" name="GPIO9/MISO" type="BiDi"/>
+        <pin num="22" name="GEN/6GPIO25" type="BiDi"/>
+        <pin num="23" name="GPIO11/SCLK" type="BiDi"/>
+        <pin num="24" name="~CE0!/GPIO8~" type="BiDi"/>
+        <pin num="25" name="GND[2]" type="power_in"/>
+        <pin num="26" name="~CE1/!GPIO7~" type="BiDi"/>
+        <pin num="27" name="ID_SD" type="BiDi"/>
+        <pin num="28" name="ID_SC" type="BiDi"/>
+        <pin num="29" name="GPIO5" type="BiDi"/>
+        <pin num="30" name="GND[6]" type="power_in"/>
+        <pin num="31" name="GPIO6" type="BiDi"/>
+        <pin num="32" name="GPIO12" type="BiDi"/>
+        <pin num="33" name="GPIO13" type="BiDi"/>
+        <pin num="34" name="GND[7]" type="power_in"/>
+        <pin num="35" name="GPIO19" type="BiDi"/>
+        <pin num="36" name="GPIO16" type="BiDi"/>
+        <pin num="37" name="GPIO26" type="BiDi"/>
+        <pin num="38" name="GPIO20" type="BiDi"/>
+        <pin num="39" name="GND[3]" type="power_in"/>
+        <pin num="40" name="GPIO21" type="BiDi"/>
+      </pins>
+    </libpart>
+    <libpart lib="transistors" part="BSS138">
+      <description>50V Vds, 0.22A Id, N-Channel MOSFET, SOT-23</description>
+      <docs>http://www.fairchildsemi.com/ds/BS/BSS138.pdf</docs>
+      <footprints>
+        <fp>SOT-23*</fp>
+      </footprints>
+      <fields>
+        <field name="Reference">Q</field>
+        <field name="Value">BSS138</field>
+        <field name="Footprint">SOT-23</field>
+      </fields>
+      <pins>
+        <pin num="1" name="G" type="passive"/>
+        <pin num="2" name="S" type="passive"/>
+        <pin num="3" name="D" type="passive"/>
+      </pins>
+    </libpart>
+    <libpart lib="device" part="C">
+      <description>Unpolarized capacitor</description>
+      <footprints>
+        <fp>C?</fp>
+        <fp>C_????_*</fp>
+        <fp>C_????</fp>
+        <fp>SMD*_c</fp>
+        <fp>Capacitor*</fp>
+      </footprints>
+      <fields>
+        <field name="Reference">C</field>
+        <field name="Value">C</field>
+      </fields>
+      <pins>
+        <pin num="1" name="~" type="passive"/>
+        <pin num="2" name="~" type="passive"/>
+      </pins>
+    </libpart>
+    <libpart lib="conn" part="CONN_01X02">
+      <description>Connector 01x02</description>
+      <footprints>
+        <fp>Pin_Header_Straight_1X02</fp>
+        <fp>Pin_Header_Angled_1X02</fp>
+        <fp>Socket_Strip_Straight_1X02</fp>
+        <fp>Socket_Strip_Angled_1X02</fp>
+      </footprints>
+      <fields>
+        <field name="Reference">P</field>
+        <field name="Value">CONN_01X02</field>
+      </fields>
+      <pins>
+        <pin num="1" name="P1" type="passive"/>
+        <pin num="2" name="P2" type="passive"/>
+      </pins>
+    </libpart>
+    <libpart lib="conn" part="CONN_01X03">
+      <description>Connector 01x03</description>
+      <footprints>
+        <fp>Pin_Header_Straight_1X03</fp>
+        <fp>Pin_Header_Angled_1X03</fp>
+        <fp>Socket_Strip_Straight_1X03</fp>
+        <fp>Socket_Strip_Angled_1X03</fp>
+      </footprints>
+      <fields>
+        <field name="Reference">P</field>
+        <field name="Value">CONN_01X03</field>
+      </fields>
+      <pins>
+        <pin num="1" name="P1" type="passive"/>
+        <pin num="2" name="P2" type="passive"/>
+        <pin num="3" name="P3" type="passive"/>
+      </pins>
+    </libpart>
+    <libpart lib="conn" part="CONN_01X04">
+      <description>Connector 01x04</description>
+      <footprints>
+        <fp>Pin_Header_Straight_1X04</fp>
+        <fp>Pin_Header_Angled_1X04</fp>
+        <fp>Socket_Strip_Straight_1X04</fp>
+        <fp>Socket_Strip_Angled_1X04</fp>
+      </footprints>
+      <fields>
+        <field name="Reference">P</field>
+        <field name="Value">CONN_01X04</field>
+      </fields>
+      <pins>
+        <pin num="1" name="P1" type="passive"/>
+        <pin num="2" name="P2" type="passive"/>
+        <pin num="3" name="P3" type="passive"/>
+        <pin num="4" name="P4" type="passive"/>
+      </pins>
+    </libpart>
+    <libpart lib="conn" part="CONN_01X06">
+      <description>Connector 01x06</description>
+      <footprints>
+        <fp>Pin_Header_Straight_1X06</fp>
+        <fp>Pin_Header_Angled_1X06</fp>
+        <fp>Socket_Strip_Straight_1X06</fp>
+        <fp>Socket_Strip_Angled_1X06</fp>
+      </footprints>
+      <fields>
+        <field name="Reference">P</field>
+        <field name="Value">CONN_01X06</field>
+      </fields>
+      <pins>
+        <pin num="1" name="P1" type="passive"/>
+        <pin num="2" name="P2" type="passive"/>
+        <pin num="3" name="P3" type="passive"/>
+        <pin num="4" name="P4" type="passive"/>
+        <pin num="5" name="P5" type="passive"/>
+        <pin num="6" name="P6" type="passive"/>
+      </pins>
+    </libpart>
+    <libpart lib="conn" part="CONN_01X08">
+      <description>Connector 01x08</description>
+      <footprints>
+        <fp>Pin_Header_Straight_1X08</fp>
+        <fp>Pin_Header_Angled_1X08</fp>
+        <fp>Socket_Strip_Straight_1X08</fp>
+        <fp>Socket_Strip_Angled_1X08</fp>
+      </footprints>
+      <fields>
+        <field name="Reference">P</field>
+        <field name="Value">CONN_01X08</field>
+      </fields>
+      <pins>
+        <pin num="1" name="P1" type="passive"/>
+        <pin num="2" name="P2" type="passive"/>
+        <pin num="3" name="P3" type="passive"/>
+        <pin num="4" name="P4" type="passive"/>
+        <pin num="5" name="P5" type="passive"/>
+        <pin num="6" name="P6" type="passive"/>
+        <pin num="7" name="P7" type="passive"/>
+        <pin num="8" name="P8" type="passive"/>
+      </pins>
+    </libpart>
+    <libpart lib="L7805" part="L7805">
+      <fields>
+        <field name="Reference">IC</field>
+        <field name="Value">L7805</field>
+        <field name="Footprint">78XXS</field>
+        <field name="Datasheet">Unavailable</field>
+        <field name="Field4">STMicroelectronics</field>
+        <field name="Field5">None</field>
+        <field name="Field6">IC Regulator 7805T/L7805 INCHANGE SEMICONDUCTORS TO220</field>
+        <field name="Field7">TO-263-3 Inchange Semiconductor</field>
+        <field name="Field8">L7805</field>
+      </fields>
+      <pins>
+        <pin num="GND" name="GND" type="input"/>
+        <pin num="IN" name="IN" type="input"/>
+        <pin num="OUT" name="OUT" type="passive"/>
+      </pins>
+    </libpart>
+    <libpart lib="LBR-127HLD" part="LBR-127HLD">
+      <description>Reflective Object Sensor</description>
+      <docs>http://akizukidenshi.com/download/lbr127hld.pdf</docs>
+      <fields>
+        <field name="Reference">U</field>
+        <field name="Value">LBR-127HLD</field>
+        <field name="Footprint">A5131A</field>
+        <field name="Datasheet">http://akizukidenshi.com/download/lbr127hld.pdf</field>
+        <field name="Description">Reflective Object Sensor</field>
+        <field name="Manufacturer_Name">Letex Technology</field>
+        <field name="Manufacturer_Part_Number">LBR-127HLD</field>
+      </fields>
+      <pins>
+        <pin num="1" name="ANODE_(LONG-LEAD)" type="BiDi"/>
+        <pin num="2" name="CATHODE" type="BiDi"/>
+        <pin num="3" name="EMITTER_(LONG-LEAD)" type="BiDi"/>
+        <pin num="4" name="COLLECTOR" type="BiDi"/>
+      </pins>
+    </libpart>
+    <libpart lib="adc-dac" part="MCP3008">
+      <description>MCP3008, 8-Channel 10-Bit A/D Converters with SPI Serial Interface</description>
+      <docs>http://ww1.microchip.com/downloads/en/DeviceDoc/21295d.pdf</docs>
+      <footprints>
+        <fp>DIP-16*</fp>
+        <fp>SOIC-16*</fp>
+      </footprints>
+      <fields>
+        <field name="Reference">U</field>
+        <field name="Value">MCP3008</field>
+      </fields>
+      <pins>
+        <pin num="1" name="CH0" type="output"/>
+        <pin num="2" name="CH1" type="output"/>
+        <pin num="3" name="CH2" type="output"/>
+        <pin num="4" name="CH3" type="output"/>
+        <pin num="5" name="CH4" type="output"/>
+        <pin num="6" name="CH5" type="output"/>
+        <pin num="7" name="CH6" type="output"/>
+        <pin num="8" name="CH7" type="output"/>
+        <pin num="9" name="DGND" type="power_in"/>
+        <pin num="10" name="~CS~/SHDN" type="input"/>
+        <pin num="11" name="DIN" type="input"/>
+        <pin num="12" name="DOUT" type="output"/>
+        <pin num="13" name="CLK" type="input"/>
+        <pin num="14" name="AGND" type="power_in"/>
+        <pin num="15" name="VREF" type="power_in"/>
+        <pin num="16" name="VDD" type="power_in"/>
+      </pins>
+    </libpart>
+    <libpart lib="OSX10201-GYR1" part="OSX10201-GYR1">
+      <description>0.2 Inch Ten Digit Multi-color Display</description>
+      <docs>http://www.optosupply.com/uppic/2016810490258.pdf</docs>
+      <fields>
+        <field name="Reference">DS</field>
+        <field name="Value">OSX10201-GYR1</field>
+        <field name="Footprint">DIPS760W45P254L2550H815Q20N</field>
+        <field name="Datasheet">http://www.optosupply.com/uppic/2016810490258.pdf</field>
+        <field name="Description">0.2 Inch Ten Digit Multi-color Display</field>
+        <field name="Height">8.15</field>
+        <field name="Manufacturer_Name">OptoSupply</field>
+        <field name="Manufacturer_Part_Number">OSX10201-GYR1</field>
+      </fields>
+      <pins>
+        <pin num="1" name="ANODE_A" type="BiDi"/>
+        <pin num="2" name="ANODE_B" type="BiDi"/>
+        <pin num="3" name="ANODE_C" type="BiDi"/>
+        <pin num="4" name="ANODE_D" type="BiDi"/>
+        <pin num="5" name="ANODE_E" type="BiDi"/>
+        <pin num="6" name="ANODE_F" type="BiDi"/>
+        <pin num="7" name="ANODE_G" type="BiDi"/>
+        <pin num="8" name="ANODE_H" type="BiDi"/>
+        <pin num="9" name="ANODE_I" type="BiDi"/>
+        <pin num="10" name="ANODE_J" type="BiDi"/>
+        <pin num="11" name="CATHODE_J" type="BiDi"/>
+        <pin num="12" name="CATHODE_I" type="BiDi"/>
+        <pin num="13" name="CATHODE_H" type="BiDi"/>
+        <pin num="14" name="CATHODE_G" type="BiDi"/>
+        <pin num="15" name="CATHODE_F" type="BiDi"/>
+        <pin num="16" name="CATHODE_E" type="BiDi"/>
+        <pin num="17" name="CATHODE_D" type="BiDi"/>
+        <pin num="18" name="CATHODE_C" type="BiDi"/>
+        <pin num="19" name="CATHODE_B" type="BiDi"/>
+        <pin num="20" name="CATHODE_A" type="BiDi"/>
+      </pins>
+    </libpart>
+    <libpart lib="pololu_a4988" part="POLOLU_A4988">
+      <footprints>
+        <fp>SWDIP8_.6W</fp>
+      </footprints>
+      <fields>
+        <field name="Reference">U</field>
+        <field name="Value">POLOLU_A4988</field>
+      </fields>
+      <pins>
+        <pin num="1" name="GND" type="passive"/>
+        <pin num="2" name="VDD" type="passive"/>
+        <pin num="3" name="IB" type="passive"/>
+        <pin num="4" name="1A" type="passive"/>
+        <pin num="5" name="2A" type="passive"/>
+        <pin num="6" name="2B" type="passive"/>
+        <pin num="7" name="GND" type="passive"/>
+        <pin num="8" name="VMOT" type="passive"/>
+        <pin num="9" name="EN" type="passive"/>
+        <pin num="10" name="MS1" type="passive"/>
+        <pin num="11" name="MS2" type="passive"/>
+        <pin num="12" name="MS3" type="passive"/>
+        <pin num="13" name="RST" type="passive"/>
+        <pin num="14" name="SLP" type="passive"/>
+        <pin num="15" name="STEP" type="passive"/>
+        <pin num="16" name="DIR" type="passive"/>
+      </pins>
+    </libpart>
+    <libpart lib="device" part="R">
+      <description>Resistor</description>
+      <footprints>
+        <fp>R_*</fp>
+        <fp>Resistor_*</fp>
+      </footprints>
+      <fields>
+        <field name="Reference">R</field>
+        <field name="Value">R</field>
+      </fields>
+      <pins>
+        <pin num="1" name="~" type="passive"/>
+        <pin num="2" name="~" type="passive"/>
+      </pins>
+    </libpart>
+    <libpart lib="device" part="SPST">
+      <description>Interrupteur simple</description>
+      <fields>
+        <field name="Reference">SW</field>
+        <field name="Value">SPST</field>
+      </fields>
+      <pins>
+        <pin num="1" name="1" type="input"/>
+        <pin num="2" name="2" type="input"/>
+      </pins>
+    </libpart>
+    <libpart lib="device" part="SW_PUSH">
+      <description>Button</description>
+      <fields>
+        <field name="Reference">SW</field>
+        <field name="Value">SW_PUSH</field>
+      </fields>
+      <pins>
+        <pin num="1" name="1" type="passive"/>
+        <pin num="2" name="2" type="passive"/>
+      </pins>
+    </libpart>
+  </libparts>
+  <libraries>
+    <library logical="ADA3708">
+      <uri>/home/platypus/Documents/kicad_libraries/ADA3708/ADA3708.lib</uri>
+    </library>
+    <library logical="OSX10201-GYR1">
+      <uri>/home/platypus/Documents/kicad_libraries/OSX10201-GYR1/OSX10201-GYR1.lib</uri>
+    </library>
+    <library logical="L7805">
+      <uri>/home/platypus/Documents/kicad_libraries/L7805/L7805.lib</uri>
+    </library>
+    <library logical="LBR-127HLD">
+      <uri>/home/platypus/Documents/kicad_libraries/LBR-127HLD/KiCad/LBR-127HLD.lib</uri>
+    </library>
+    <library logical="pololu_a4988">
+      <uri>/home/platypus/Documents/kicad_libraries/pololu/pololu_a4988.lib</uri>
+    </library>
+    <library logical="adc-dac">
+      <uri>/usr/share/kicad/library/adc-dac.lib</uri>
+    </library>
+    <library logical="transistors">
+      <uri>/usr/share/kicad/library/transistors.lib</uri>
+    </library>
+    <library logical="device">
+      <uri>/usr/share/kicad/library/device.lib</uri>
+    </library>
+    <library logical="display">
+      <uri>/usr/share/kicad/library/display.lib</uri>
+    </library>
+    <library logical="conn">
+      <uri>/usr/share/kicad/library/conn.lib</uri>
+    </library>
+  </libraries>
+  <nets>
+    <net code="1" name="Net-(R1-Pad2)">
+      <node ref="R2" pin="1"/>
+      <node ref="U1" pin="8"/>
+      <node ref="R1" pin="2"/>
+    </net>
+    <net code="2" name="Net-(A1-Pad19)">
+      <node ref="A1" pin="19"/>
+      <node ref="U1" pin="11"/>
+    </net>
+    <net code="3" name="Net-(A1-Pad24)">
+      <node ref="U1" pin="10"/>
+      <node ref="A1" pin="24"/>
+    </net>
+    <net code="4" name="MOTOR_R_DIRE2">
+      <node ref="P9" pin="2"/>
+      <node ref="A1" pin="35"/>
+    </net>
+    <net code="5" name="MOTOR_R_DIRE1">
+      <node ref="A1" pin="11"/>
+      <node ref="P9" pin="3"/>
+    </net>
+    <net code="6" name="MOTOR_L_DIRE1">
+      <node ref="P9" pin="6"/>
+      <node ref="A1" pin="12"/>
+    </net>
+    <net code="7" name="Net-(P8-Pad4)">
+      <node ref="P8" pin="4"/>
+      <node ref="U1" pin="1"/>
+    </net>
+    <net code="8" name="Net-(P8-Pad3)">
+      <node ref="U1" pin="2"/>
+      <node ref="P8" pin="3"/>
+    </net>
+    <net code="9" name="Net-(P8-Pad2)">
+      <node ref="U1" pin="3"/>
+      <node ref="P8" pin="2"/>
+    </net>
+    <net code="10" name="Net-(P8-Pad1)">
+      <node ref="P8" pin="1"/>
+      <node ref="U1" pin="4"/>
+    </net>
+    <net code="11" name="Net-(A1-Pad23)">
+      <node ref="U1" pin="13"/>
+      <node ref="A1" pin="23"/>
+    </net>
+    <net code="12" name="Net-(A1-Pad21)">
+      <node ref="A1" pin="21"/>
+      <node ref="U1" pin="12"/>
+    </net>
+    <net code="13" name="LED_K2">
+      <node ref="A1" pin="10"/>
+      <node ref="P12" pin="2"/>
+    </net>
+    <net code="14" name="LED_K3">
+      <node ref="A1" pin="16"/>
+      <node ref="P12" pin="1"/>
+    </net>
+    <net code="15" name="LED_K1">
+      <node ref="A1" pin="8"/>
+      <node ref="P12" pin="3"/>
+    </net>
+    <net code="16" name="MOTOR_L_DIRE2">
+      <node ref="P9" pin="5"/>
+      <node ref="A1" pin="36"/>
+    </net>
+    <net code="17" name="SW1">
+      <node ref="P11" pin="4"/>
+      <node ref="A1" pin="18"/>
+    </net>
+    <net code="18" name="SW2">
+      <node ref="P11" pin="3"/>
+      <node ref="A1" pin="22"/>
+    </net>
+    <net code="19" name="SW3">
+      <node ref="A1" pin="38"/>
+      <node ref="P11" pin="2"/>
+    </net>
+    <net code="20" name="SW4">
+      <node ref="A1" pin="40"/>
+      <node ref="P11" pin="1"/>
+    </net>
+    <net code="21" name="Net-(C1-Pad1)">
+      <node ref="P1" pin="2"/>
+      <node ref="P2" pin="2"/>
+      <node ref="R1" pin="1"/>
+      <node ref="IC1" pin="IN"/>
+      <node ref="C1" pin="1"/>
+      <node ref="SW5" pin="2"/>
+    </net>
+    <net code="22" name="Net-(P3-Pad2)">
+      <node ref="P3" pin="2"/>
+      <node ref="SW5" pin="1"/>
+    </net>
+    <net code="23" name="GND">
+      <node ref="R2" pin="2"/>
+      <node ref="U1" pin="14"/>
+      <node ref="A1" pin="14"/>
+      <node ref="P2" pin="1"/>
+      <node ref="U1" pin="9"/>
+      <node ref="A1" pin="9"/>
+      <node ref="P3" pin="1"/>
+      <node ref="C2" pin="2"/>
+      <node ref="C1" pin="2"/>
+      <node ref="A1" pin="6"/>
+      <node ref="A1" pin="25"/>
+      <node ref="A1" pin="34"/>
+      <node ref="P5" pin="1"/>
+      <node ref="P7" pin="1"/>
+      <node ref="IC1" pin="GND"/>
+      <node ref="P4" pin="1"/>
+      <node ref="P1" pin="1"/>
+      <node ref="A1" pin="39"/>
+      <node ref="A1" pin="30"/>
+      <node ref="P6" pin="1"/>
+      <node ref="A1" pin="20"/>
+    </net>
+    <net code="24" name="MOTOR_L_PWM">
+      <node ref="P9" pin="4"/>
+      <node ref="A1" pin="32"/>
+    </net>
+    <net code="25" name="MOTOR_R_PWM">
+      <node ref="A1" pin="33"/>
+      <node ref="P9" pin="1"/>
+    </net>
+    <net code="26" name="+5V">
+      <node ref="P7" pin="2"/>
+      <node ref="P4" pin="2"/>
+      <node ref="P5" pin="2"/>
+      <node ref="P6" pin="2"/>
+      <node ref="IC1" pin="OUT"/>
+      <node ref="A1" pin="4"/>
+      <node ref="U1" pin="15"/>
+      <node ref="U1" pin="16"/>
+      <node ref="C2" pin="1"/>
+    </net>
+    <net code="27" name="Net-(A1-Pad28)">
+      <node ref="A1" pin="28"/>
+    </net>
+    <net code="28" name="Net-(A1-Pad27)">
+      <node ref="A1" pin="27"/>
+    </net>
+    <net code="29" name="Net-(A1-Pad17)">
+      <node ref="A1" pin="17"/>
+    </net>
+    <net code="30" name="Net-(A1-Pad26)">
+      <node ref="A1" pin="26"/>
+    </net>
+    <net code="31" name="Net-(U1-Pad7)">
+      <node ref="U1" pin="7"/>
+    </net>
+    <net code="32" name="Net-(U1-Pad6)">
+      <node ref="U1" pin="6"/>
+    </net>
+    <net code="33" name="Net-(U1-Pad5)">
+      <node ref="U1" pin="5"/>
+    </net>
+    <net code="34" name="Net-(A1-Pad2)">
+      <node ref="A1" pin="2"/>
+    </net>
+    <net code="35" name="Net-(A1-Pad1)">
+      <node ref="A1" pin="1"/>
+    </net>
+    <net code="36" name="LED1">
+      <node ref="P10" pin="8"/>
+      <node ref="A1" pin="3"/>
+    </net>
+    <net code="37" name="LED2">
+      <node ref="A1" pin="5"/>
+      <node ref="P10" pin="7"/>
+    </net>
+    <net code="38" name="LED3">
+      <node ref="P10" pin="6"/>
+      <node ref="A1" pin="7"/>
+    </net>
+    <net code="39" name="LED4">
+      <node ref="A1" pin="13"/>
+      <node ref="P10" pin="5"/>
+    </net>
+    <net code="40" name="LED5">
+      <node ref="A1" pin="15"/>
+      <node ref="P10" pin="4"/>
+    </net>
+    <net code="41" name="LED6">
+      <node ref="A1" pin="29"/>
+      <node ref="P10" pin="3"/>
+    </net>
+    <net code="42" name="LED7">
+      <node ref="A1" pin="31"/>
+      <node ref="P10" pin="2"/>
+    </net>
+    <net code="43" name="LED8">
+      <node ref="A1" pin="37"/>
+      <node ref="P10" pin="1"/>
+    </net>
+    <net code="44" name="IR_SENSOR4">
+      <node ref="P14" pin="1"/>
+      <node ref="U5" pin="3"/>
+      <node ref="R14" pin="1"/>
+    </net>
+    <net code="45" name="Net-(R4-Pad2)">
+      <node ref="R4" pin="2"/>
+      <node ref="U3" pin="1"/>
+    </net>
+    <net code="46" name="Net-(R10-Pad2)">
+      <node ref="R10" pin="2"/>
+      <node ref="U5" pin="1"/>
+    </net>
+    <net code="47" name="Net-(Q4-Pad3)">
+      <node ref="Q4" pin="3"/>
+      <node ref="U5" pin="2"/>
+    </net>
+    <net code="48" name="IR4">
+      <node ref="R12" pin="1"/>
+      <node ref="Q4" pin="1"/>
+      <node ref="P13" pin="1"/>
+    </net>
+    <net code="49" name="IR_SENSOR1">
+      <node ref="U2" pin="3"/>
+      <node ref="P14" pin="4"/>
+      <node ref="R7" pin="1"/>
+    </net>
+    <net code="50" name="IR1">
+      <node ref="P13" pin="4"/>
+      <node ref="R5" pin="1"/>
+      <node ref="Q1" pin="1"/>
+    </net>
+    <net code="51" name="IR2">
+      <node ref="Q2" pin="1"/>
+      <node ref="R6" pin="1"/>
+      <node ref="P13" pin="3"/>
+    </net>
+    <net code="52" name="IR3">
+      <node ref="R11" pin="1"/>
+      <node ref="Q3" pin="1"/>
+      <node ref="P13" pin="2"/>
+    </net>
+    <net code="53" name="IR_SENSOR3">
+      <node ref="P14" pin="2"/>
+      <node ref="R13" pin="1"/>
+      <node ref="U4" pin="3"/>
+    </net>
+    <net code="54" name="Net-(R9-Pad2)">
+      <node ref="R9" pin="2"/>
+      <node ref="U4" pin="1"/>
+    </net>
+    <net code="55" name="Net-(P13-Pad6)">
+      <node ref="R3" pin="1"/>
+      <node ref="U5" pin="4"/>
+      <node ref="U4" pin="4"/>
+      <node ref="R4" pin="1"/>
+      <node ref="U2" pin="4"/>
+      <node ref="R10" pin="1"/>
+      <node ref="P13" pin="6"/>
+      <node ref="R9" pin="1"/>
+      <node ref="U3" pin="4"/>
+    </net>
+    <net code="56" name="Net-(Q3-Pad3)">
+      <node ref="Q3" pin="3"/>
+      <node ref="U4" pin="2"/>
+    </net>
+    <net code="57" name="Net-(R3-Pad2)">
+      <node ref="U2" pin="1"/>
+      <node ref="R3" pin="2"/>
+    </net>
+    <net code="58" name="Net-(Q1-Pad3)">
+      <node ref="U2" pin="2"/>
+      <node ref="Q1" pin="3"/>
+    </net>
+    <net code="59" name="IR_SENSOR2">
+      <node ref="R8" pin="1"/>
+      <node ref="P14" pin="3"/>
+      <node ref="U3" pin="3"/>
+    </net>
+    <net code="60" name="Net-(Q2-Pad3)">
+      <node ref="U3" pin="2"/>
+      <node ref="Q2" pin="3"/>
+    </net>
+    <net code="61" name="Net-(P13-Pad5)">
+      <node ref="R13" pin="2"/>
+      <node ref="R14" pin="2"/>
+      <node ref="R12" pin="2"/>
+      <node ref="Q4" pin="2"/>
+      <node ref="Q1" pin="2"/>
+      <node ref="R11" pin="2"/>
+      <node ref="R5" pin="2"/>
+      <node ref="Q3" pin="2"/>
+      <node ref="R7" pin="2"/>
+      <node ref="P13" pin="5"/>
+      <node ref="Q2" pin="2"/>
+      <node ref="R6" pin="2"/>
+      <node ref="R8" pin="2"/>
+    </net>
+    <net code="62" name="Net-(Q6-Pad3)">
+      <node ref="S2" pin="3"/>
+      <node ref="Q6" pin="3"/>
+      <node ref="S2" pin="8"/>
+    </net>
+    <net code="63" name="Net-(P16-Pad3)">
+      <node ref="Q7" pin="1"/>
+      <node ref="P16" pin="3"/>
+      <node ref="R29" pin="1"/>
+    </net>
+    <net code="64" name="Net-(P16-Pad2)">
+      <node ref="P16" pin="2"/>
+      <node ref="Q6" pin="1"/>
+      <node ref="R24" pin="1"/>
+    </net>
+    <net code="65" name="Net-(DS1-Pad11)">
+      <node ref="DS1" pin="17"/>
+      <node ref="DS1" pin="18"/>
+      <node ref="DS1" pin="19"/>
+      <node ref="DS1" pin="16"/>
+      <node ref="DS1" pin="20"/>
+      <node ref="DS1" pin="11"/>
+      <node ref="DS1" pin="12"/>
+      <node ref="DS1" pin="13"/>
+      <node ref="DS1" pin="14"/>
+      <node ref="DS1" pin="15"/>
+      <node ref="Q7" pin="3"/>
+    </net>
+    <net code="66" name="Net-(P18-Pad2)">
+      <node ref="P18" pin="2"/>
+      <node ref="SW3" pin="1"/>
+      <node ref="R27" pin="2"/>
+    </net>
+    <net code="67" name="Net-(P15-Pad2)">
+      <node ref="R28" pin="1"/>
+      <node ref="R27" pin="1"/>
+      <node ref="R26" pin="1"/>
+      <node ref="P15" pin="2"/>
+      <node ref="R25" pin="1"/>
+    </net>
+    <net code="68" name="Net-(P18-Pad1)">
+      <node ref="P18" pin="1"/>
+      <node ref="R28" pin="2"/>
+      <node ref="SW4" pin="1"/>
+    </net>
+    <net code="69" name="Net-(P18-Pad3)">
+      <node ref="R26" pin="2"/>
+      <node ref="P18" pin="3"/>
+      <node ref="SW2" pin="1"/>
+    </net>
+    <net code="70" name="Net-(P18-Pad4)">
+      <node ref="SW1" pin="1"/>
+      <node ref="R25" pin="2"/>
+      <node ref="P18" pin="4"/>
+    </net>
+    <net code="71" name="Net-(DS1-Pad10)">
+      <node ref="DS1" pin="10"/>
+    </net>
+    <net code="72" name="Net-(P17-Pad8)">
+      <node ref="P17" pin="8"/>
+      <node ref="R15" pin="2"/>
+    </net>
+    <net code="73" name="Net-(P17-Pad1)">
+      <node ref="P17" pin="1"/>
+      <node ref="R23" pin="2"/>
+    </net>
+    <net code="74" name="Net-(P17-Pad2)">
+      <node ref="P17" pin="2"/>
+      <node ref="R22" pin="2"/>
+    </net>
+    <net code="75" name="Net-(P17-Pad3)">
+      <node ref="P17" pin="3"/>
+      <node ref="R21" pin="2"/>
+    </net>
+    <net code="76" name="Net-(P17-Pad4)">
+      <node ref="P17" pin="4"/>
+      <node ref="R19" pin="2"/>
+    </net>
+    <net code="77" name="Net-(P17-Pad5)">
+      <node ref="R18" pin="2"/>
+      <node ref="P17" pin="5"/>
+    </net>
+    <net code="78" name="Net-(P17-Pad6)">
+      <node ref="R17" pin="2"/>
+      <node ref="P17" pin="6"/>
+    </net>
+    <net code="79" name="Net-(P17-Pad7)">
+      <node ref="R16" pin="2"/>
+      <node ref="P17" pin="7"/>
+    </net>
+    <net code="80" name="Net-(Q5-Pad3)">
+      <node ref="Q5" pin="3"/>
+      <node ref="S1" pin="8"/>
+      <node ref="S1" pin="3"/>
+    </net>
+    <net code="81" name="Net-(P16-Pad1)">
+      <node ref="Q5" pin="1"/>
+      <node ref="R20" pin="1"/>
+      <node ref="P16" pin="1"/>
+    </net>
+    <net code="82" name="Net-(P15-Pad1)">
+      <node ref="Q7" pin="2"/>
+      <node ref="SW1" pin="2"/>
+      <node ref="SW3" pin="2"/>
+      <node ref="R29" pin="2"/>
+      <node ref="Q6" pin="2"/>
+      <node ref="R20" pin="2"/>
+      <node ref="SW2" pin="2"/>
+      <node ref="R24" pin="2"/>
+      <node ref="SW4" pin="2"/>
+      <node ref="Q5" pin="2"/>
+      <node ref="P15" pin="1"/>
+    </net>
+    <net code="83" name="Net-(DS1-Pad5)">
+      <node ref="R19" pin="1"/>
+      <node ref="S1" pin="1"/>
+      <node ref="S2" pin="1"/>
+      <node ref="DS1" pin="5"/>
+    </net>
+    <net code="84" name="Net-(DS1-Pad7)">
+      <node ref="R22" pin="1"/>
+      <node ref="S2" pin="10"/>
+      <node ref="S1" pin="10"/>
+      <node ref="DS1" pin="7"/>
+    </net>
+    <net code="85" name="Net-(DS1-Pad9)">
+      <node ref="DS1" pin="9"/>
+    </net>
+    <net code="86" name="Net-(DS1-Pad3)">
+      <node ref="R17" pin="1"/>
+      <node ref="DS1" pin="3"/>
+      <node ref="S2" pin="4"/>
+      <node ref="S1" pin="4"/>
+    </net>
+    <net code="87" name="Net-(DS1-Pad2)">
+      <node ref="S2" pin="6"/>
+      <node ref="S1" pin="6"/>
+      <node ref="DS1" pin="2"/>
+      <node ref="R16" pin="1"/>
+    </net>
+    <net code="88" name="Net-(DS1-Pad1)">
+      <node ref="S2" pin="7"/>
+      <node ref="S1" pin="7"/>
+      <node ref="R15" pin="1"/>
+      <node ref="DS1" pin="1"/>
+    </net>
+    <net code="89" name="Net-(DS1-Pad6)">
+      <node ref="DS1" pin="6"/>
+      <node ref="S2" pin="9"/>
+      <node ref="S1" pin="9"/>
+      <node ref="R21" pin="1"/>
+    </net>
+    <net code="90" name="Net-(DS1-Pad8)">
+      <node ref="S1" pin="5"/>
+      <node ref="R23" pin="1"/>
+      <node ref="S2" pin="5"/>
+      <node ref="DS1" pin="8"/>
+    </net>
+    <net code="91" name="Net-(DS1-Pad4)">
+      <node ref="S1" pin="2"/>
+      <node ref="R18" pin="1"/>
+      <node ref="DS1" pin="4"/>
+      <node ref="S2" pin="2"/>
+    </net>
+    <net code="92" name="Net-(U6-Pad13)">
+      <node ref="U6" pin="14"/>
+      <node ref="U6" pin="13"/>
+    </net>
+    <net code="93" name="Net-(P23-Pad4)">
+      <node ref="U7" pin="3"/>
+      <node ref="P23" pin="4"/>
+    </net>
+    <net code="94" name="Net-(P23-Pad3)">
+      <node ref="P23" pin="3"/>
+      <node ref="U7" pin="4"/>
+    </net>
+    <net code="95" name="Net-(P23-Pad2)">
+      <node ref="P23" pin="2"/>
+      <node ref="U7" pin="5"/>
+    </net>
+    <net code="96" name="Net-(P23-Pad1)">
+      <node ref="U7" pin="6"/>
+      <node ref="P23" pin="1"/>
+    </net>
+    <net code="97" name="Net-(P19-Pad2)">
+      <node ref="U7" pin="8"/>
+      <node ref="U6" pin="8"/>
+      <node ref="P19" pin="2"/>
+    </net>
+    <net code="98" name="Net-(P20-Pad2)">
+      <node ref="P20" pin="2"/>
+      <node ref="U6" pin="2"/>
+      <node ref="U7" pin="2"/>
+    </net>
+    <net code="99" name="Net-(U7-Pad9)">
+      <node ref="U7" pin="9"/>
+    </net>
+    <net code="100" name="Net-(U7-Pad10)">
+      <node ref="U7" pin="10"/>
+    </net>
+    <net code="101" name="Net-(U7-Pad11)">
+      <node ref="U7" pin="11"/>
+    </net>
+    <net code="102" name="Net-(U7-Pad12)">
+      <node ref="U7" pin="12"/>
+    </net>
+    <net code="103" name="Net-(U6-Pad9)">
+      <node ref="U6" pin="9"/>
+    </net>
+    <net code="104" name="Net-(U6-Pad10)">
+      <node ref="U6" pin="10"/>
+    </net>
+    <net code="105" name="Net-(U6-Pad11)">
+      <node ref="U6" pin="11"/>
+    </net>
+    <net code="106" name="Net-(U6-Pad12)">
+      <node ref="U6" pin="12"/>
+    </net>
+    <net code="107" name="Net-(P21-Pad4)">
+      <node ref="P21" pin="4"/>
+      <node ref="U7" pin="15"/>
+    </net>
+    <net code="108" name="Net-(P21-Pad3)">
+      <node ref="P21" pin="3"/>
+      <node ref="U7" pin="16"/>
+    </net>
+    <net code="109" name="Net-(P21-Pad2)">
+      <node ref="P21" pin="2"/>
+      <node ref="U6" pin="15"/>
+    </net>
+    <net code="110" name="Net-(P21-Pad1)">
+      <node ref="U6" pin="16"/>
+      <node ref="P21" pin="1"/>
+    </net>
+    <net code="111" name="Net-(U7-Pad13)">
+      <node ref="U7" pin="14"/>
+      <node ref="U7" pin="13"/>
+    </net>
+    <net code="112" name="Net-(P22-Pad1)">
+      <node ref="P22" pin="1"/>
+      <node ref="U6" pin="6"/>
+    </net>
+    <net code="113" name="Net-(P22-Pad2)">
+      <node ref="P22" pin="2"/>
+      <node ref="U6" pin="5"/>
+    </net>
+    <net code="114" name="Net-(P22-Pad3)">
+      <node ref="U6" pin="4"/>
+      <node ref="P22" pin="3"/>
+    </net>
+    <net code="115" name="Net-(P22-Pad4)">
+      <node ref="P22" pin="4"/>
+      <node ref="U6" pin="3"/>
+    </net>
+    <net code="116" name="Net-(P19-Pad1)">
+      <node ref="U7" pin="7"/>
+      <node ref="P20" pin="1"/>
+      <node ref="U6" pin="1"/>
+      <node ref="U6" pin="7"/>
+      <node ref="P19" pin="1"/>
+      <node ref="U7" pin="1"/>
+    </net>
+  </nets>
+</export>
