@@ -34,83 +34,83 @@
   )
   (placement
     (component "ADA3708:ADA3708_RPI-ZERO"
-      (place A1 59690 -135890 front 0 (PN ADA3708))
+      (place A1 59000 -142000 front 0 (PN ADA3708))
     )
     (component Capacitors_ThroughHole:C_Disc_D3_P2.5
-      (place C1 115570 -151130 front 180 (PN 0.33uF))
-      (place C2 107950 -151130 front 0 (PN 0.1uF))
+      (place C1 115570 -150130 front 180 (PN 0.33uF))
+      (place C2 107950 -150130 front 0 (PN 0.1uF))
     )
     (component Socket_Strips:Socket_Strip_Straight_1x02
-      (place P1 113030 -162560 front 0 (PN SOURCE_12v))
-      (place P2 113030 -167640 front 0 (PN SOURCE_12v))
-      (place P3 113030 -157480 front 0 (PN "battery 12v"))
-      (place P4 102870 -151130 front 180 (PN SOURCE_5v))
-      (place P5 102870 -157480 front 180 (PN SOURCE_5v))
-      (place P6 102870 -162560 front 180 (PN SOURCE_5v))
-      (place P7 102870 -167640 front 180 (PN SOURCE_5v))
-      (place P15 29730 -125910 front 270 (PN UI_SOURCE))
+      (place P1 113030 -161560 front 0 (PN SOURCE_12v))
+      (place P2 113030 -166640 front 0 (PN SOURCE_12v))
+      (place P3 113030 -156480 front 0 (PN "battery 12v"))
+      (place P4 102870 -150130 front 180 (PN SOURCE_5v))
+      (place P5 102870 -156480 front 180 (PN SOURCE_5v))
+      (place P6 102870 -161560 front 180 (PN SOURCE_5v))
+      (place P7 102870 -166640 front 180 (PN SOURCE_5v))
+      (place P15 29730 -124910 front 270 (PN UI_SOURCE))
     )
     (component Socket_Strips:Socket_Strip_Straight_1x04
-      (place P8 113030 -128270 front 0 (PN IR_CONN))
-      (place P11 73660 -167640 front 180 (PN SW_CONN))
-      (place P18 29730 -110670 front 270 (PN SW_CONN))
+      (place P8 113030 -127270 front 0 (PN IR_CONN))
+      (place P11 71000 -135000 front 180 (PN SW_CONN))
+      (place P18 29730 -109670 front 270 (PN SW_CONN))
     )
     (component Socket_Strips:Socket_Strip_Straight_1x06
-      (place P9 93980 -167640 front 180 (PN MOTOR_CONTROL))
+      (place P9 89000 -135000 front 180 (PN MOTOR_CONTROL))
     )
     (component Socket_Strips:Socket_Strip_Straight_1x08
-      (place P10 58420 -167640 front 180 (PN LED_CONN))
-      (place P17 29730 -95430 front 90 (PN LED_CONN))
+      (place P10 57000 -135000 front 180 (PN LED_CONN))
+      (place P17 29730 -94430 front 90 (PN LED_CONN))
     )
     (component Socket_Strips:Socket_Strip_Straight_1x03
-      (place P12 35560 -167640 front 180 (PN LED_K_CONN))
-      (place P16 29730 -100510 front 270 (PN LED_K_CONN))
+      (place P12 34000 -135000 front 180 (PN LED_K_CONN))
+      (place P16 29730 -99510 front 270 (PN LED_K_CONN))
     )
     (component "TO_SOT_Packages_SMD:SOT-23"
-      (place Q5 65290 -113210 front 90 (PN BSS138))
-      (place Q6 65290 -108130 front 90 (PN BSS138))
-      (place Q7 65290 -103050 front 90 (PN BSS138))
+      (place Q5 65290 -112210 front 90 (PN BSS138))
+      (place Q6 65290 -107130 front 90 (PN BSS138))
+      (place Q7 65290 -102050 front 90 (PN BSS138))
     )
     (component Resistors_ThroughHole:Resistor_Horizontal_RM7mm
-      (place R1 97790 -140970 front 90 (PN 4.7k))
-      (place R2 95250 -133350 front 270 (PN 8.2k))
-      (place R15 44250 -77740 front 180 (PN 10k))
-      (place R16 44250 -80740 front 180 (PN 10k))
-      (place R17 44250 -83740 front 180 (PN 10k))
-      (place R18 44250 -86740 front 180 (PN 10k))
-      (place R19 44250 -89740 front 180 (PN 10k))
-      (place R20 60210 -95430 front 90 (PN 10k))
-      (place R21 44250 -92740 front 180 (PN 10k))
-      (place R22 44250 -95740 front 180 (PN 10k))
-      (place R23 44250 -98740 front 180 (PN 10k))
-      (place R24 62750 -95430 front 90 (PN 10k))
-      (place R25 80530 -128450 front 180 (PN 10k))
-      (place R26 80530 -118290 front 180 (PN 10k))
-      (place R27 80530 -103050 front 180 (PN 10k))
-      (place R28 80530 -87810 front 180 (PN 10k))
-      (place R29 65290 -95430 front 90 (PN 10k))
+      (place R1 97790 -139970 front 90 (PN 4.7k))
+      (place R2 95250 -132350 front 270 (PN 8.2k))
+      (place R15 44250 -76740 front 180 (PN 10k))
+      (place R16 44250 -79740 front 180 (PN 10k))
+      (place R17 44250 -82740 front 180 (PN 10k))
+      (place R18 44250 -85740 front 180 (PN 10k))
+      (place R19 44250 -88740 front 180 (PN 10k))
+      (place R20 60210 -94430 front 90 (PN 10k))
+      (place R21 44250 -91740 front 180 (PN 10k))
+      (place R22 44250 -94740 front 180 (PN 10k))
+      (place R23 44250 -97740 front 180 (PN 10k))
+      (place R24 62750 -94430 front 90 (PN 10k))
+      (place R25 80530 -127450 front 180 (PN 10k))
+      (place R26 80530 -117290 front 180 (PN 10k))
+      (place R27 80530 -102050 front 180 (PN 10k))
+      (place R28 80530 -86810 front 180 (PN 10k))
+      (place R29 65290 -94430 front 90 (PN 10k))
     )
     (component "Displays_7-Segment:7SegmentLED_LTS6760_LTS6780"
-      (place S1 50050 -123370 front 90 (PN 7SEGM))
-      (place S2 50050 -110670 front 90 (PN 7SEGM))
+      (place S1 50050 -122370 front 90 (PN 7SEGM))
+      (place S2 50050 -109670 front 90 (PN 7SEGM))
     )
     (component Buttons_Switches_ThroughHole:SW_DIP_x1_Slide
-      (place SW1 72910 -123370 front 270 (PN SPST))
+      (place SW1 72910 -122370 front 270 (PN SPST))
       (place SW5 121920 -152400 front 0 (PN SPST))
     )
     (component "Buttons_Switches_ThroughHole:SW_PUSH-12mm"
-      (place SW2 77990 -110670 front 180 (PN SW_PUSH))
-      (place SW3 77990 -95430 front 180 (PN SW_PUSH))
-      (place SW4 77990 -80190 front 180 (PN SW_PUSH))
+      (place SW2 77990 -109670 front 180 (PN SW_PUSH))
+      (place SW3 77990 -94430 front 180 (PN SW_PUSH))
+      (place SW4 77990 -79190 front 180 (PN SW_PUSH))
     )
     (component "Housings_DIP:DIP-16_W7.62mm_LongPads"
-      (place U1 120650 -133350 front 270 (PN MCP3008))
+      (place U1 120650 -132350 front 270 (PN MCP3008))
     )
     (component "OSX10201-GYR1:DIPS760W45P254L2550H815Q20N"
-      (place DS1 47510 -77650 front 0 (PN "OSX10201-GYR1"))
+      (place DS1 47510 -76650 front 0 (PN "OSX10201-GYR1"))
     )
     (component L7805:78XXS
-      (place IC1 111760 -148590 front 180 (PN L7805))
+      (place IC1 111760 -147590 front 180 (PN L7805))
     )
   )
   (library
@@ -805,29 +805,20 @@
     (net "Net-(P3-Pad2)"
       (pins P3-2 SW5-1)
     )
-    (class kicad_default "" +5V GND IR1 IR2 IR3 IR4 IR_SENSOR1 IR_SENSOR2
-      IR_SENSOR3 IR_SENSOR4 LED1 LED2 LED3 LED4 LED5 LED6 LED7 LED8 LED_K1
-      LED_K2 LED_K3 MOTOR_L_DIRE1 MOTOR_L_DIRE2 MOTOR_L_PWM MOTOR_R_DIRE1
+    (class kicad_default "" +5V GND LED1 LED2 LED3 LED4 LED5 LED6 LED7 LED8
+      LED_K1 LED_K2 LED_K3 MOTOR_L_DIRE1 MOTOR_L_DIRE2 MOTOR_L_PWM MOTOR_R_DIRE1
       MOTOR_R_DIRE2 MOTOR_R_PWM "Net-(A1-Pad1)" "Net-(A1-Pad17)" "Net-(A1-Pad19)"
       "Net-(A1-Pad2)" "Net-(A1-Pad21)" "Net-(A1-Pad23)" "Net-(A1-Pad24)" "Net-(A1-Pad26)"
       "Net-(A1-Pad27)" "Net-(A1-Pad28)" "Net-(C1-Pad1)" "Net-(DS1-Pad1)" "Net-(DS1-Pad10)"
       "Net-(DS1-Pad11)" "Net-(DS1-Pad2)" "Net-(DS1-Pad3)" "Net-(DS1-Pad4)"
       "Net-(DS1-Pad5)" "Net-(DS1-Pad6)" "Net-(DS1-Pad7)" "Net-(DS1-Pad8)"
-      "Net-(DS1-Pad9)" "Net-(P13-Pad5)" "Net-(P13-Pad6)" "Net-(P15-Pad1)"
-      "Net-(P15-Pad2)" "Net-(P16-Pad1)" "Net-(P16-Pad2)" "Net-(P16-Pad3)"
-      "Net-(P17-Pad1)" "Net-(P17-Pad2)" "Net-(P17-Pad3)" "Net-(P17-Pad4)"
-      "Net-(P17-Pad5)" "Net-(P17-Pad6)" "Net-(P17-Pad7)" "Net-(P17-Pad8)"
-      "Net-(P18-Pad1)" "Net-(P18-Pad2)" "Net-(P18-Pad3)" "Net-(P18-Pad4)"
-      "Net-(P19-Pad1)" "Net-(P19-Pad2)" "Net-(P20-Pad2)" "Net-(P21-Pad1)"
-      "Net-(P21-Pad2)" "Net-(P21-Pad3)" "Net-(P21-Pad4)" "Net-(P22-Pad1)"
-      "Net-(P22-Pad2)" "Net-(P22-Pad3)" "Net-(P22-Pad4)" "Net-(P23-Pad1)"
-      "Net-(P23-Pad2)" "Net-(P23-Pad3)" "Net-(P23-Pad4)" "Net-(P3-Pad2)" "Net-(P8-Pad1)"
-      "Net-(P8-Pad2)" "Net-(P8-Pad3)" "Net-(P8-Pad4)" "Net-(Q1-Pad3)" "Net-(Q2-Pad3)"
-      "Net-(Q3-Pad3)" "Net-(Q4-Pad3)" "Net-(Q5-Pad3)" "Net-(Q6-Pad3)" "Net-(R1-Pad2)"
-      "Net-(R10-Pad2)" "Net-(R3-Pad2)" "Net-(R4-Pad2)" "Net-(R9-Pad2)" "Net-(U1-Pad5)"
-      "Net-(U1-Pad6)" "Net-(U1-Pad7)" "Net-(U6-Pad10)" "Net-(U6-Pad11)" "Net-(U6-Pad12)"
-      "Net-(U6-Pad13)" "Net-(U6-Pad9)" "Net-(U7-Pad10)" "Net-(U7-Pad11)" "Net-(U7-Pad12)"
-      "Net-(U7-Pad13)" "Net-(U7-Pad9)" SW1 SW2 SW3 SW4
+      "Net-(DS1-Pad9)" "Net-(P15-Pad1)" "Net-(P15-Pad2)" "Net-(P16-Pad1)"
+      "Net-(P16-Pad2)" "Net-(P16-Pad3)" "Net-(P17-Pad1)" "Net-(P17-Pad2)"
+      "Net-(P17-Pad3)" "Net-(P17-Pad4)" "Net-(P17-Pad5)" "Net-(P17-Pad6)"
+      "Net-(P17-Pad7)" "Net-(P17-Pad8)" "Net-(P18-Pad1)" "Net-(P18-Pad2)"
+      "Net-(P18-Pad3)" "Net-(P18-Pad4)" "Net-(P3-Pad2)" "Net-(P8-Pad1)" "Net-(P8-Pad2)"
+      "Net-(P8-Pad3)" "Net-(P8-Pad4)" "Net-(Q5-Pad3)" "Net-(Q6-Pad3)" "Net-(R1-Pad2)"
+      "Net-(U1-Pad5)" "Net-(U1-Pad6)" "Net-(U1-Pad7)" SW1 SW2 SW3 SW4
       (circuit
         (use_via Via[0-1]_600:400_um)
       )

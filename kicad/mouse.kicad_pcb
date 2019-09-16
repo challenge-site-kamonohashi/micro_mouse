@@ -3,7 +3,7 @@
   (general
     (links 145)
     (no_connects 145)
-    (area 0 0 0 0)
+    (area 6.285716 69.924999 126.845 187.700001)
     (thickness 1.6)
     (drawings 8)
     (tracks 0)
@@ -16,24 +16,24 @@
   (layers
     (0 F.Cu signal)
     (31 B.Cu signal)
-    (32 B.Adhes user)
-    (33 F.Adhes user)
-    (34 B.Paste user)
-    (35 F.Paste user)
-    (36 B.SilkS user)
+    (32 B.Adhes user hide)
+    (33 F.Adhes user hide)
+    (34 B.Paste user hide)
+    (35 F.Paste user hide)
+    (36 B.SilkS user hide)
     (37 F.SilkS user)
     (38 B.Mask user)
     (39 F.Mask user)
-    (40 Dwgs.User user)
-    (41 Cmts.User user)
-    (42 Eco1.User user)
-    (43 Eco2.User user)
+    (40 Dwgs.User user hide)
+    (41 Cmts.User user hide)
+    (42 Eco1.User user hide)
+    (43 Eco2.User user hide)
     (44 Edge.Cuts user)
-    (45 Margin user)
-    (46 B.CrtYd user)
-    (47 F.CrtYd user)
-    (48 B.Fab user)
-    (49 F.Fab user)
+    (45 Margin user hide)
+    (46 B.CrtYd user hide)
+    (47 F.CrtYd user hide)
+    (48 B.Fab user hide)
+    (49 F.Fab user hide)
   )
 
   (setup
@@ -64,7 +64,7 @@
     (aux_axis_origin 0 0)
     (visible_elements FFFFFF7F)
     (pcbplotparams
-      (layerselection 0x00030_80000001)
+      (layerselection 0x298e0_80000001)
       (usegerberextensions false)
       (excludeedgelayer true)
       (linewidth 0.100000)
@@ -78,16 +78,16 @@
       (hpglpenoverlay 2)
       (psnegative false)
       (psa4output false)
-      (plotreference true)
+      (plotreference false)
       (plotvalue true)
       (plotinvisibletext false)
       (padsonsilk false)
       (subtractmaskfromsilk false)
       (outputformat 1)
       (mirror false)
-      (drillshape 1)
+      (drillshape 0)
       (scaleselection 1)
-      (outputdirectory ""))
+      (outputdirectory /home/platypus/mp_ws/src/micro_mouse/gerber/))
   )
 
   (net 0 "")
@@ -248,7 +248,7 @@
   )
 
   (module ADA3708:ADA3708_RPI-ZERO (layer F.Cu) (tedit 0) (tstamp 5D7CC8E5)
-    (at 59.69 135.89)
+    (at 59 142)
     (descr "Raspberry Pi board model B+, full outline with position of big connectors &amp; drill holes")
     (path /5D7C8F11)
     (fp_text reference A1 (at -27.9928 -5.72581) (layer F.SilkS)
@@ -401,7 +401,7 @@
   )
 
   (module Capacitors_ThroughHole:C_Disc_D3_P2.5 (layer F.Cu) (tedit 0) (tstamp 5D7CC8EB)
-    (at 115.57 151.13 180)
+    (at 115.57 150.13 180)
     (descr "Capacitor 3mm Disc, Pitch 2.5mm")
     (tags Capacitor)
     (path /5D7BB8AB)
@@ -429,7 +429,7 @@
   )
 
   (module Capacitors_ThroughHole:C_Disc_D3_P2.5 (layer F.Cu) (tedit 0) (tstamp 5D7CC8F1)
-    (at 107.95 151.13)
+    (at 107.95 150.13)
     (descr "Capacitor 3mm Disc, Pitch 2.5mm")
     (tags Capacitor)
     (path /5D7BB97A)
@@ -457,7 +457,7 @@
   )
 
   (module Socket_Strips:Socket_Strip_Straight_1x02 (layer F.Cu) (tedit 54E9F75E) (tstamp 5D7CC916)
-    (at 113.03 162.56)
+    (at 113.03 161.56)
     (descr "Through hole socket strip")
     (tags "socket strip")
     (path /5D7DBE9A)
@@ -490,7 +490,7 @@
   )
 
   (module Socket_Strips:Socket_Strip_Straight_1x02 (layer F.Cu) (tedit 54E9F75E) (tstamp 5D7CC91C)
-    (at 113.03 167.64)
+    (at 113.03 166.64)
     (descr "Through hole socket strip")
     (tags "socket strip")
     (path /5D7DBD82)
@@ -523,7 +523,7 @@
   )
 
   (module Socket_Strips:Socket_Strip_Straight_1x02 (layer F.Cu) (tedit 54E9F75E) (tstamp 5D7CC922)
-    (at 113.03 157.48)
+    (at 113.03 156.48)
     (descr "Through hole socket strip")
     (tags "socket strip")
     (path /5D7BBC6E)
@@ -556,7 +556,7 @@
   )
 
   (module Socket_Strips:Socket_Strip_Straight_1x02 (layer F.Cu) (tedit 54E9F75E) (tstamp 5D7CC928)
-    (at 102.87 151.13 180)
+    (at 102.87 150.13 180)
     (descr "Through hole socket strip")
     (tags "socket strip")
     (path /5D7DB08F)
@@ -589,7 +589,7 @@
   )
 
   (module Socket_Strips:Socket_Strip_Straight_1x02 (layer F.Cu) (tedit 54E9F75E) (tstamp 5D7CC92E)
-    (at 102.87 157.48 180)
+    (at 102.87 156.48 180)
     (descr "Through hole socket strip")
     (tags "socket strip")
     (path /5D7DB4B8)
@@ -622,7 +622,7 @@
   )
 
   (module Socket_Strips:Socket_Strip_Straight_1x02 (layer F.Cu) (tedit 54E9F75E) (tstamp 5D7CC934)
-    (at 102.87 162.56 180)
+    (at 102.87 161.56 180)
     (descr "Through hole socket strip")
     (tags "socket strip")
     (path /5D7DB517)
@@ -655,7 +655,7 @@
   )
 
   (module Socket_Strips:Socket_Strip_Straight_1x02 (layer F.Cu) (tedit 54E9F75E) (tstamp 5D7CC93A)
-    (at 102.87 167.64 180)
+    (at 102.87 166.64 180)
     (descr "Through hole socket strip")
     (tags "socket strip")
     (path /5D7DB579)
@@ -688,7 +688,7 @@
   )
 
   (module Socket_Strips:Socket_Strip_Straight_1x04 (layer F.Cu) (tedit 0) (tstamp 5D7CC942)
-    (at 113.03 128.27)
+    (at 113.03 127.27)
     (descr "Through hole socket strip")
     (tags "socket strip")
     (path /5D7C9EB4)
@@ -725,7 +725,7 @@
   )
 
   (module Socket_Strips:Socket_Strip_Straight_1x06 (layer F.Cu) (tedit 0) (tstamp 5D7CC94C)
-    (at 93.98 167.64 180)
+    (at 89 135 180)
     (descr "Through hole socket strip")
     (tags "socket strip")
     (path /5D7D457A)
@@ -766,7 +766,7 @@
   )
 
   (module Socket_Strips:Socket_Strip_Straight_1x08 (layer F.Cu) (tedit 0) (tstamp 5D7CC958)
-    (at 58.42 167.64 180)
+    (at 57 135 180)
     (descr "Through hole socket strip")
     (tags "socket strip")
     (path /5D7D7414)
@@ -811,7 +811,7 @@
   )
 
   (module Socket_Strips:Socket_Strip_Straight_1x04 (layer F.Cu) (tedit 0) (tstamp 5D7CC960)
-    (at 73.66 167.64 180)
+    (at 71 135 180)
     (descr "Through hole socket strip")
     (tags "socket strip")
     (path /5D7D6AA9)
@@ -848,7 +848,7 @@
   )
 
   (module Socket_Strips:Socket_Strip_Straight_1x03 (layer F.Cu) (tedit 54E9F429) (tstamp 5D7CC967)
-    (at 35.56 167.64 180)
+    (at 34 135 180)
     (descr "Through hole socket strip")
     (tags "socket strip")
     (path /5D7D6E46)
@@ -883,7 +883,7 @@
   )
 
   (module Socket_Strips:Socket_Strip_Straight_1x02 (layer F.Cu) (tedit 54E9F75E) (tstamp 5D7CC97F)
-    (at 29.73 125.91 270)
+    (at 29.73 124.91 270)
     (descr "Through hole socket strip")
     (tags "socket strip")
     (path /5D7CBC6D/5D7D128D)
@@ -916,7 +916,7 @@
   )
 
   (module Socket_Strips:Socket_Strip_Straight_1x03 (layer F.Cu) (tedit 54E9F429) (tstamp 5D7CC986)
-    (at 29.73 100.51 270)
+    (at 29.73 99.51 270)
     (descr "Through hole socket strip")
     (tags "socket strip")
     (path /5D7CBC6D/5D7D0373)
@@ -951,7 +951,7 @@
   )
 
   (module Socket_Strips:Socket_Strip_Straight_1x08 (layer F.Cu) (tedit 0) (tstamp 5D7CC992)
-    (at 29.73 95.43 90)
+    (at 29.73 94.43 90)
     (descr "Through hole socket strip")
     (tags "socket strip")
     (path /5D7CBC6D/5D7CF99F)
@@ -996,7 +996,7 @@
   )
 
   (module Socket_Strips:Socket_Strip_Straight_1x04 (layer F.Cu) (tedit 0) (tstamp 5D7CC99A)
-    (at 29.73 110.67 270)
+    (at 29.73 109.67 270)
     (descr "Through hole socket strip")
     (tags "socket strip")
     (path /5D7CBC6D/5D7CB5B9)
@@ -1033,7 +1033,7 @@
   )
 
   (module TO_SOT_Packages_SMD:SOT-23 (layer F.Cu) (tedit 553634F8) (tstamp 5D7CC9E1)
-    (at 65.29 113.21 90)
+    (at 65.29 112.21 90)
     (descr "SOT-23, Standard")
     (tags SOT-23)
     (path /5D7CBC6D/5D7CF221)
@@ -1067,7 +1067,7 @@
   )
 
   (module TO_SOT_Packages_SMD:SOT-23 (layer F.Cu) (tedit 553634F8) (tstamp 5D7CC9E8)
-    (at 65.29 108.13 90)
+    (at 65.29 107.13 90)
     (descr "SOT-23, Standard")
     (tags SOT-23)
     (path /5D7CBC6D/5D7CEE22)
@@ -1101,7 +1101,7 @@
   )
 
   (module TO_SOT_Packages_SMD:SOT-23 (layer F.Cu) (tedit 553634F8) (tstamp 5D7CC9EF)
-    (at 65.29 103.05 90)
+    (at 65.29 102.05 90)
     (descr "SOT-23, Standard")
     (tags SOT-23)
     (path /5D7CBC6D/5D7CE50E)
@@ -1135,7 +1135,7 @@
   )
 
   (module Resistors_ThroughHole:Resistor_Horizontal_RM7mm (layer F.Cu) (tedit 569FCF07) (tstamp 5D7CC9F5)
-    (at 97.79 140.97 90)
+    (at 97.79 139.97 90)
     (descr "Resistor, Axial,  RM 7.62mm, 1/3W,")
     (tags "Resistor Axial RM 7.62mm 1/3W R3")
     (path /5D7CAEB4)
@@ -1160,7 +1160,7 @@
   )
 
   (module Resistors_ThroughHole:Resistor_Horizontal_RM7mm (layer F.Cu) (tedit 569FCF07) (tstamp 5D7CC9FB)
-    (at 95.25 133.35 270)
+    (at 95.25 132.35 270)
     (descr "Resistor, Axial,  RM 7.62mm, 1/3W,")
     (tags "Resistor Axial RM 7.62mm 1/3W R3")
     (path /5D7CAF15)
@@ -1185,7 +1185,7 @@
   )
 
   (module Resistors_ThroughHole:Resistor_Horizontal_RM7mm (layer F.Cu) (tedit 569FCF07) (tstamp 5D7CCA49)
-    (at 44.25 77.74 180)
+    (at 44.25 76.74 180)
     (descr "Resistor, Axial,  RM 7.62mm, 1/3W,")
     (tags "Resistor Axial RM 7.62mm 1/3W R3")
     (path /5D7CBC6D/5D7CBFB9)
@@ -1210,7 +1210,7 @@
   )
 
   (module Resistors_ThroughHole:Resistor_Horizontal_RM7mm (layer F.Cu) (tedit 569FCF07) (tstamp 5D7CCA4F)
-    (at 44.25 80.74 180)
+    (at 44.25 79.74 180)
     (descr "Resistor, Axial,  RM 7.62mm, 1/3W,")
     (tags "Resistor Axial RM 7.62mm 1/3W R3")
     (path /5D7CBC6D/5D7CC071)
@@ -1235,7 +1235,7 @@
   )
 
   (module Resistors_ThroughHole:Resistor_Horizontal_RM7mm (layer F.Cu) (tedit 569FCF07) (tstamp 5D7CCA55)
-    (at 44.25 83.74 180)
+    (at 44.25 82.74 180)
     (descr "Resistor, Axial,  RM 7.62mm, 1/3W,")
     (tags "Resistor Axial RM 7.62mm 1/3W R3")
     (path /5D7CBC6D/5D7CC0A9)
@@ -1260,7 +1260,7 @@
   )
 
   (module Resistors_ThroughHole:Resistor_Horizontal_RM7mm (layer F.Cu) (tedit 569FCF07) (tstamp 5D7CCA5B)
-    (at 44.25 86.74 180)
+    (at 44.25 85.74 180)
     (descr "Resistor, Axial,  RM 7.62mm, 1/3W,")
     (tags "Resistor Axial RM 7.62mm 1/3W R3")
     (path /5D7CBC6D/5D7CC0D9)
@@ -1285,7 +1285,7 @@
   )
 
   (module Resistors_ThroughHole:Resistor_Horizontal_RM7mm (layer F.Cu) (tedit 569FCF07) (tstamp 5D7CCA61)
-    (at 44.25 89.74 180)
+    (at 44.25 88.74 180)
     (descr "Resistor, Axial,  RM 7.62mm, 1/3W,")
     (tags "Resistor Axial RM 7.62mm 1/3W R3")
     (path /5D7CBC6D/5D7CC1B7)
@@ -1310,7 +1310,7 @@
   )
 
   (module Resistors_ThroughHole:Resistor_Horizontal_RM7mm (layer F.Cu) (tedit 569FCF07) (tstamp 5D7CCA67)
-    (at 60.21 95.43 90)
+    (at 60.21 94.43 90)
     (descr "Resistor, Axial,  RM 7.62mm, 1/3W,")
     (tags "Resistor Axial RM 7.62mm 1/3W R3")
     (path /5D7CBC6D/5D7CF22E)
@@ -1335,7 +1335,7 @@
   )
 
   (module Resistors_ThroughHole:Resistor_Horizontal_RM7mm (layer F.Cu) (tedit 569FCF07) (tstamp 5D7CCA6D)
-    (at 44.25 92.74 180)
+    (at 44.25 91.74 180)
     (descr "Resistor, Axial,  RM 7.62mm, 1/3W,")
     (tags "Resistor Axial RM 7.62mm 1/3W R3")
     (path /5D7CBC6D/5D7CC23B)
@@ -1360,7 +1360,7 @@
   )
 
   (module Resistors_ThroughHole:Resistor_Horizontal_RM7mm (layer F.Cu) (tedit 569FCF07) (tstamp 5D7CCA73)
-    (at 44.25 95.74 180)
+    (at 44.25 94.74 180)
     (descr "Resistor, Axial,  RM 7.62mm, 1/3W,")
     (tags "Resistor Axial RM 7.62mm 1/3W R3")
     (path /5D7CBC6D/5D7CC5EA)
@@ -1385,7 +1385,7 @@
   )
 
   (module Resistors_ThroughHole:Resistor_Horizontal_RM7mm (layer F.Cu) (tedit 569FCF07) (tstamp 5D7CCA79)
-    (at 44.25 98.74 180)
+    (at 44.25 97.74 180)
     (descr "Resistor, Axial,  RM 7.62mm, 1/3W,")
     (tags "Resistor Axial RM 7.62mm 1/3W R3")
     (path /5D7CBC6D/5D7CC8FF)
@@ -1410,7 +1410,7 @@
   )
 
   (module Resistors_ThroughHole:Resistor_Horizontal_RM7mm (layer F.Cu) (tedit 569FCF07) (tstamp 5D7CCA7F)
-    (at 62.75 95.43 90)
+    (at 62.75 94.43 90)
     (descr "Resistor, Axial,  RM 7.62mm, 1/3W,")
     (tags "Resistor Axial RM 7.62mm 1/3W R3")
     (path /5D7CBC6D/5D7CEE2F)
@@ -1435,7 +1435,7 @@
   )
 
   (module Resistors_ThroughHole:Resistor_Horizontal_RM7mm (layer F.Cu) (tedit 569FCF07) (tstamp 5D7CCA85)
-    (at 80.53 128.45 180)
+    (at 80.53 127.45 180)
     (descr "Resistor, Axial,  RM 7.62mm, 1/3W,")
     (tags "Resistor Axial RM 7.62mm 1/3W R3")
     (path /5D7CBC6D/5D7C9C0D)
@@ -1460,7 +1460,7 @@
   )
 
   (module Resistors_ThroughHole:Resistor_Horizontal_RM7mm (layer F.Cu) (tedit 569FCF07) (tstamp 5D7CCA8B)
-    (at 80.53 118.29 180)
+    (at 80.53 117.29 180)
     (descr "Resistor, Axial,  RM 7.62mm, 1/3W,")
     (tags "Resistor Axial RM 7.62mm 1/3W R3")
     (path /5D7CBC6D/5D7C9D79)
@@ -1485,7 +1485,7 @@
   )
 
   (module Resistors_ThroughHole:Resistor_Horizontal_RM7mm (layer F.Cu) (tedit 569FCF07) (tstamp 5D7CCA91)
-    (at 80.53 103.05 180)
+    (at 80.53 102.05 180)
     (descr "Resistor, Axial,  RM 7.62mm, 1/3W,")
     (tags "Resistor Axial RM 7.62mm 1/3W R3")
     (path /5D7CBC6D/5D7C9E01)
@@ -1510,7 +1510,7 @@
   )
 
   (module Resistors_ThroughHole:Resistor_Horizontal_RM7mm (layer F.Cu) (tedit 569FCF07) (tstamp 5D7CCA97)
-    (at 80.53 87.81 180)
+    (at 80.53 86.81 180)
     (descr "Resistor, Axial,  RM 7.62mm, 1/3W,")
     (tags "Resistor Axial RM 7.62mm 1/3W R3")
     (path /5D7CBC6D/5D7C9E89)
@@ -1535,7 +1535,7 @@
   )
 
   (module Resistors_ThroughHole:Resistor_Horizontal_RM7mm (layer F.Cu) (tedit 569FCF07) (tstamp 5D7CCA9D)
-    (at 65.29 95.43 90)
+    (at 65.29 94.43 90)
     (descr "Resistor, Axial,  RM 7.62mm, 1/3W,")
     (tags "Resistor Axial RM 7.62mm 1/3W R3")
     (path /5D7CBC6D/5D7CE51B)
@@ -1560,7 +1560,7 @@
   )
 
   (module Displays_7-Segment:7SegmentLED_LTS6760_LTS6780 (layer F.Cu) (tedit 0) (tstamp 5D7CCAAB)
-    (at 50.05 123.37 90)
+    (at 50.05 122.37 90)
     (path /5D7CBC6D/5D7CC874)
     (fp_text reference S1 (at -9.5 -5.8 90) (layer F.SilkS)
       (effects (font (size 1 1) (thickness 0.15)))
@@ -1608,7 +1608,7 @@
   )
 
   (module Displays_7-Segment:7SegmentLED_LTS6760_LTS6780 (layer F.Cu) (tedit 0) (tstamp 5D7CCAB9)
-    (at 50.05 110.67 90)
+    (at 50.05 109.67 90)
     (path /5D7CBC6D/5D7CCECF)
     (fp_text reference S2 (at -9.5 -5.8 90) (layer F.SilkS)
       (effects (font (size 1 1) (thickness 0.15)))
@@ -1656,7 +1656,7 @@
   )
 
   (module Buttons_Switches_ThroughHole:SW_DIP_x1_Slide (layer F.Cu) (tedit 54C4BC96) (tstamp 5D7CCABF)
-    (at 72.91 123.37 270)
+    (at 72.91 122.37 270)
     (descr "CTS Electrocomponents, Series 206/208")
     (path /5D7CBC6D/5D7C9516)
     (fp_text reference SW1 (at 0 -10 270) (layer F.SilkS)
@@ -1690,7 +1690,7 @@
   )
 
   (module Buttons_Switches_ThroughHole:SW_PUSH-12mm (layer F.Cu) (tedit 53FD9538) (tstamp 5D7CCAC7)
-    (at 77.99 110.67 180)
+    (at 77.99 109.67 180)
     (path /5D7CBC6D/5D7C9418)
     (fp_text reference SW2 (at 0 -0.762 180) (layer F.SilkS)
       (effects (font (size 1 1) (thickness 0.15)))
@@ -1719,7 +1719,7 @@
   )
 
   (module Buttons_Switches_ThroughHole:SW_PUSH-12mm (layer F.Cu) (tedit 53FD9538) (tstamp 5D7CCACF)
-    (at 77.99 95.43 180)
+    (at 77.99 94.43 180)
     (path /5D7CBC6D/5D7C93BD)
     (fp_text reference SW3 (at 0 -0.762 180) (layer F.SilkS)
       (effects (font (size 1 1) (thickness 0.15)))
@@ -1748,7 +1748,7 @@
   )
 
   (module Buttons_Switches_ThroughHole:SW_PUSH-12mm (layer F.Cu) (tedit 53FD9538) (tstamp 5D7CCAD7)
-    (at 77.99 80.19 180)
+    (at 77.99 79.19 180)
     (path /5D7CBC6D/5D7C9274)
     (fp_text reference SW4 (at 0 -0.762 180) (layer F.SilkS)
       (effects (font (size 1 1) (thickness 0.15)))
@@ -1777,7 +1777,7 @@
   )
 
   (module Housings_DIP:DIP-16_W7.62mm_LongPads (layer F.Cu) (tedit 54130A77) (tstamp 5D7CCAEB)
-    (at 120.65 133.35 270)
+    (at 120.65 132.35 270)
     (descr "16-lead dip package, row spacing 7.62 mm (300 mils), longer pads")
     (tags "dil dip 2.54 300")
     (path /5D7C9C58)
@@ -1838,7 +1838,7 @@
   )
 
   (module OSX10201-GYR1:DIPS760W45P254L2550H815Q20N (layer F.Cu) (tedit 5D7C7CFF) (tstamp 5D7CC909)
-    (at 47.51 77.65)
+    (at 47.51 76.65)
     (descr OSX10201-GYR1)
     (tags Display)
     (path /5D7CBC6D/5D7CBDC3)
@@ -1903,7 +1903,7 @@
   )
 
   (module L7805:78XXS (layer F.Cu) (tedit 0) (tstamp 5D7CC910)
-    (at 111.76 148.59 180)
+    (at 111.76 147.59 180)
     (descr "<b>VOLTAGE REGULATOR</b>")
     (path /5D7BB7F5)
     (fp_text reference IC1 (at -2.54477 5.42037 180) (layer F.SilkS)
@@ -1979,11 +1979,11 @@
     )
   )
 
-  (gr_text "made by powertimer811" (at 120 90 90) (layer F.SilkS)
-    (effects (font (size 2 2) (thickness 0.3) italic))
+  (gr_text "author :: powertimer811\ndate :: 2019/9/16\nVer :: alfa" (at 119 91 90) (layer B.Cu)
+    (effects (font (size 2 2) (thickness 0.3)) (justify mirror))
   )
-  (gr_text "MechanicPlatypus\nMicroMouse" (at 95 100 90) (layer F.SilkS)
-    (effects (font (size 4 4) (thickness 0.3) italic))
+  (gr_text "MechanicPlatypus\nMicroMouse" (at 97 100 90) (layer B.Cu)
+    (effects (font (size 4 4) (thickness 0.3) italic) (justify mirror))
   )
   (gr_line (start 125 70) (end 25 70) (angle 90) (layer Edge.Cuts) (width 0.15))
   (gr_line (start 125 170) (end 125 70) (angle 90) (layer Edge.Cuts) (width 0.15))
