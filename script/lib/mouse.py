@@ -4,6 +4,8 @@
 import math
 import numpy as np
 import rospy  # include<ros/ros.h>のようなもの
+import tf
+import tf2_ros
 from std_msgs.msg import Float32
 from geometry_msgs.msg import Twist
 
@@ -32,6 +34,9 @@ class Mouse:
     self.pub_twist = rospy.Publisher( control_topic, Twist, queue_size=10)
     self.sensor = [ LightSensor(topic) for topic in sensors_topic]
 
+    self.tfBuffer = tf2_ros.Buffer()
+    self.listener = tf2_ros.TransformListener(self.tfBuffer)
+
     self.move(0.0, 0.0, 5)
     print("hello_mouse!")
 
@@ -47,3 +52,16 @@ class Mouse:
 
   def getSensor( self):
     return np.array([ sensor.data for sensor in self.sensor])
+
+
+  def getPosture( self):
+    try:
+      t = self.tfBuffer.lookup_transform('odom', 'base_footprint', rospy.Time())
+      x = t.transform.translation.x
+      y = t.transform.translation.y
+      quat = t.transform.rotation
+      euler = tf.transformations.euler_from_quaternion((quat.x, quat.y, quat.z, quat.w))
+      theta = euler[2]
+      return x,y,theta
+    except (tf2_ros.LookupException, tf2_ros.ConnectivityException, tf2_ros.ExtrapolationException) as e:
+      print(e)
