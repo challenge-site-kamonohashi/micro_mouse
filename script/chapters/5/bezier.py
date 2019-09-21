@@ -17,7 +17,6 @@ def pltLine( p1, p2, option):
   plt.plot( [p1[0], p2[0]], [p1[1], p2[1]], option)
 
 
-"""
 plt.figure(1)
 
 p0 = np.array([ 0, 0])
@@ -38,5 +37,3 @@ for t in np.arange(26)/25.0:
   plt.pause(0.02)
 
 plt.show()
-
-"""

@@ -1,0 +1,29 @@
+include "map.inc"
+include "turtlebot.inc"
+
+# time to pause (in GUI mode) or quit (in headless mode (-g)) the simulation
+quit_time 36000 # 10 hour of simulated time
+paused 0
+resolution 0.005
+
+window
+(
+  size [ 989 1014] # in pixels
+  scale 289.892   # pixels per meter
+  center [ 0.024  0.002 ]
+  rotate [ 0.000  0.000 ]
+
+  show_data 1              # 1=on 0=off
+)
+
+# load an environment bitmap
+floorplan
+(
+  name "test_stage"
+  size [ 3.200 3.200 0.200]
+  pose [0.000 0.000 0.000 0.000]
+  bitmap "bitmaps/maze2011exp.png"
+  obstacle_return 1
+)
+
+turtlebot( pose [ -0.500 -0.500 0.000 -63.000 ] name "mouse")

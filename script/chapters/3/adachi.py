@@ -21,7 +21,7 @@ import numpy as np
 if __name__ == '__main__': # int main()みたいな
   rospy.init_node("node_name") # ノード設定
 #-----object等の定義-----
-  cell_matrix = [ 17, 17]
+  cell_matrix = [ 33, 33]
   cell_size = [ 0.200, 0.200]
   mouse = mouse.Mouse()
   walls = wall.wallPublisher("wall_marker", cell_matrix, cell_size)
@@ -74,9 +74,9 @@ if __name__ == '__main__': # int main()みたいな
       walls.setData( map_data_colored)
       maze_data[ map_data==1] = 1
   #-----PathPlanning-----
-      cost_map = pathplanning.costmapByDijkstra( maze_data, start=[px,py], goal=[11, 9],DIRECTIONS=DIRECTIONS)
-      path_data = pathplanning.pathByCostmap( cost_map, start=[px,py], goal=[11, 9], DIRECTIONS=DIRECTIONS)
-  #-----行動選択(左手法)-----
+      cost_map = pathplanning.costmapByAstar( maze_data, start=[px,py], goal=[17, 17],DIRECTIONS=DIRECTIONS)
+      path_data = pathplanning.pathByCostmap( cost_map, start=[px,py], goal=[17, 17], DIRECTIONS=DIRECTIONS)
+  #-----行動選択(足立法)-----
       vr = 0; vl = 0
       path_dire = path_data[0,:] - [ px, py]
       rad = int(round(math.atan2( path_dire[1], path_dire[0])/(PI/2)))
