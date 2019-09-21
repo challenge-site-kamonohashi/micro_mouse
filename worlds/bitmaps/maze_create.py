@@ -11,6 +11,39 @@ import numpy as np
 import rospy
 
 
+def loadHexMaze( sx, sy, filename):
+  with open( filename) as f:
+    raw_data = f.read()
+    serial_data = [ int(d,16) for d in raw_data.split()[3:]]
+    hex_maze = np.array( serial_data).reshape([sy,sx])
+
+    x_size = sx*2 + 1
+    y_size = sy*2 + 1
+    maze = np.zeros([y_size, x_size])
+    maze_str = np.zeros([y_size, x_size], dtype="str")
+
+    for ii in range(y_size):
+      maze[ 0, ii] = 1
+      maze[-1, ii] = 1
+    for i in range(x_size):
+      maze[i, 0] = 1
+      maze[i,-1] = 1
+
+    for i in range(sy):
+      for ii in range(sx):
+        a = hex_maze[i, ii]
+        y = i*2+1
+        x = ii*2+1
+        maze[y+1, x+1] = 1
+        if a & 1:
+          maze[y-1, x  ] = 1 ########
+        if a & 2:
+          maze[y  , x+1] = 1 #######
+        if a & 4:
+          maze[y+1, x  ] = 1 #######
+        if a & 8:
+          maze[y  , x-1] = 1 ########
+  return x_size, y_size, maze
 
 def EmptyMaze( sx, sy): #迷路生成
   maze = [[ 0 for i in range(sx)] for ii in range(sy)]
@@ -99,10 +132,10 @@ def outBinMaze( maze, filename="test.txt"):
         
 
 
-def outWorldMaze( maze, filename="test"):
+def outWorldMaze( maze, filename="test.world"):
   sx = len(maze[0])
   sy = len(maze)
-  with open("./../"+filename+".world", mode='w') as f:
+  with open("./../"+filename, mode='w') as f:
     f.write('include "map.inc"\n')
     f.write('include "turtlebot.inc"\n')
     f.write('\n')
@@ -134,44 +167,23 @@ def outWorldMaze( maze, filename="test"):
     f.write('turtlebot( pose [ '+str((sx-3)/-20.0)+' '+str((sy-3)/-20.0)+' 0.0 0.0 ] name "mouse")\n')
 
 
-maze = [
+def outYamlMaze( maze, filename="test.yaml"):
+  sx = len(maze[0])
+  sy = len(maze)
+  with open("./../config/"+filename, mode='w') as f:
+    f.write("micro_mouse:\n")
+    f.write("  maze:\n")
+    f.write("    size:\n")
+    f.write("      x: "+str(sx)+"\n")
+    f.write("      y: "+str(sy)+"\n")
+    f.write("    data:\n")
+    for my in maze:
+      f.write("    - ["),
+      for mx in my[:-1]:
+        f.write(str(int(mx))+", "),
+      f.write(str(int(mx))+"]\n")
 
-[ 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, ],
-[ 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 0, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 0, 0, 0, 1, ],
-[ 1, 1, 1, 1, 1, 0, 1, 0, 1, 1, 1, 1, 1, 1, 1, 0, 1, 1, 1, 0, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 0, 1, ],
-[ 1, 0, 0, 0, 1, 0, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 0, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 0, 1, ],
-[ 1, 0, 1, 1, 1, 0, 1, 1, 1, 1, 1, 1, 1, 1, 1, 0, 1, 1, 1, 1, 1, 1, 1, 1, 1, 0, 1, 1, 1, 0, 1, 0, 1, ],
-[ 1, 0, 1, 0, 1, 0, 1, 0, 1, 0, 1, 0, 0, 0, 1, 0, 1, 0, 0, 0, 0, 0, 0, 0, 1, 0, 1, 0, 1, 0, 1, 0, 1, ],
-[ 1, 0, 1, 1, 1, 0, 1, 1, 1, 1, 1, 0, 1, 1, 1, 0, 1, 1, 1, 0, 1, 1, 1, 0, 1, 0, 1, 1, 1, 0, 1, 0, 1, ],
-[ 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 0, 0, 0, 0, 0, 1, 0, 1, 0, 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0, 1, ],
-[ 1, 1, 1, 1, 1, 1, 1, 0, 1, 0, 1, 1, 1, 1, 1, 0, 1, 1, 1, 0, 1, 1, 1, 1, 1, 1, 1, 0, 1, 1, 1, 0, 1, ],
-[ 1, 0, 1, 0, 1, 0, 1, 0, 1, 0, 1, 0, 1, 0, 1, 0, 0, 0, 0, 0, 1, 0, 1, 0, 0, 0, 0, 0, 1, 0, 1, 0, 1, ],
-[ 1, 1, 1, 0, 1, 1, 1, 0, 1, 0, 1, 0, 1, 0, 1, 1, 1, 1, 1, 1, 1, 1, 1, 0, 1, 1, 1, 1, 1, 1, 1, 0, 1, ],
-[ 1, 0, 0, 0, 0, 0, 0, 0, 1, 0, 1, 0, 0, 0, 0, 0, 0, 0, 1, 0, 1, 0, 1, 0, 1, 0, 1, 0, 0, 0, 0, 0, 1, ],
-[ 1, 1, 1, 1, 1, 1, 1, 0, 1, 0, 1, 1, 1, 0, 1, 1, 1, 0, 1, 1, 1, 1, 1, 0, 1, 1, 1, 0, 1, 1, 1, 1, 1, ],
-[ 1, 0, 0, 0, 0, 0, 1, 0, 1, 0, 1, 0, 0, 0, 1, 0, 1, 0, 0, 0, 0, 0, 0, 0, 1, 0, 0, 0, 0, 0, 0, 0, 1, ],
-[ 1, 1, 1, 0, 1, 0, 1, 0, 1, 0, 1, 1, 1, 1, 1, 1, 1, 0, 1, 0, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 0, 1, ],
-[ 1, 0, 1, 0, 1, 0, 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0, 0, 0, 0, 0, 1, 0, 1, ],
-[ 1, 1, 1, 0, 1, 0, 1, 1, 1, 0, 1, 1, 1, 0, 1, 0, 1, 0, 1, 1, 1, 0, 1, 0, 1, 1, 1, 0, 1, 1, 1, 0, 1, ],
-[ 1, 0, 1, 0, 0, 0, 0, 0, 1, 0, 1, 0, 1, 0, 1, 0, 0, 0, 0, 0, 1, 0, 1, 0, 1, 0, 1, 0, 1, 0, 1, 0, 1, ],
-[ 1, 1, 1, 1, 1, 1, 1, 0, 1, 0, 1, 1, 1, 0, 1, 1, 1, 1, 1, 1, 1, 0, 1, 1, 1, 1, 1, 0, 1, 1, 1, 0, 1, ],
-[ 1, 0, 0, 0, 1, 0, 1, 0, 0, 0, 0, 0, 1, 0, 1, 0, 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1, 0, 1, 0, 0, 0, 1, ],
-[ 1, 0, 1, 0, 1, 0, 1, 1, 1, 1, 1, 0, 1, 0, 1, 1, 1, 0, 1, 0, 1, 0, 1, 0, 1, 1, 1, 0, 1, 0, 1, 1, 1, ],
-[ 1, 0, 1, 0, 1, 0, 0, 0, 0, 0, 0, 0, 1, 0, 0, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1, 0, 0, 0, 0, 0, 1, 0, 1, ],
-[ 1, 0, 1, 0, 1, 1, 1, 1, 1, 1, 1, 0, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 0, 1, 0, 1, 1, 1, 1, 1, 0, 1, ],
-[ 1, 0, 1, 0, 0, 0, 0, 0, 0, 0, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 0, 0, 0, 0, 0, 0, 0, 1, ],
-[ 1, 0, 1, 1, 1, 1, 1, 1, 1, 0, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 0, 1, 1, 1, 1, 1, 0, 1, ],
-[ 1, 0, 1, 0, 1, 0, 1, 0, 1, 0, 1, 0, 1, 0, 1, 0, 1, 0, 1, 0, 0, 0, 0, 0, 0, 0, 1, 0, 1, 0, 1, 0, 1, ],
-[ 1, 0, 1, 1, 1, 1, 1, 1, 1, 0, 1, 0, 1, 1, 1, 1, 1, 0, 1, 0, 1, 1, 1, 1, 1, 1, 1, 1, 1, 0, 1, 0, 1, ],
-[ 1, 0, 1, 0, 1, 0, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 0, 1, ],
-[ 1, 0, 1, 1, 1, 1, 1, 1, 1, 0, 1, 1, 1, 0, 1, 1, 1, 1, 1, 1, 1, 0, 1, 1, 1, 1, 1, 0, 1, 0, 1, 0, 1, ],
-[ 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 0, 1, 0, 1, 0, 1, 0, 1, 0, 1, ],
-[ 1, 0, 1, 0, 1, 0, 1, 0, 1, 0, 1, 1, 1, 0, 1, 0, 1, 1, 1, 1, 1, 0, 1, 1, 1, 1, 1, 1, 1, 1, 1, 0, 1, ],
-[ 1, 0, 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1, 0, 1, 0, 1, 0, 1, 0, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, ],
-[ 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, ],
 
-]
-maze = np.array(maze)
 
 if __name__ == '__main__':
   rospy.init_node("maze_creater")
@@ -197,12 +209,23 @@ if __name__ == '__main__':
     print sx, sy
     print("\n")
 
-  maze = EmptyMaze( sx, sy)
-  poleDown( maze)
-  printMaze( maze)
-  outPngMaze( maze, filename=filename+".png")
-  outBinMaze( maze, filename=filename+".txt")
-  outWorldMaze( maze, filename=filename)
+#  maze = EmptyMaze( sx, sy)
+#  poleDown( maze)
+  relative = "/home/platypus/Downloads/MazeSolver2015-master/maze_data/"
+  names = ["maze2", "maze2011fr", "maze2013exp", "maze2013taiwan", "maze4", "maze","maze2011exp", "maze2012exp", "maze2013fr", "maze3", "maze5"]
+  for name in names:
+    filename = relative + name
+    print filename
+    sx, sy, maze = loadHexMaze(16, 16, filename+".dat")
+    filename = name
+    printMaze( maze)
+    outYamlMaze( maze, filename=filename+".yaml")
+    outPngMaze( maze, filename=filename+".png")
+    outBinMaze( maze, filename=filename+".txt")
+    outWorldMaze( maze, filename=filename+".world")
+
+
+#  rospy.set_param("/micro_mouse/maze/data", maze)
 
 """  
   rospy.set_param("/micro_mouse/maze/size/x", sx)
@@ -215,5 +238,4 @@ if __name__ == '__main__':
   rospy.set_param("/micro_mouse/maze/pole/x", 0.020)
   rospy.set_param("/micro_mouse/maze/pole/y", 0.020)
   rospy.set_param("/micro_mouse/maze/pole/z", 0.050)
-  rospy.set_param("/micro_mouse/maze/data", maze)
 """

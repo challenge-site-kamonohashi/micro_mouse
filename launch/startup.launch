@@ -1,9 +1,9 @@
 <launch>
 
   <!-- arguments -->
-  <arg name="model" default="$(find micro_mouse)/robots/hello_xacro.xacro"/>
+  <arg name="model" default="$(find micro_mouse)/robots/micromouse.xacro"/>
   <arg name="stage" default="left_hand.world"/>
-  <arg name="stage_fullpath" default="$(find micro_mouse)/worlds/$(arg stage)"/>
+  <arg name="stage_fullpath" default="$(find micro_mouse)/worlds/$(arg stage).world"/>
   <!-- prameters -->
   <param name="robot_description" command="$(find xacro)/xacro.py '$(arg model)'"/>
 

@@ -8,7 +8,7 @@ resolution 0.005
 
 window
 (
-  size [ 660.0 660.0] # in pixels
+  size [ 340.0 340.0] # in pixels
   scale 180.000   # pixels per meter
   center [ 0  0 ]
   rotate [ 0  0 ]
@@ -20,10 +20,10 @@ window
 floorplan
 (
   name "test_stage"
-  size [ 3.2 3.2 0.200]
+  size [ 1.6 1.6 0.200]
   pose [0 0 0 0]
-  bitmap "bitmaps/maze2013exp.world.png"
+  bitmap "bitmaps/a.png"
   obstacle_return 1
 )
 
-turtlebot( pose [ -1.5 -1.5 0.0 0.0 ] name "mouse")
+turtlebot( pose [ -0.7 -0.7 0.0 0.0 ] name "mouse")

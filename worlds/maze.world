@@ -22,7 +22,7 @@ floorplan
   name "test_stage"
   size [ 3.2 3.2 0.200]
   pose [0 0 0 0]
-  bitmap "bitmaps/maze2013exp.world.png"
+  bitmap "bitmaps/maze.world.png"
   obstacle_return 1
 )
 
